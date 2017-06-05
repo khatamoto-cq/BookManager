@@ -15,7 +15,14 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     
     @IBAction func clickLogin(_ sender: Any) {
-        performSegue(withIdentifier: "listBooks", sender: self)
+        if validate() {
+            performSegue(withIdentifier: "listBooks", sender: self)
+        } else {
+            let alertWindow = UIAlertController(title: "ログインエラー", message: "メールアドレスもしくはパスワードが違います", preferredStyle: .alert)
+            let canselAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alertWindow.addAction(canselAction)
+            present(alertWindow, animated: true, completion: nil)
+        }
     }
     
     override func viewDidLoad() {
@@ -37,4 +44,15 @@ class LoginViewController: UIViewController {
         loginButton.layer.cornerRadius = 5
     }
     
+    func validate() -> Bool {
+        if mailField.text == "" || passwordField.text == "" {
+            return false
+        }
+        
+        if mailField.text != "k.hatamoto@caraquri.com" || passwordField.text != "password" {
+            return false
+        }
+        
+        return true
+    }
 }
