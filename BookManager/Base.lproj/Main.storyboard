@@ -58,6 +58,9 @@
                                 </constraints>
                                 <color key="tintColor" white="0.96999999999999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="ログイン"/>
+                                <connections>
+                                    <action selector="clickLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5B8-aO-rzr"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -78,11 +81,30 @@
                         <outlet property="loginButton" destination="CuC-qf-eQY" id="2Ry-kQ-sUc"/>
                         <outlet property="mailField" destination="4Co-vp-ANO" id="LzM-1A-OvW"/>
                         <outlet property="passwordField" destination="hyu-Fy-65Q" id="Idp-Jn-0dx"/>
+                        <segue destination="dPK-a6-HGa" kind="show" identifier="listBooks" id="n0v-hE-FrH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
+            <point key="canvasLocation" x="-156" y="67"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="aY2-ey-QAW">
+            <objects>
+                <viewController id="dPK-a6-HGa" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zhW-dN-FPP"/>
+                        <viewControllerLayoutGuide type="bottom" id="MhZ-Sc-U88"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uiJ-KP-8Fs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2xf-qx-9Ig" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="620" y="71"/>
         </scene>
     </scenes>
 </document>

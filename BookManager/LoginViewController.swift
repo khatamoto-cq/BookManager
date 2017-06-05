@@ -14,6 +14,10 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     
+    @IBAction func clickLogin(_ sender: Any) {
+        performSegue(withIdentifier: "listBooks", sender: self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,5 +36,5 @@ class LoginViewController: UIViewController {
         // ログイン(ボタン)
         loginButton.layer.cornerRadius = 5
     }
+    
 }
-
