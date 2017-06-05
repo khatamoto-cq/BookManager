@@ -27,7 +27,10 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        initControls()
+    }
+    
+    func initControls() {
         // メール(テキストフィールド)
         mailField.layer.borderWidth = 1
         mailField.layer.cornerRadius = 5
