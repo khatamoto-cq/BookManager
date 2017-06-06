@@ -88,10 +88,10 @@
             </objects>
             <point key="canvasLocation" x="-156" y="67"/>
         </scene>
-        <!--View Controller-->
+        <!--List Books View Controller-->
         <scene sceneID="aY2-ey-QAW">
             <objects>
-                <viewController id="dPK-a6-HGa" sceneMemberID="viewController">
+                <viewController id="dPK-a6-HGa" customClass="ListBooksViewController" customModule="BookManager" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zhW-dN-FPP"/>
                         <viewControllerLayoutGuide type="bottom" id="MhZ-Sc-U88"/>
