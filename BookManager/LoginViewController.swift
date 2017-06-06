@@ -52,10 +52,6 @@ class LoginViewController: UIViewController {
             return false
         }
         
-        if mailField.text != "k.hatamoto@caraquri.com" || passwordField.text != "password" {
-            return false
-        }
-        
         return true
     }
 }
