@@ -9,11 +9,11 @@
 import UIKit
 
 class AccountViewController: UIViewController {
-    
+
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var passwordConfirmTextField: UITextField!
-    
+
     @IBAction func closeAction(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
@@ -35,7 +35,7 @@ class AccountViewController: UIViewController {
         passwordTextField.layer.cornerRadius = 5
         passwordTextField.layer.borderColor = UIColor.lightGray.cgColor
         passwordTextField.layer.masksToBounds = true
-        
+
         // パスワード(テキストフィールド)
         passwordConfirmTextField.layer.borderWidth = 1
         passwordConfirmTextField.layer.cornerRadius = 5

@@ -11,10 +11,9 @@ import UIKit
 class ListBooksViewController: UITableViewController {
 
     var books = Book.allBooks
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,16 +29,17 @@ class ListBooksViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "bookCell", for: indexPath) as? BookTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "bookCell",
+                                                       for: indexPath) as? BookTableViewCell else {
             return UITableViewCell()
         }
-        
+
         let book = books[indexPath.row]
         cell.bookImageView.image = UIImage(named: book.imageUrl)
         cell.nameLabel.text = book.name
         cell.priceLabel.text = book.price
         cell.publishDateLabel.text = book.publishDate
-        
+
         return cell
     }
 }

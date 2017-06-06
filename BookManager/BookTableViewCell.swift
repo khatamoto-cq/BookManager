@@ -14,7 +14,7 @@ class BookTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var publishDateLabel: UILabel!
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -27,5 +27,4 @@ class BookTableViewCell: UITableViewCell {
         // 元々入っている情報を再利用時にクリア
         bookImageView.image = nil
     }
-    
 }

@@ -13,11 +13,10 @@ class SettingViewController: UIViewController {
     @IBAction func clickAccountSetting(_ sender: Any) {
         performSegue(withIdentifier: "setting", sender: self)
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
 
     /*
     // MARK: - Navigation
