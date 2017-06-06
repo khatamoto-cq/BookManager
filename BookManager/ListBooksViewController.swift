@@ -12,6 +12,10 @@ class ListBooksViewController: UITableViewController {
 
     var books = Book.allBooks
 
+    @IBAction func clickAddAction(_ sender: Any) {
+        performSegue(withIdentifier: "addBook", sender: self)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
