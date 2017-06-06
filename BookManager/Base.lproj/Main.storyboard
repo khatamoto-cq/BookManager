@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -250,34 +251,90 @@
             </objects>
             <point key="canvasLocation" x="639.20000000000005" y="66.11694152923539"/>
         </scene>
-        <!--List Books View Controller-->
+        <!--書籍一覧-->
         <scene sceneID="dfJ-YH-Brk">
             <objects>
                 <tableViewController id="Tml-yE-kk8" customClass="ListBooksViewController" customModule="BookManager" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="lmZ-bD-nkv">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" sectionHeaderHeight="28" sectionFooterHeight="28" id="lmZ-bD-nkv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Oh7-77-xca">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="bookCell" id="Oh7-77-xca" customClass="BookTableViewCell" customModule="BookManager" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Oh7-77-xca" id="Sii-sk-uPM">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="120"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oLk-kT-xbY">
+                                            <rect key="frame" x="10" y="10" width="100" height="100"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="100" id="Ulg-Ue-hPc"/>
+                                                <constraint firstAttribute="width" constant="100" id="Wju-qM-5UD"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="書籍名" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lqn-8Q-Eek">
+                                            <rect key="frame" x="118" y="10" width="208" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="価格" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iRd-i6-Bk9">
+                                            <rect key="frame" x="118" y="81" width="100" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="100" id="xUk-P5-zMp"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="出版日" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XxH-1m-ma3">
+                                            <rect key="frame" x="226" y="80.5" width="100" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Lqn-8Q-Eek" firstAttribute="top" secondItem="oLk-kT-xbY" secondAttribute="top" id="6TY-j6-e39"/>
+                                        <constraint firstItem="oLk-kT-xbY" firstAttribute="leading" secondItem="Sii-sk-uPM" secondAttribute="leading" constant="10" id="CqS-9l-oef"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="XxH-1m-ma3" secondAttribute="trailing" constant="8" id="I8z-nq-t3M"/>
+                                        <constraint firstItem="XxH-1m-ma3" firstAttribute="width" secondItem="iRd-i6-Bk9" secondAttribute="width" id="Ia1-Il-mAK"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="XxH-1m-ma3" secondAttribute="bottom" constant="10" id="IhT-YI-D5N"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Lqn-8Q-Eek" secondAttribute="trailing" constant="8" id="Meu-Wl-Wz4"/>
+                                        <constraint firstItem="Lqn-8Q-Eek" firstAttribute="leading" secondItem="oLk-kT-xbY" secondAttribute="trailing" constant="8" id="P1n-g6-dfm"/>
+                                        <constraint firstItem="oLk-kT-xbY" firstAttribute="top" secondItem="Sii-sk-uPM" secondAttribute="top" constant="10" id="SNV-N3-7ly"/>
+                                        <constraint firstItem="iRd-i6-Bk9" firstAttribute="leading" secondItem="oLk-kT-xbY" secondAttribute="trailing" constant="8" id="qKC-oK-qtN"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="iRd-i6-Bk9" secondAttribute="bottom" constant="10" id="u4Y-xh-RPB"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="bookImageView" destination="oLk-kT-xbY" id="HY0-G0-IXW"/>
+                                    <outlet property="nameLabel" destination="Lqn-8Q-Eek" id="dz8-dI-sUa"/>
+                                    <outlet property="priceLabel" destination="iRd-i6-Bk9" id="7OG-ai-0aj"/>
+                                    <outlet property="publishDateLabel" destination="XxH-1m-ma3" id="rX2-Mm-Cx7"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="Tml-yE-kk8" id="h7C-kn-86N"/>
-                            <outlet property="delegate" destination="Tml-yE-kk8" id="Pm2-cl-Dl8"/>
+                            <outlet property="dataSource" destination="Tml-yE-kk8" id="N9q-jh-8O5"/>
+                            <outlet property="delegate" destination="Tml-yE-kk8" id="nFV-BY-Wmu"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="y0b-fa-1XR"/>
+                    <navigationItem key="navigationItem" title="書籍一覧" id="y0b-fa-1XR">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="hhT-wH-grN">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="bWu-HG-0jL">
+                                <rect key="frame" x="289" y="12" width="70" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="追加"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SFK-zc-4jx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2295" y="66"/>
+            <point key="canvasLocation" x="2293.5999999999999" y="65.217391304347828"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ort-KL-djA">

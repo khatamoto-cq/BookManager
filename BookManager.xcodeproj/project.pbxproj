@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		235B0DA91EE66D510007BB69 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235B0DA81EE66D510007BB69 /* Book.swift */; };
+		235B0DAC1EE673700007BB69 /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235B0DAB1EE673700007BB69 /* BookTableViewCell.swift */; };
 		23EB3D881EE4FF140038B49C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EB3D871EE4FF140038B49C /* AppDelegate.swift */; };
 		23EB3D8A1EE4FF140038B49C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EB3D891EE4FF140038B49C /* LoginViewController.swift */; };
 		23EB3D8D1EE4FF140038B49C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23EB3D8B1EE4FF140038B49C /* Main.storyboard */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		235B0DA81EE66D510007BB69 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		235B0DAB1EE673700007BB69 /* BookTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
 		23EB3D841EE4FF140038B49C /* BookManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23EB3D871EE4FF140038B49C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23EB3D891EE4FF140038B49C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +73,8 @@
 				23EB3D8E1EE4FF140038B49C /* Assets.xcassets */,
 				23EB3D901EE4FF140038B49C /* LaunchScreen.storyboard */,
 				23EB3D931EE4FF140038B49C /* Info.plist */,
+				235B0DA81EE66D510007BB69 /* Book.swift */,
+				235B0DAB1EE673700007BB69 /* BookTableViewCell.swift */,
 			);
 			path = BookManager;
 			sourceTree = "<group>";
@@ -148,6 +154,8 @@
 			files = (
 				23EB3D9A1EE50C740038B49C /* ListBooksViewController.swift in Sources */,
 				23EB3E981EE5574D0038B49C /* AccountViewController.swift in Sources */,
+				235B0DA91EE66D510007BB69 /* Book.swift in Sources */,
+				235B0DAC1EE673700007BB69 /* BookTableViewCell.swift in Sources */,
 				23EB3D8A1EE4FF140038B49C /* LoginViewController.swift in Sources */,
 				23EB3D881EE4FF140038B49C /* AppDelegate.swift in Sources */,
 				23EB3E961EE5562E0038B49C /* SettingViewController.swift in Sources */,
