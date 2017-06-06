@@ -87,7 +87,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-156" y="67"/>
+            <point key="canvasLocation" x="-186" y="66"/>
         </scene>
         <!--アカウント設定-->
         <scene sceneID="gax-xD-WnA">
@@ -164,7 +164,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="アカウント設定" id="3P6-NV-Ud0">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="BTE-nO-MYy">
+                        <barButtonItem key="leftBarButtonItem" style="done" id="BTE-nO-MYy">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="FF9-NC-XXE">
                                 <rect key="frame" x="16" y="7" width="83" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -174,7 +174,7 @@
                                 </connections>
                             </button>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="FwG-oj-nfU">
+                        <barButtonItem key="rightBarButtonItem" style="done" id="FwG-oj-nfU">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="hwS-P0-yTm">
                                 <rect key="frame" x="276" y="7" width="83" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -190,7 +190,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lij-tf-V8r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2496.8000000000002" y="841.52923538230891"/>
+            <point key="canvasLocation" x="2026" y="904"/>
         </scene>
         <!--設定-->
         <scene sceneID="0Mj-6V-acB">
@@ -230,7 +230,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WZq-n2-Mw7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3340" y="832.53373313343332"/>
+            <point key="canvasLocation" x="478" y="904"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="2NB-H4-e9j">
@@ -249,7 +249,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MrQ-Pj-7Iz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="639.20000000000005" y="66.11694152923539"/>
+            <point key="canvasLocation" x="478" y="66"/>
         </scene>
         <!--書籍一覧-->
         <scene sceneID="dfJ-YH-Brk">
@@ -324,7 +324,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="書籍一覧" id="y0b-fa-1XR">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="hhT-wH-grN">
+                        <barButtonItem key="rightBarButtonItem" style="done" id="hhT-wH-grN">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="bWu-HG-0jL">
                                 <rect key="frame" x="289" y="12" width="70" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -335,7 +335,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SFK-zc-4jx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2293.5999999999999" y="65.217391304347828"/>
+            <point key="canvasLocation" x="1996" y="65"/>
         </scene>
         <!--書籍編集-->
         <scene sceneID="OXP-y3-E9c">
@@ -437,7 +437,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="書籍編集" id="2U6-Bx-pOc">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="V9L-db-8Xa">
+                        <barButtonItem key="rightBarButtonItem" style="done" id="V9L-db-8Xa">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="hJ8-oY-oBR">
                                 <rect key="frame" x="276" y="7" width="83" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -448,7 +448,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wgN-dX-GI8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3052" y="65"/>
+            <point key="canvasLocation" x="2681" y="66"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ort-KL-djA">
@@ -466,7 +466,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vHc-hj-wvn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1557.5999999999999" y="841.52923538230891"/>
+            <point key="canvasLocation" x="1225" y="904"/>
         </scene>
         <!--書籍一覧-->
         <scene sceneID="U2O-TO-ERF">
@@ -485,7 +485,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xye-OH-EWi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1496.8" y="65.217391304347828"/>
+            <point key="canvasLocation" x="1189" y="67"/>
         </scene>
     </scenes>
 </document>
