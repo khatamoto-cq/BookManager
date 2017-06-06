@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ListBooksViewController: UIViewController {
+class ListBooksViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
