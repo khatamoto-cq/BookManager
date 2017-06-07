@@ -87,7 +87,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-186" y="66"/>
+            <point key="canvasLocation" x="-234" y="66"/>
         </scene>
         <!--アカウント設定-->
         <scene sceneID="gax-xD-WnA">
@@ -179,6 +179,9 @@
                                 <rect key="frame" x="276" y="7" width="83" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="保存"/>
+                                <connections>
+                                    <action selector="saveAction:" destination="Bnp-72-Stm" eventType="touchUpInside" id="yxR-rc-Hwe"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
@@ -190,7 +193,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lij-tf-V8r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2026" y="904"/>
+            <point key="canvasLocation" x="2964" y="903.59820089955031"/>
         </scene>
         <!--設定-->
         <scene sceneID="0Mj-6V-acB">
@@ -205,7 +208,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LHX-eA-Yb7">
-                                <rect key="frame" x="107.5" y="120" width="160" height="30"/>
+                                <rect key="frame" x="107.5" y="164" width="160" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="160" id="hpk-UY-dcT"/>
@@ -223,14 +226,14 @@
                             <constraint firstItem="LHX-eA-Yb7" firstAttribute="centerX" secondItem="DII-hH-ohs" secondAttribute="centerX" id="kRK-ng-sbN"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="設定" id="CZO-EL-43b"/>
+                    <navigationItem key="navigationItem" title="設定" id="iVR-QU-eSk"/>
                     <connections>
                         <segue destination="O08-23-T0Q" kind="presentation" identifier="setting" id="mxX-vL-xfD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WZq-n2-Mw7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="478" y="904"/>
+            <point key="canvasLocation" x="1380" y="904"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="2NB-H4-e9j">
@@ -244,7 +247,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="NSp-b0-jZo" kind="relationship" relationship="viewControllers" id="QSs-5h-02b"/>
-                        <segue destination="Hda-4J-GHu" kind="relationship" relationship="viewControllers" id="1Qt-YE-l8W"/>
+                        <segue destination="NGw-FU-Eik" kind="relationship" relationship="viewControllers" id="1Qt-YE-l8W"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MrQ-Pj-7Iz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -336,14 +339,14 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="9CG-ZW-5OY" kind="presentation" identifier="addBook" id="H2m-eJ-e6v"/>
+                        <segue destination="Uuw-9A-G1A" kind="presentation" identifier="addBook" id="H2m-eJ-e6v"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SFK-zc-4jx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1996" y="65"/>
         </scene>
-        <!--Add Book View Controller-->
+        <!--書籍追加-->
         <scene sceneID="Hqu-AA-xzX">
             <objects>
                 <viewController id="9CG-ZW-5OY" customClass="AddBookViewController" customModule="BookManager" customModuleProvider="target" sceneMemberID="viewController">
@@ -355,38 +358,110 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="et0-63-fZT">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="書籍追加" id="QYr-gv-9xU">
-                                        <barButtonItem key="leftBarButtonItem" style="done" id="85Q-Px-tOB">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="be8-TG-2VU">
-                                                <rect key="frame" x="16" y="7" width="83" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="閉じる"/>
-                                                <connections>
-                                                    <action selector="closeAction:" destination="9CG-ZW-5OY" eventType="touchUpInside" id="IkI-LA-d37"/>
-                                                </connections>
-                                            </button>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" style="done" id="xZA-eC-cUE">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="lZf-QG-ZeH">
-                                                <rect key="frame" x="276" y="7" width="83" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="保存"/>
-                                            </button>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="x5M-2a-gdR">
+                                <rect key="frame" x="20" y="104" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="2fb-vB-dOS"/>
+                                    <constraint firstAttribute="width" constant="120" id="Ogm-SK-o8Z"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ez-7M-TU7">
+                                <rect key="frame" x="178" y="149" width="137" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="画像添付ボタン"/>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="書籍名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s5w-fb-dde">
+                                <rect key="frame" x="37.5" y="288.5" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="Ons-4c-sex"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="金額" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hcp-60-fr5">
+                                <rect key="frame" x="37" y="358.5" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="EXL-sC-POr"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="V7g-Sp-P4o">
+                                <rect key="frame" x="37" y="421" width="300" height="145"/>
+                                <date key="date" timeIntervalSinceReferenceDate="518517101.515194">
+                                    <!--2017-06-07 08:31:41 +0000-->
+                                </date>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="金額" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vy8-2F-F4O">
+                                <rect key="frame" x="37" y="344" width="25" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="購入日" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x4J-MC-twX">
+                                <rect key="frame" x="37" y="406.5" width="37" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="書籍名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJJ-Ad-lRH">
+                                <rect key="frame" x="37" y="274" width="37" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hcp-60-fr5" firstAttribute="top" secondItem="s5w-fb-dde" secondAttribute="bottom" constant="40" id="14C-2M-Jd4"/>
+                            <constraint firstItem="V7g-Sp-P4o" firstAttribute="top" secondItem="hcp-60-fr5" secondAttribute="bottom" constant="32" id="2Rq-xu-gUA"/>
+                            <constraint firstItem="vy8-2F-F4O" firstAttribute="leading" secondItem="hcp-60-fr5" secondAttribute="leading" id="8wP-Oa-yX4"/>
+                            <constraint firstItem="s5w-fb-dde" firstAttribute="centerX" secondItem="JQG-SA-Ctd" secondAttribute="centerX" id="AY2-Q1-Vso"/>
+                            <constraint firstItem="hcp-60-fr5" firstAttribute="centerX" secondItem="JQG-SA-Ctd" secondAttribute="centerX" id="Es7-1v-GQL"/>
+                            <constraint firstItem="x5M-2a-gdR" firstAttribute="top" secondItem="ede-ID-4Kj" secondAttribute="bottom" constant="40" id="JWT-sZ-53E"/>
+                            <constraint firstItem="7ez-7M-TU7" firstAttribute="centerY" secondItem="x5M-2a-gdR" secondAttribute="centerY" id="Jge-hK-KG7"/>
+                            <constraint firstItem="vy8-2F-F4O" firstAttribute="bottom" secondItem="hcp-60-fr5" secondAttribute="top" id="Ng3-G9-UAs"/>
+                            <constraint firstItem="7ez-7M-TU7" firstAttribute="leading" secondItem="x5M-2a-gdR" secondAttribute="trailing" constant="38" id="QJn-46-lTD"/>
+                            <constraint firstItem="V7g-Sp-P4o" firstAttribute="trailing" secondItem="hcp-60-fr5" secondAttribute="trailing" id="aHV-dZ-R77"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7ez-7M-TU7" secondAttribute="trailing" constant="44" id="bBX-BS-F5j"/>
+                            <constraint firstItem="s5w-fb-dde" firstAttribute="centerY" secondItem="JQG-SA-Ctd" secondAttribute="centerY" constant="-30" id="eFe-UZ-sP4"/>
+                            <constraint firstItem="EJJ-Ad-lRH" firstAttribute="bottom" secondItem="s5w-fb-dde" secondAttribute="top" id="eNe-0P-czH"/>
+                            <constraint firstItem="EJJ-Ad-lRH" firstAttribute="leading" secondItem="s5w-fb-dde" secondAttribute="leading" id="jSW-op-jTP"/>
+                            <constraint firstItem="V7g-Sp-P4o" firstAttribute="leading" secondItem="hcp-60-fr5" secondAttribute="leading" id="kGP-Pl-7Jk"/>
+                            <constraint firstItem="x5M-2a-gdR" firstAttribute="leading" secondItem="JQG-SA-Ctd" secondAttribute="leading" constant="20" id="kiH-Rr-r8h"/>
+                            <constraint firstItem="x4J-MC-twX" firstAttribute="bottom" secondItem="V7g-Sp-P4o" secondAttribute="top" id="pOy-xi-9Ar"/>
+                            <constraint firstItem="x4J-MC-twX" firstAttribute="leading" secondItem="V7g-Sp-P4o" secondAttribute="leading" id="xrk-XG-WOR"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="書籍追加" id="66O-n2-QXT">
+                        <barButtonItem key="leftBarButtonItem" style="done" id="uh5-0x-ijV">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kXs-re-3JH">
+                                <rect key="frame" x="16" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="閉じる"/>
+                                <connections>
+                                    <action selector="closeAction:" destination="9CG-ZW-5OY" eventType="touchUpInside" id="we5-Fs-Fyl"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="done" id="0Ft-65-ALt">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="MZx-G2-FHQ">
+                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="保存"/>
+                                <connections>
+                                    <action selector="saveAction:" destination="9CG-ZW-5OY" eventType="touchUpInside" id="aB1-lA-1XE"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FE9-IF-GgK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2830" y="-207"/>
+            <point key="canvasLocation" x="3653.5999999999999" y="-207.34632683658174"/>
         </scene>
         <!--書籍編集-->
         <scene sceneID="OXP-y3-E9c">
@@ -499,7 +574,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wgN-dX-GI8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2830" y="459"/>
+            <point key="canvasLocation" x="3654" y="466"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ort-KL-djA">
@@ -517,7 +592,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vHc-hj-wvn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1225" y="904"/>
+            <point key="canvasLocation" x="2164" y="903.59820089955031"/>
         </scene>
         <!--書籍一覧-->
         <scene sceneID="U2O-TO-ERF">
@@ -537,6 +612,43 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xye-OH-EWi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1189" y="67"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="10t-Dk-1He">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Uuw-9A-G1A" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cH5-6l-YyM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9CG-ZW-5OY" kind="relationship" relationship="rootViewController" id="WBa-xo-tzl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AYM-rR-jne" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2829.5999999999999" y="-207.34632683658174"/>
+        </scene>
+        <!--設定-->
+        <scene sceneID="8Sj-Px-774">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NGw-FU-Eik" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="設定" id="CZO-EL-43b"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2E4-bR-UTV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Hda-4J-GHu" kind="relationship" relationship="rootViewController" id="Tb4-Wy-g22"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OxQ-lz-qiN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="477.60000000000002" y="903.59820089955031"/>
         </scene>
     </scenes>
 </document>

@@ -14,6 +14,10 @@ class AddBookViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
 
+    @IBAction func saveAction(_ sender: Any) {
+        print("登録しました")
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }

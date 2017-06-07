@@ -18,6 +18,10 @@ class AccountViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
 
+    @IBAction func saveAction(_ sender: Any) {
+        print("アカウント設定を登録しました")
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         initControls()
