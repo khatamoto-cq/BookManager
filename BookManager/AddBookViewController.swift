@@ -10,8 +10,22 @@ import UIKit
 
 class AddBookViewController: UIViewController {
 
+    var datePicker: UIDatePicker!
+
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var priceTextField: UITextField!
+    @IBOutlet weak var purchaseDateTextField: UITextField!
+
     @IBAction func closeAction(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
+    }
+
+    @IBAction func popupDatepicker(_ sender: UITextField) {
+        datePicker = UIDatePicker()
+        datePicker.datePickerMode = UIDatePickerMode.date
+        sender.inputView = datePicker
+        datePicker.addTarget(self, action: #selector(pickerChanged),
+                             for: UIControlEvents.valueChanged)
     }
 
     @IBAction func saveAction(_ sender: Any) {
@@ -23,5 +37,11 @@ class AddBookViewController: UIViewController {
     }
 
     override func didReceiveMemoryWarning() {
+    }
+
+    func pickerChanged(sender: UIDatePicker) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy/MM/dd"
+        purchaseDateTextField.text = dateFormatter.string(from: sender.date)
     }
 }
