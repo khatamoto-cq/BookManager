@@ -389,8 +389,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="V7g-Sp-P4o">
-                                <rect key="frame" x="37" y="421" width="300" height="145"/>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="V7g-Sp-P4o">
+                                <rect key="frame" x="37" y="421" width="300" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="518517101.515194">
                                     <!--2017-06-07 08:31:41 +0000-->
                                 </date>
@@ -574,7 +574,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wgN-dX-GI8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3654" y="466"/>
+            <point key="canvasLocation" x="3654" y="550"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ort-KL-djA">
