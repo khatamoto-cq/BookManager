@@ -14,6 +14,7 @@ class EditBookViewController: UIViewController, UIImagePickerControllerDelegate,
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var priceTextField: UITextField!
     @IBOutlet weak var purchaseDateTextField: UITextField!
+    @IBOutlet weak var imageAttachButton: UIButton!
 
     @IBAction func popupDatepickerAction(_ sender: UITextField) {
         let datePicker = UIDatePicker()
@@ -40,6 +41,7 @@ class EditBookViewController: UIViewController, UIImagePickerControllerDelegate,
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        initControls()
     }
 
     override func didReceiveMemoryWarning() {
@@ -58,5 +60,24 @@ class EditBookViewController: UIViewController, UIImagePickerControllerDelegate,
         }
 
         self.dismiss(animated: true)
+    }
+
+    func initControls() {
+        nameTextField.layer.borderWidth = 1
+        nameTextField.layer.cornerRadius = 5
+        nameTextField.layer.borderColor = UIColor.lightGray.cgColor
+        nameTextField.layer.masksToBounds = true
+
+        priceTextField.layer.borderWidth = 1
+        priceTextField.layer.cornerRadius = 5
+        priceTextField.layer.borderColor = UIColor.lightGray.cgColor
+        priceTextField.layer.masksToBounds = true
+
+        purchaseDateTextField.layer.borderWidth = 1
+        purchaseDateTextField.layer.cornerRadius = 5
+        purchaseDateTextField.layer.borderColor = UIColor.lightGray.cgColor
+        purchaseDateTextField.layer.masksToBounds = true
+
+        imageAttachButton.layer.cornerRadius = 5
     }
 }

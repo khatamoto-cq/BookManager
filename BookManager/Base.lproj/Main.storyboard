@@ -228,6 +228,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="設定" id="iVR-QU-eSk"/>
                     <connections>
+                        <outlet property="settingButton" destination="LHX-eA-Yb7" id="Wcg-RS-aAS"/>
                         <segue destination="O08-23-T0Q" kind="presentation" identifier="setting" id="mxX-vL-xfD"/>
                     </connections>
                 </viewController>
@@ -467,6 +468,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="imageAttachButton" destination="7ez-7M-TU7" id="XG1-31-zpX"/>
                         <outlet property="imageView" destination="x5M-2a-gdR" id="azy-uH-tyT"/>
                         <outlet property="nameTextField" destination="s5w-fb-dde" id="5P1-pV-r4Y"/>
                         <outlet property="priceTextField" destination="hcp-60-fr5" id="XZR-IZ-R7x"/>
@@ -593,6 +595,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="imageAttachButton" destination="XKj-Je-YwH" id="SHP-WO-KSh"/>
                         <outlet property="imageView" destination="YKk-Ms-4u5" id="ShV-Ne-CYv"/>
                         <outlet property="nameTextField" destination="Qse-Rk-bhO" id="72t-Gd-hju"/>
                         <outlet property="priceTextField" destination="xhV-PR-xjO" id="MH6-Bi-hpO"/>
