@@ -13,7 +13,7 @@ class BookTableViewCell: UITableViewCell {
     @IBOutlet weak var bookImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
-    @IBOutlet weak var publishDateLabel: UILabel!
+    @IBOutlet weak var purchaseDateLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -19,7 +19,7 @@ class AddBookViewController: UIViewController, UIImagePickerControllerDelegate, 
         self.dismiss(animated: true, completion: nil)
     }
 
-    @IBAction func popupDatepicker(_ sender: UITextField) {
+    @IBAction func popupDatepickerAction(_ sender: UITextField) {
         let datePicker = UIDatePicker()
         datePicker.datePickerMode = UIDatePickerMode.date
         sender.inputView = datePicker

@@ -15,7 +15,7 @@ class EditBookViewController: UIViewController, UIImagePickerControllerDelegate,
     @IBOutlet weak var priceTextField: UITextField!
     @IBOutlet weak var purchaseDateTextField: UITextField!
 
-    @IBAction func popupDatepicker(_ sender: UITextField) {
+    @IBAction func popupDatepickerAction(_ sender: UITextField) {
         let datePicker = UIDatePicker()
         datePicker.datePickerMode = UIDatePickerMode.date
         sender.inputView = datePicker

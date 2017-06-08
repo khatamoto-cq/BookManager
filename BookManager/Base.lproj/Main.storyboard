@@ -60,7 +60,7 @@
                                 <color key="tintColor" white="0.96999999999999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="ログイン"/>
                                 <connections>
-                                    <action selector="clickLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5B8-aO-rzr"/>
+                                    <action selector="tapLoginAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eIY-r4-jcq"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -79,9 +79,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="emailTextField" destination="4Co-vp-ANO" id="but-KK-33T"/>
                         <outlet property="loginButton" destination="CuC-qf-eQY" id="2Ry-kQ-sUc"/>
-                        <outlet property="mailField" destination="4Co-vp-ANO" id="LzM-1A-OvW"/>
-                        <outlet property="passwordField" destination="hyu-Fy-65Q" id="Idp-Jn-0dx"/>
+                        <outlet property="passwordTextField" destination="hyu-Fy-65Q" id="P4P-bn-wOv"/>
                         <segue destination="5yk-Zl-9jp" kind="show" identifier="listBooks" id="n0v-hE-FrH"/>
                     </connections>
                 </viewController>
@@ -216,7 +216,7 @@
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="アカウント設定"/>
                                 <connections>
-                                    <action selector="clickAccountSetting:" destination="Hda-4J-GHu" eventType="touchUpInside" id="WpK-hm-oGn"/>
+                                    <action selector="tapSettingAction:" destination="Hda-4J-GHu" eventType="touchUpInside" id="gPd-Tg-Okg"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -292,7 +292,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="出版日" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XxH-1m-ma3">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="購入日" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XxH-1m-ma3">
                                             <rect key="frame" x="226" y="80.5" width="100" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -316,7 +316,7 @@
                                     <outlet property="bookImageView" destination="oLk-kT-xbY" id="HY0-G0-IXW"/>
                                     <outlet property="nameLabel" destination="Lqn-8Q-Eek" id="dz8-dI-sUa"/>
                                     <outlet property="priceLabel" destination="iRd-i6-Bk9" id="7OG-ai-0aj"/>
-                                    <outlet property="publishDateLabel" destination="XxH-1m-ma3" id="rX2-Mm-Cx7"/>
+                                    <outlet property="purchaseDateLabel" destination="XxH-1m-ma3" id="irc-0S-JXp"/>
                                     <segue destination="SwA-HA-3Wn" kind="show" id="b49-Qy-LRR"/>
                                 </connections>
                             </tableViewCell>
@@ -333,7 +333,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="追加"/>
                                 <connections>
-                                    <action selector="clickAddAction:" destination="Tml-yE-kk8" eventType="touchUpInside" id="v40-gi-ART"/>
+                                    <action selector="tapAddAction:" destination="Tml-yE-kk8" eventType="touchUpInside" id="pZv-h9-jZk"/>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -374,19 +374,16 @@
                                     <action selector="attachImageAction:" destination="9CG-ZW-5OY" eventType="touchUpInside" id="Ogg-4J-1YR"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="書籍名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJJ-Ad-lRH">
+                                <rect key="frame" x="37" y="274" width="37" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="書籍名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s5w-fb-dde">
                                 <rect key="frame" x="37.5" y="288.5" width="300" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="Ons-4c-sex"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="金額" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hcp-60-fr5">
-                                <rect key="frame" x="37" y="358.5" width="300" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="EXL-sC-POr"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -398,20 +395,23 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="金額" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hcp-60-fr5">
+                                <rect key="frame" x="37" y="358" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="EXL-sC-POr"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="購入日" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x4J-MC-twX">
-                                <rect key="frame" x="37" y="414.5" width="37" height="14.5"/>
+                                <rect key="frame" x="37" y="413.5" width="37" height="14.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="書籍名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJJ-Ad-lRH">
-                                <rect key="frame" x="37" y="274" width="37" height="14.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ac1-cb-Bdg" userLabel="購入日">
-                                <rect key="frame" x="37" y="429" width="300" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ac1-cb-Bdg" userLabel="PurchaseDate Text Field">
+                                <rect key="frame" x="37" y="428" width="300" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="pRb-cB-6Yd"/>
                                 </constraints>
@@ -419,7 +419,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="popupDatepicker:" destination="9CG-ZW-5OY" eventType="editingDidBegin" id="uo9-Ik-e6N"/>
+                                    <action selector="popupDatepickerAction:" destination="9CG-ZW-5OY" eventType="editingDidBegin" id="d7G-C6-vcz"/>
                                 </connections>
                             </textField>
                         </subviews>
@@ -545,7 +545,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Vo-Od-gFB" userLabel="購入日">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Vo-Od-gFB" userLabel="PurchaseDate Text Field">
                                 <rect key="frame" x="38" y="429" width="300" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="gak-dv-oYg"/>
@@ -554,7 +554,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="popupDatepicker:" destination="SwA-HA-3Wn" eventType="editingDidBegin" id="tm4-jZ-J8s"/>
+                                    <action selector="popupDatepickerAction:" destination="SwA-HA-3Wn" eventType="editingDidBegin" id="3tR-xg-zAq"/>
                                 </connections>
                             </textField>
                         </subviews>

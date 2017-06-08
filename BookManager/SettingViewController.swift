@@ -10,7 +10,7 @@ import UIKit
 
 class SettingViewController: UIViewController {
 
-    @IBAction func clickAccountSetting(_ sender: Any) {
+    @IBAction func tapSettingAction(_ sender: Any) {
         performSegue(withIdentifier: "setting", sender: self)
     }
 

@@ -12,7 +12,7 @@ class ListBooksViewController: UITableViewController {
 
     var books = Book.allBooks
 
-    @IBAction func clickAddAction(_ sender: Any) {
+    @IBAction func tapAddAction(_ sender: Any) {
         performSegue(withIdentifier: "addBook", sender: self)
     }
 
@@ -42,7 +42,7 @@ class ListBooksViewController: UITableViewController {
         cell.bookImageView.image = UIImage(named: book.imageUrl)
         cell.nameLabel.text = book.name
         cell.priceLabel.text = book.price
-        cell.publishDateLabel.text = book.publishDate
+        cell.purchaseDateLabel.text = book.publishDate
 
         return cell
     }
