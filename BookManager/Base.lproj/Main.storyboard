@@ -82,12 +82,11 @@
                         <outlet property="emailTextField" destination="4Co-vp-ANO" id="but-KK-33T"/>
                         <outlet property="loginButton" destination="CuC-qf-eQY" id="2Ry-kQ-sUc"/>
                         <outlet property="passwordTextField" destination="hyu-Fy-65Q" id="P4P-bn-wOv"/>
-                        <segue destination="5yk-Zl-9jp" kind="show" identifier="listBooks" id="n0v-hE-FrH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-234" y="66"/>
+            <point key="canvasLocation" x="-338" y="63"/>
         </scene>
         <!--アカウント設定-->
         <scene sceneID="gax-xD-WnA">
@@ -236,11 +235,12 @@
             </objects>
             <point key="canvasLocation" x="1380" y="904"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab View Controller-->
         <scene sceneID="2NB-H4-e9j">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="5yk-Zl-9jp" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabViewController" automaticallyAdjustsScrollViewInsets="NO" id="5yk-Zl-9jp" customClass="TabViewController" customModule="BookManager" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="qga-7b-9uy"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="c0d-69-q1S">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -258,7 +258,7 @@
         <!--書籍一覧-->
         <scene sceneID="dfJ-YH-Brk">
             <objects>
-                <tableViewController id="Tml-yE-kk8" customClass="ListBooksViewController" customModule="BookManager" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ListBooksViewController" id="Tml-yE-kk8" customClass="ListBooksViewController" customModule="BookManager" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" sectionHeaderHeight="28" sectionFooterHeight="28" id="lmZ-bD-nkv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -627,8 +627,8 @@
         <!--書籍一覧-->
         <scene sceneID="U2O-TO-ERF">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NSp-b0-jZo" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="書籍一覧" id="RIl-Uy-SMh"/>
+                <navigationController storyboardIdentifier="listBookNavigation" automaticallyAdjustsScrollViewInsets="NO" id="NSp-b0-jZo" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" tag="1" title="書籍一覧" id="RIl-Uy-SMh"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="vWe-EC-g9Q">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -641,7 +641,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xye-OH-EWi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1189" y="67"/>
+            <point key="canvasLocation" x="1223" y="64"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="10t-Dk-1He">
@@ -665,7 +665,7 @@
         <scene sceneID="8Sj-Px-774">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NGw-FU-Eik" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="設定" id="CZO-EL-43b"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="設定" id="CZO-EL-43b"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2E4-bR-UTV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
