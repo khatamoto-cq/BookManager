@@ -370,6 +370,9 @@
                                 <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="画像添付ボタン"/>
+                                <connections>
+                                    <action selector="attachImageAction:" destination="9CG-ZW-5OY" eventType="touchUpInside" id="Ogg-4J-1YR"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="書籍名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s5w-fb-dde">
                                 <rect key="frame" x="37.5" y="288.5" width="300" height="30"/>
@@ -464,6 +467,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="imageView" destination="x5M-2a-gdR" id="azy-uH-tyT"/>
                         <outlet property="nameTextField" destination="s5w-fb-dde" id="5P1-pV-r4Y"/>
                         <outlet property="priceTextField" destination="hcp-60-fr5" id="XZR-IZ-R7x"/>
                         <outlet property="purchaseDateTextField" destination="Ac1-cb-Bdg" id="YgW-DA-RUh"/>
