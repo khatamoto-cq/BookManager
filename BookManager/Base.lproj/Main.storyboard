@@ -501,6 +501,9 @@
                                 <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="画像添付ボタン"/>
+                                <connections>
+                                    <action selector="attachImageAction:" destination="SwA-HA-3Wn" eventType="touchUpInside" id="jBl-TJ-zjx"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="書籍名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pre-vd-Uix">
                                 <rect key="frame" x="38" y="266" width="52" height="21"/>
@@ -583,10 +586,14 @@
                                 <rect key="frame" x="276" y="7" width="83" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="保存"/>
+                                <connections>
+                                    <action selector="saveAction:" destination="SwA-HA-3Wn" eventType="touchUpInside" id="2Tk-Ht-Fzu"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="imageView" destination="YKk-Ms-4u5" id="ShV-Ne-CYv"/>
                         <outlet property="nameTextField" destination="Qse-Rk-bhO" id="72t-Gd-hju"/>
                         <outlet property="priceTextField" destination="xhV-PR-xjO" id="MH6-Bi-hpO"/>
                         <outlet property="purchaseDateTextField" destination="3Vo-Od-gFB" id="Tl5-uf-bMu"/>
