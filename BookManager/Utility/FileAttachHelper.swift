@@ -11,4 +11,12 @@ class FileAttachHelper {
             target.present(picker, animated: true)
         }
     }
+
+    class func setImage(_ controller: UIViewController, imageView: UIImageView, info: [String : Any]) {
+        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            imageView.image = image
+        }
+
+        controller.dismiss(animated: true)
+    }
 }

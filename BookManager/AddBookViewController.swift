@@ -31,20 +31,15 @@ class AddBookViewController: UIViewController, UIImagePickerControllerDelegate, 
     }
 
     override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
     }
 
     func pickerChanged(sender: UIDatePicker) {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy/MM/dd"
-        purchaseDateTextField.text = dateFormatter.string(from: sender.date)
+        DatePickerHelper.setValue(sender, target: self.purchaseDateTextField)
     }
 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            self.imageView.image = image
-        }
-
-        self.dismiss(animated: true)
+        FileAttachHelper.setImage(self, imageView: self.imageView, info: info)
     }
 
     func initControls() {

@@ -9,4 +9,10 @@ class DatePickerHelper {
         datePicker.addTarget(target, action: action,
                              for: UIControlEvents.valueChanged)
     }
+
+    class func setValue(_ sender: UIDatePicker, target: UITextField) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy/MM/dd"
+        target.text = dateFormatter.string(from: sender.date)
+    }
 }
