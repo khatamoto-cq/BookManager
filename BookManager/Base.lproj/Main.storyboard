@@ -229,7 +229,6 @@
                     <navigationItem key="navigationItem" title="設定" id="iVR-QU-eSk"/>
                     <connections>
                         <outlet property="settingButton" destination="LHX-eA-Yb7" id="Wcg-RS-aAS"/>
-                        <segue destination="O08-23-T0Q" kind="presentation" identifier="setting" id="mxX-vL-xfD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WZq-n2-Mw7" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -489,14 +488,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YKk-Ms-4u5">
-                                <rect key="frame" x="18" y="104" width="120" height="120"/>
+                                <rect key="frame" x="18" y="60" width="120" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="E4r-SO-uJl"/>
                                     <constraint firstAttribute="width" constant="120" id="PrW-ho-meQ"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XKj-Je-YwH">
-                                <rect key="frame" x="176" y="149" width="139" height="30"/>
+                                <rect key="frame" x="176" y="105" width="139" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="画像添付ボタン"/>
