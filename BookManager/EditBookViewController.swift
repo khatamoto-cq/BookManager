@@ -2,6 +2,8 @@ import UIKit
 
 class EditBookViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    var book: Book!
+
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var priceTextField: UITextField!
@@ -42,16 +44,19 @@ class EditBookViewController: UIViewController, UIImagePickerControllerDelegate,
         nameTextField.layer.cornerRadius = 5
         nameTextField.layer.borderColor = UIColor.lightGray.cgColor
         nameTextField.layer.masksToBounds = true
+        nameTextField.text = book.name
 
         priceTextField.layer.borderWidth = 1
         priceTextField.layer.cornerRadius = 5
         priceTextField.layer.borderColor = UIColor.lightGray.cgColor
         priceTextField.layer.masksToBounds = true
+        priceTextField.text = book.price
 
         purchaseDateTextField.layer.borderWidth = 1
         purchaseDateTextField.layer.cornerRadius = 5
         purchaseDateTextField.layer.borderColor = UIColor.lightGray.cgColor
         purchaseDateTextField.layer.masksToBounds = true
+        purchaseDateTextField.text = book.purchaseDate
 
         imageAttachButton.layer.cornerRadius = 5
     }

@@ -319,7 +319,7 @@
                                     <outlet property="nameLabel" destination="Lqn-8Q-Eek" id="dz8-dI-sUa"/>
                                     <outlet property="priceLabel" destination="iRd-i6-Bk9" id="7OG-ai-0aj"/>
                                     <outlet property="purchaseDateLabel" destination="XxH-1m-ma3" id="irc-0S-JXp"/>
-                                    <segue destination="SwA-HA-3Wn" kind="show" id="b49-Qy-LRR"/>
+                                    <segue destination="SwA-HA-3Wn" kind="show" identifier="EditBook" id="b49-Qy-LRR"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

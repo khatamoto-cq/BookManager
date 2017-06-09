@@ -17,6 +17,16 @@ class ListBooksViewController: UITableViewController {
         super.didReceiveMemoryWarning()
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "EditBook" {
+            if let indexPath = self.tableView.indexPathForSelectedRow {
+                let book = books[indexPath.row]
+                let controller = segue.destination as? EditBookViewController
+                controller!.book = book
+            }
+        }
+    }
+
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -35,7 +45,7 @@ class ListBooksViewController: UITableViewController {
         cell.bookImageView.image = UIImage(named: book.imageUrl)
         cell.nameLabel.text = book.name
         cell.priceLabel.text = book.price
-        cell.purchaseDateLabel.text = book.publishDate
+        cell.purchaseDateLabel.text = book.purchaseDate
 
         return cell
     }
