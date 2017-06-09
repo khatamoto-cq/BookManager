@@ -319,7 +319,6 @@
                                     <outlet property="nameLabel" destination="Lqn-8Q-Eek" id="dz8-dI-sUa"/>
                                     <outlet property="priceLabel" destination="iRd-i6-Bk9" id="7OG-ai-0aj"/>
                                     <outlet property="purchaseDateLabel" destination="XxH-1m-ma3" id="irc-0S-JXp"/>
-                                    <segue destination="SwA-HA-3Wn" kind="show" identifier="EditBook" id="b49-Qy-LRR"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -480,7 +479,7 @@
         <!--書籍編集-->
         <scene sceneID="OXP-y3-E9c">
             <objects>
-                <viewController id="SwA-HA-3Wn" customClass="EditBookViewController" customModule="BookManager" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EditBookViewController" id="SwA-HA-3Wn" customClass="EditBookViewController" customModule="BookManager" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Qom-IK-woc"/>
                         <viewControllerLayoutGuide type="bottom" id="Nzm-AI-tIU"/>

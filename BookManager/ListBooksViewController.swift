@@ -17,16 +17,6 @@ class ListBooksViewController: UITableViewController {
         super.didReceiveMemoryWarning()
     }
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "EditBook" {
-            if let indexPath = self.tableView.indexPathForSelectedRow {
-                let book = books[indexPath.row]
-                let controller = segue.destination as? EditBookViewController
-                controller!.book = book
-            }
-        }
-    }
-
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -48,5 +38,13 @@ class ListBooksViewController: UITableViewController {
         cell.purchaseDateLabel.text = book.purchaseDate
 
         return cell
+    }
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let book = books[indexPath.row]
+        let controller = self.storyboard?.instantiateViewController(
+            withIdentifier: "EditBookViewController") as? EditBookViewController
+        controller?.book = book
+        self.navigationController?.pushViewController(controller!, animated: true)
     }
 }
