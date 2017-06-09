@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		231B23901EE6BEDA004C3221 /* AddBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B238F1EE6BEDA004C3221 /* AddBookViewController.swift */; };
 		231B23921EE6BF03004C3221 /* EditBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B23911EE6BF03004C3221 /* EditBookViewController.swift */; };
+		231B69A31EEA8017006F2CBD /* DatePickerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B69A11EEA8017006F2CBD /* DatePickerHelper.swift */; };
+		231B69A41EEA8017006F2CBD /* FileAttachHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B69A21EEA8017006F2CBD /* FileAttachHelper.swift */; };
 		235B0DA91EE66D510007BB69 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235B0DA81EE66D510007BB69 /* Book.swift */; };
 		235B0DAC1EE673700007BB69 /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235B0DAB1EE673700007BB69 /* BookTableViewCell.swift */; };
 		23CAD1D11EE9346100C27108 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CAD1D01EE9346100C27108 /* TabViewController.swift */; };
@@ -25,6 +27,8 @@
 /* Begin PBXFileReference section */
 		231B238F1EE6BEDA004C3221 /* AddBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBookViewController.swift; sourceTree = "<group>"; };
 		231B23911EE6BF03004C3221 /* EditBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditBookViewController.swift; sourceTree = "<group>"; };
+		231B69A11EEA8017006F2CBD /* DatePickerHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerHelper.swift; sourceTree = "<group>"; };
+		231B69A21EEA8017006F2CBD /* FileAttachHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileAttachHelper.swift; sourceTree = "<group>"; };
 		235B0DA81EE66D510007BB69 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		235B0DAB1EE673700007BB69 /* BookTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
 		23CAD1D01EE9346100C27108 /* TabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +55,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		231B69A01EEA8017006F2CBD /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				231B69A11EEA8017006F2CBD /* DatePickerHelper.swift */,
+				231B69A21EEA8017006F2CBD /* FileAttachHelper.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
 		23EB3D7B1EE4FF140038B49C = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +83,7 @@
 		23EB3D861EE4FF140038B49C /* BookManager */ = {
 			isa = PBXGroup;
 			children = (
+				231B69A01EEA8017006F2CBD /* Utility */,
 				23EB3D871EE4FF140038B49C /* AppDelegate.swift */,
 				23EB3D891EE4FF140038B49C /* LoginViewController.swift */,
 				23CAD1D01EE9346100C27108 /* TabViewController.swift */,
@@ -180,12 +194,14 @@
 			files = (
 				23EB3D9A1EE50C740038B49C /* ListBooksViewController.swift in Sources */,
 				231B23901EE6BEDA004C3221 /* AddBookViewController.swift in Sources */,
+				231B69A41EEA8017006F2CBD /* FileAttachHelper.swift in Sources */,
 				23EB3E981EE5574D0038B49C /* AccountViewController.swift in Sources */,
 				235B0DA91EE66D510007BB69 /* Book.swift in Sources */,
 				235B0DAC1EE673700007BB69 /* BookTableViewCell.swift in Sources */,
 				23EB3D8A1EE4FF140038B49C /* LoginViewController.swift in Sources */,
 				23EB3D881EE4FF140038B49C /* AppDelegate.swift in Sources */,
 				231B23921EE6BF03004C3221 /* EditBookViewController.swift in Sources */,
+				231B69A31EEA8017006F2CBD /* DatePickerHelper.swift in Sources */,
 				23CAD1D11EE9346100C27108 /* TabViewController.swift in Sources */,
 				23EB3E961EE5562E0038B49C /* SettingViewController.swift in Sources */,
 			);

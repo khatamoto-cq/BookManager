@@ -17,26 +17,15 @@ class EditBookViewController: UIViewController, UIImagePickerControllerDelegate,
     @IBOutlet weak var imageAttachButton: UIButton!
 
     @IBAction func popupDatepickerAction(_ sender: UITextField) {
-        let datePicker = UIDatePicker()
-        datePicker.datePickerMode = UIDatePickerMode.date
-        sender.inputView = datePicker
-        datePicker.addTarget(self, action: #selector(pickerChanged),
-                             for: UIControlEvents.valueChanged)
+        DatePickerHelper.load(self, action: #selector(pickerChanged), sender: sender)
+    }
+
+    @IBAction func attachImageAction(_ sender: Any) {
+        FileAttachHelper.load(self, delegate: self)
     }
 
     @IBAction func saveAction(_ sender: Any) {
         print("書籍を編集しました。") // (todo) APIにて登録
-    }
-
-    @IBAction func attachImageAction(_ sender: Any) {
-        let photo = UIImagePickerControllerSourceType.photoLibrary
-
-        if UIImagePickerController.isSourceTypeAvailable(photo) {
-            let picker = UIImagePickerController()
-            picker.sourceType = photo
-            picker.delegate = self
-            self.present(picker, animated: true)
-        }
     }
 
     override func viewDidLoad() {
