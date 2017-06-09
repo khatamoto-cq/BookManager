@@ -1,11 +1,3 @@
-//
-//  AddBookViewController.swift
-//  BookManager
-//
-//  Created by hatamoto kanji on 2017/06/06.
-//  Copyright © 2017年 hatamoto kanji. All rights reserved.
-//
-
 import UIKit
 
 class AddBookViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
