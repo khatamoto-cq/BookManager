@@ -339,9 +339,6 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <segue destination="Uuw-9A-G1A" kind="presentation" identifier="addBook" id="H2m-eJ-e6v"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SFK-zc-4jx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -646,7 +643,7 @@
         <!--Navigation Controller-->
         <scene sceneID="10t-Dk-1He">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Uuw-9A-G1A" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="AddBook" automaticallyAdjustsScrollViewInsets="NO" id="Uuw-9A-G1A" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="cH5-6l-YyM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>

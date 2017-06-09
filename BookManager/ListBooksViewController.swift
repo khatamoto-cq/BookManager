@@ -13,7 +13,8 @@ class ListBooksViewController: UITableViewController {
     var books = Book.allBooks
 
     @IBAction func tapAddAction(_ sender: Any) {
-        performSegue(withIdentifier: "addBook", sender: self)
+        let controller = self.storyboard?.instantiateViewController(withIdentifier: "AddBook")
+        present(controller!, animated: true, completion: nil)
     }
 
     override func viewDidLoad() {
