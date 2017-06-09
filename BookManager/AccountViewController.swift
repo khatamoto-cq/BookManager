@@ -5,6 +5,7 @@ class AccountViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var passwordConfirmTextField: UITextField!
+    @IBOutlet weak var closeButton: UIButton!
 
     @IBAction func closeAction(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
@@ -12,11 +13,26 @@ class AccountViewController: UIViewController {
 
     @IBAction func saveAction(_ sender: Any) {
         print("アカウント設定を登録しました")
+
+        if UserDefaults.standard.bool(forKey: "logined") == false {
+            saveLoginState()
+            let controller = self.storyboard?.instantiateViewController(withIdentifier: "TabViewController")
+            controller?.modalTransitionStyle = .crossDissolve
+            present(controller!, animated: true, completion: nil)
+        }
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         initControls()
+
+        if UserDefaults.standard.bool(forKey: "logined") {
+            closeButton.isEnabled = true
+            closeButton.isHidden = false
+        } else {
+            closeButton.isEnabled = false
+            closeButton.isHidden = true
+        }
     }
 
     func initControls() {
@@ -37,5 +53,11 @@ class AccountViewController: UIViewController {
         passwordConfirmTextField.layer.cornerRadius = 5
         passwordConfirmTextField.layer.borderColor = UIColor.lightGray.cgColor
         passwordConfirmTextField.layer.masksToBounds = true
+    }
+
+    func saveLoginState() {
+        let userDefaults = UserDefaults.standard
+        userDefaults.set(true, forKey: "logined")
+        userDefaults.synchronize()
     }
 }

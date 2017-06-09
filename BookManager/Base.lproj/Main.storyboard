@@ -91,7 +91,7 @@
         <!--アカウント設定-->
         <scene sceneID="gax-xD-WnA">
             <objects>
-                <viewController id="Bnp-72-Stm" customClass="AccountViewController" customModule="BookManager" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AccountSetting" id="Bnp-72-Stm" customClass="AccountViewController" customModule="BookManager" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9fM-pc-2kh"/>
                         <viewControllerLayoutGuide type="bottom" id="K0m-ui-xDL"/>
@@ -185,6 +185,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="closeButton" destination="FF9-NC-XXE" id="FSg-eo-4F7"/>
                         <outlet property="emailTextField" destination="FsL-1B-fq5" id="Jmt-vm-RjN"/>
                         <outlet property="passwordConfirmTextField" destination="h3d-7V-970" id="8EO-P1-LIe"/>
                         <outlet property="passwordTextField" destination="NAA-TH-S4P" id="9J7-LI-m1B"/>
@@ -606,7 +607,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Ort-KL-djA">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="O08-23-T0Q" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="AccountNav" automaticallyAdjustsScrollViewInsets="NO" id="O08-23-T0Q" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Tew-aL-rFA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>

@@ -11,6 +11,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UIFont(name: "Avenir-Medium", size: 14)!], for: .normal)
         UITabBarItem.appearance().titlePositionAdjustment = UIOffsetMake(0, -9)
 
+        // 最初のアクセスを判定
+//        let userDefaults = UserDefaults.standard
+//        userDefaults.set(false, forKey: "logined")
+//        userDefaults.synchronize()
+
+        if UserDefaults.standard.bool(forKey: "logined") == false {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let controller = storyboard.instantiateViewController(withIdentifier: "AccountNav")
+            self.window?.rootViewController = controller
+            self.window?.makeKeyAndVisible()
+        }
+
         return true
     }
 
