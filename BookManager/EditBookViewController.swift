@@ -40,22 +40,22 @@ class EditBookViewController: UIViewController, UIImagePickerControllerDelegate,
     }
 
     func initControls() {
-        nameTextField.layer.borderWidth = 1
-        nameTextField.layer.cornerRadius = 5
-        nameTextField.layer.borderColor = UIColor.lightGray.cgColor
-        nameTextField.layer.masksToBounds = true
+        nameTextField.layer.borderWidth = Const.TextFieldBorderWidth
+        nameTextField.layer.cornerRadius = Const.TextFieldCornerRadius
+        nameTextField.layer.borderColor = Const.TextFieldBorderColor
+        nameTextField.layer.masksToBounds = Const.TextFieldMasksToBounds
         nameTextField.text = book.name
 
-        priceTextField.layer.borderWidth = 1
-        priceTextField.layer.cornerRadius = 5
-        priceTextField.layer.borderColor = UIColor.lightGray.cgColor
-        priceTextField.layer.masksToBounds = true
+        priceTextField.layer.borderWidth = Const.TextFieldBorderWidth
+        priceTextField.layer.cornerRadius = Const.TextFieldCornerRadius
+        priceTextField.layer.borderColor = Const.TextFieldBorderColor
+        priceTextField.layer.masksToBounds = Const.TextFieldMasksToBounds
         priceTextField.text = book.price
 
-        purchaseDateTextField.layer.borderWidth = 1
-        purchaseDateTextField.layer.cornerRadius = 5
-        purchaseDateTextField.layer.borderColor = UIColor.lightGray.cgColor
-        purchaseDateTextField.layer.masksToBounds = true
+        purchaseDateTextField.layer.borderWidth = Const.TextFieldBorderWidth
+        purchaseDateTextField.layer.cornerRadius = Const.TextFieldCornerRadius
+        purchaseDateTextField.layer.borderColor = Const.TextFieldBorderColor
+        purchaseDateTextField.layer.masksToBounds = Const.TextFieldMasksToBounds
         purchaseDateTextField.text = book.purchaseDate
 
         imageAttachButton.layer.cornerRadius = 5

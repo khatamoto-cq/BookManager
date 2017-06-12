@@ -10,14 +10,14 @@ class LoginViewController: UIViewController {
         if validate() {
             let controller = R.storyboard.main.tabViewController()
             controller?.modalTransitionStyle = .crossDissolve
-            present(controller!, animated: true, completion: nil)
-        } else {
-            let alertWindow = UIAlertController(title: "ログインエラー",
-                        message: "メールアドレスもしくはパスワードが違います", preferredStyle: .alert)
-            let canselAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-            alertWindow.addAction(canselAction)
-            present(alertWindow, animated: true, completion: nil)
+            return present(controller!, animated: true, completion: nil)
         }
+
+        let alertWindow = UIAlertController(title: "ログインエラー",
+                        message: "メールアドレスもしくはパスワードが違います", preferredStyle: .alert)
+        let canselAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alertWindow.addAction(canselAction)
+        present(alertWindow, animated: true, completion: nil)
     }
 
     override func viewDidLoad() {
@@ -27,19 +27,19 @@ class LoginViewController: UIViewController {
 
     func initControls() {
         // メール(テキストフィールド)
-        emailTextField.layer.borderWidth = 1
-        emailTextField.layer.cornerRadius = 5
-        emailTextField.layer.borderColor = UIColor.lightGray.cgColor
-        emailTextField.layer.masksToBounds = true
+        emailTextField.layer.borderWidth = Const.TextFieldBorderWidth
+        emailTextField.layer.cornerRadius = Const.TextFieldCornerRadius
+        emailTextField.layer.borderColor = Const.TextFieldBorderColor
+        emailTextField.layer.masksToBounds = Const.TextFieldMasksToBounds
 
         // パスワード(テキストフィールド)
-        passwordTextField.layer.borderWidth = 1
-        passwordTextField.layer.cornerRadius = 5
-        passwordTextField.layer.borderColor = UIColor.lightGray.cgColor
-        passwordTextField.layer.masksToBounds = true
+        passwordTextField.layer.borderWidth = Const.TextFieldBorderWidth
+        passwordTextField.layer.cornerRadius = Const.TextFieldCornerRadius
+        passwordTextField.layer.borderColor = Const.TextFieldBorderColor
+        passwordTextField.layer.masksToBounds = Const.TextFieldMasksToBounds
 
         // ログイン(ボタン)
-        loginButton.layer.cornerRadius = 5
+        loginButton.layer.cornerRadius = Const.TextFieldCornerRadius
     }
 
     func validate() -> Bool {

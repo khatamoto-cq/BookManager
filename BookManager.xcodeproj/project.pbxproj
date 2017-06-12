@@ -17,6 +17,7 @@
 		2328F56A1EEE2AC100FA0A62 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2328F5691EEE2AC100FA0A62 /* Kingfisher.framework */; };
 		2328F5981EEE3F5000FA0A62 /* Rswift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2328F5971EEE3F5000FA0A62 /* Rswift.framework */; };
 		2328F59B1EEE402A00FA0A62 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2328F59A1EEE402A00FA0A62 /* R.generated.swift */; };
+		2328F5AE1EEEA1C300FA0A62 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2328F5AD1EEEA1C300FA0A62 /* Const.swift */; };
 		235B0DA91EE66D510007BB69 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235B0DA81EE66D510007BB69 /* Book.swift */; };
 		235B0DAC1EE673700007BB69 /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235B0DAB1EE673700007BB69 /* BookTableViewCell.swift */; };
 		23CAD1D11EE9346100C27108 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CAD1D01EE9346100C27108 /* TabViewController.swift */; };
@@ -41,6 +42,7 @@
 		2328F5691EEE2AC100FA0A62 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		2328F5971EEE3F5000FA0A62 /* Rswift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Rswift.framework; path = Carthage/Build/iOS/Rswift.framework; sourceTree = "<group>"; };
 		2328F59A1EEE402A00FA0A62 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		2328F5AD1EEEA1C300FA0A62 /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		235B0DA81EE66D510007BB69 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		235B0DAB1EE673700007BB69 /* BookTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
 		23CAD1D01EE9346100C27108 /* TabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 			children = (
 				231B69A11EEA8017006F2CBD /* DatePickerHelper.swift */,
 				231B69A21EEA8017006F2CBD /* FileAttachHelper.swift */,
+				2328F5AD1EEEA1C300FA0A62 /* Const.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 				231B69A31EEA8017006F2CBD /* DatePickerHelper.swift in Sources */,
 				23CAD1D11EE9346100C27108 /* TabViewController.swift in Sources */,
 				23EB3E961EE5562E0038B49C /* SettingViewController.swift in Sources */,
+				2328F5AE1EEEA1C300FA0A62 /* Const.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,11 +13,11 @@ struct Book {
     static let PurchaseDate = "purchaseDate"
     static let ImageUrl = "imageUrl"
 
-    init(dictionay: [String : String]) {
-        self.name = dictionay[Book.Name]!
-        self.price = dictionay[Book.Price]!
-        self.purchaseDate = dictionay[Book.PurchaseDate]!
-        self.imageUrl = dictionay[Book.ImageUrl]!
+    init(name: String, price: String, purchaseDate: String, imageUrl: String) {
+        self.name = name
+        self.price = price
+        self.purchaseDate = purchaseDate
+        self.imageUrl = imageUrl
     }
 }
 
@@ -25,7 +25,8 @@ extension Book {
     static var allBooks: [Book] {
         var books = [Book]()
         for book in Book.load() {
-            books.append(Book(dictionay: book))
+            books.append(Book(name: book[Book.Name]!, price: book[Book.Price]!,
+                              purchaseDate: book[Book.PurchaseDate]!, imageUrl: book[Book.ImageUrl]!))
         }
 
         return books

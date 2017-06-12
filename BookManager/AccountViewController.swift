@@ -26,33 +26,29 @@ class AccountViewController: UIViewController {
         super.viewDidLoad()
         initControls()
 
-        if UserDefaults.standard.bool(forKey: "logined") {
-            closeButton.isEnabled = true
-            closeButton.isHidden = false
-        } else {
-            closeButton.isEnabled = false
-            closeButton.isHidden = true
-        }
+        let logined = UserDefaults.standard.bool(forKey: "logined")
+        closeButton.isEnabled = logined
+        closeButton.isHidden = !logined
     }
 
     func initControls() {
         // メール(テキストフィールド)
-        emailTextField.layer.borderWidth = 1
-        emailTextField.layer.cornerRadius = 5
-        emailTextField.layer.borderColor = UIColor.lightGray.cgColor
-        emailTextField.layer.masksToBounds = true
+        emailTextField.layer.borderWidth = Const.TextFieldBorderWidth
+        emailTextField.layer.cornerRadius = Const.TextFieldCornerRadius
+        emailTextField.layer.borderColor = Const.TextFieldBorderColor
+        emailTextField.layer.masksToBounds = Const.TextFieldMasksToBounds
 
         // パスワード(テキストフィールド)
-        passwordTextField.layer.borderWidth = 1
-        passwordTextField.layer.cornerRadius = 5
-        passwordTextField.layer.borderColor = UIColor.lightGray.cgColor
-        passwordTextField.layer.masksToBounds = true
+        passwordTextField.layer.borderWidth = Const.TextFieldBorderWidth
+        passwordTextField.layer.cornerRadius = Const.TextFieldCornerRadius
+        passwordTextField.layer.borderColor = Const.TextFieldBorderColor
+        passwordTextField.layer.masksToBounds = Const.TextFieldMasksToBounds
 
         // パスワード(テキストフィールド)
-        passwordConfirmTextField.layer.borderWidth = 1
-        passwordConfirmTextField.layer.cornerRadius = 5
-        passwordConfirmTextField.layer.borderColor = UIColor.lightGray.cgColor
-        passwordConfirmTextField.layer.masksToBounds = true
+        passwordConfirmTextField.layer.borderWidth = Const.TextFieldBorderWidth
+        passwordConfirmTextField.layer.cornerRadius = Const.TextFieldCornerRadius
+        passwordConfirmTextField.layer.borderColor = Const.TextFieldBorderColor
+        passwordConfirmTextField.layer.masksToBounds = Const.TextFieldMasksToBounds
     }
 
     func saveLoginState() {
