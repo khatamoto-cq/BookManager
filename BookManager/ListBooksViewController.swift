@@ -5,8 +5,7 @@ class ListBooksViewController: UITableViewController {
     var books = Book.allBooks
 
     @IBAction func tapAddAction(_ sender: Any) {
-        let controller = self.storyboard?.instantiateViewController(withIdentifier: "AddBook")
-        present(controller!, animated: true, completion: nil)
+        present(R.storyboard.main.addBook()!, animated: true, completion: nil)
     }
 
     override func viewDidLoad() {
@@ -26,8 +25,8 @@ class ListBooksViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "bookCell",
-                                                       for: indexPath) as? BookTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(
+            withIdentifier: R.reuseIdentifier.bookCell, for: indexPath) else {
             return UITableViewCell()
         }
 
@@ -41,10 +40,8 @@ class ListBooksViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let book = books[indexPath.row]
-        let controller = self.storyboard?.instantiateViewController(
-            withIdentifier: "EditBookViewController") as? EditBookViewController
-        controller?.book = book
+        let controller = R.storyboard.main.editBookViewController()
+        controller?.book = books[indexPath.row]
         self.navigationController?.pushViewController(controller!, animated: true)
     }
 }

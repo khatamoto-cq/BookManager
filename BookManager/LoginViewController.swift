@@ -8,11 +8,9 @@ class LoginViewController: UIViewController {
 
     @IBAction func tapLoginAction(_ sender: Any) {
         if validate() {
-            var controller: TabViewController!
-            controller = self.storyboard?.instantiateViewController(
-                withIdentifier: "TabViewController") as? TabViewController
-            controller.modalTransitionStyle = .crossDissolve
-            present(controller, animated: true, completion: nil)
+            let controller = R.storyboard.main.tabViewController()
+            controller?.modalTransitionStyle = .crossDissolve
+            present(controller!, animated: true, completion: nil)
         } else {
             let alertWindow = UIAlertController(title: "ログインエラー",
                         message: "メールアドレスもしくはパスワードが違います", preferredStyle: .alert)

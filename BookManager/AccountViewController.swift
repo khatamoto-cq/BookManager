@@ -16,7 +16,7 @@ class AccountViewController: UIViewController {
 
         if UserDefaults.standard.bool(forKey: "logined") == false {
             saveLoginState()
-            let controller = self.storyboard?.instantiateViewController(withIdentifier: "TabViewController")
+            let controller = R.storyboard.main.tabViewController()
             controller?.modalTransitionStyle = .crossDissolve
             present(controller!, animated: true, completion: nil)
         }
