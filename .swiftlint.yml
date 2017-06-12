@@ -1,3 +1,4 @@
 excluded:
+  - R.generated.swift
   - Pods/
   - Carthage/

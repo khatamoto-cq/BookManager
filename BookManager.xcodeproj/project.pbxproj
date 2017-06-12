@@ -15,6 +15,8 @@
 		2328F5661EEE2AB100FA0A62 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2328F5651EEE2AB100FA0A62 /* Result.framework */; };
 		2328F5681EEE2AB500FA0A62 /* Himotoki.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2328F5671EEE2AB500FA0A62 /* Himotoki.framework */; };
 		2328F56A1EEE2AC100FA0A62 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2328F5691EEE2AC100FA0A62 /* Kingfisher.framework */; };
+		2328F5981EEE3F5000FA0A62 /* Rswift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2328F5971EEE3F5000FA0A62 /* Rswift.framework */; };
+		2328F59B1EEE402A00FA0A62 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2328F59A1EEE402A00FA0A62 /* R.generated.swift */; };
 		235B0DA91EE66D510007BB69 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235B0DA81EE66D510007BB69 /* Book.swift */; };
 		235B0DAC1EE673700007BB69 /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235B0DAB1EE673700007BB69 /* BookTableViewCell.swift */; };
 		23CAD1D11EE9346100C27108 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CAD1D01EE9346100C27108 /* TabViewController.swift */; };
@@ -37,6 +39,8 @@
 		2328F5651EEE2AB100FA0A62 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		2328F5671EEE2AB500FA0A62 /* Himotoki.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Himotoki.framework; path = Carthage/Build/iOS/Himotoki.framework; sourceTree = "<group>"; };
 		2328F5691EEE2AC100FA0A62 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
+		2328F5971EEE3F5000FA0A62 /* Rswift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Rswift.framework; path = Carthage/Build/iOS/Rswift.framework; sourceTree = "<group>"; };
+		2328F59A1EEE402A00FA0A62 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		235B0DA81EE66D510007BB69 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		235B0DAB1EE673700007BB69 /* BookTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
 		23CAD1D01EE9346100C27108 /* TabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +65,7 @@
 				2328F5661EEE2AB100FA0A62 /* Result.framework in Frameworks */,
 				2328F5681EEE2AB500FA0A62 /* Himotoki.framework in Frameworks */,
 				2328F56A1EEE2AC100FA0A62 /* Kingfisher.framework in Frameworks */,
+				2328F5981EEE3F5000FA0A62 /* Rswift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +84,7 @@
 		2328F5621EEE2AA800FA0A62 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2328F5971EEE3F5000FA0A62 /* Rswift.framework */,
 				2328F5691EEE2AC100FA0A62 /* Kingfisher.framework */,
 				2328F5671EEE2AB500FA0A62 /* Himotoki.framework */,
 				2328F5651EEE2AB100FA0A62 /* Result.framework */,
@@ -90,6 +96,7 @@
 		23EB3D7B1EE4FF140038B49C = {
 			isa = PBXGroup;
 			children = (
+				2328F59A1EEE402A00FA0A62 /* R.generated.swift */,
 				23EB3D861EE4FF140038B49C /* BookManager */,
 				23EB3D851EE4FF140038B49C /* Products */,
 				2328F5621EEE2AA800FA0A62 /* Frameworks */,
@@ -133,6 +140,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 23EB3D961EE4FF140038B49C /* Build configuration list for PBXNativeTarget "BookManager" */;
 			buildPhases = (
+				2328F5991EEE3FA600FA0A62 /* RSwift Run Script */,
 				23EB3D801EE4FF140038B49C /* Sources */,
 				23EB3D811EE4FF140038B49C /* Frameworks */,
 				23EB3D821EE4FF140038B49C /* Resources */,
@@ -207,6 +215,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Himotoki.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Rswift.framework",
 			);
 			name = "Framework Run Script";
 			outputPaths = (
@@ -214,6 +223,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		2328F5991EEE3FA600FA0A62 /* RSwift Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "RSwift Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$SRCROOT/rswift\" \"$SRCROOT\"";
 		};
 		23895AAD1EE69422008EDD29 /* SwiftLint Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -242,6 +265,7 @@
 				23EB3E981EE5574D0038B49C /* AccountViewController.swift in Sources */,
 				235B0DA91EE66D510007BB69 /* Book.swift in Sources */,
 				235B0DAC1EE673700007BB69 /* BookTableViewCell.swift in Sources */,
+				2328F59B1EEE402A00FA0A62 /* R.generated.swift in Sources */,
 				23EB3D8A1EE4FF140038B49C /* LoginViewController.swift in Sources */,
 				23EB3D881EE4FF140038B49C /* AppDelegate.swift in Sources */,
 				231B23921EE6BF03004C3221 /* EditBookViewController.swift in Sources */,
