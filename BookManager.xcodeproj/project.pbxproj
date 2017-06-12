@@ -11,6 +11,10 @@
 		231B23921EE6BF03004C3221 /* EditBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B23911EE6BF03004C3221 /* EditBookViewController.swift */; };
 		231B69A31EEA8017006F2CBD /* DatePickerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B69A11EEA8017006F2CBD /* DatePickerHelper.swift */; };
 		231B69A41EEA8017006F2CBD /* FileAttachHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B69A21EEA8017006F2CBD /* FileAttachHelper.swift */; };
+		2328F5641EEE2AA800FA0A62 /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2328F5631EEE2AA800FA0A62 /* APIKit.framework */; };
+		2328F5661EEE2AB100FA0A62 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2328F5651EEE2AB100FA0A62 /* Result.framework */; };
+		2328F5681EEE2AB500FA0A62 /* Himotoki.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2328F5671EEE2AB500FA0A62 /* Himotoki.framework */; };
+		2328F56A1EEE2AC100FA0A62 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2328F5691EEE2AC100FA0A62 /* Kingfisher.framework */; };
 		235B0DA91EE66D510007BB69 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235B0DA81EE66D510007BB69 /* Book.swift */; };
 		235B0DAC1EE673700007BB69 /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235B0DAB1EE673700007BB69 /* BookTableViewCell.swift */; };
 		23CAD1D11EE9346100C27108 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CAD1D01EE9346100C27108 /* TabViewController.swift */; };
@@ -29,6 +33,10 @@
 		231B23911EE6BF03004C3221 /* EditBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditBookViewController.swift; sourceTree = "<group>"; };
 		231B69A11EEA8017006F2CBD /* DatePickerHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerHelper.swift; sourceTree = "<group>"; };
 		231B69A21EEA8017006F2CBD /* FileAttachHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileAttachHelper.swift; sourceTree = "<group>"; };
+		2328F5631EEE2AA800FA0A62 /* APIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = APIKit.framework; path = Carthage/Build/iOS/APIKit.framework; sourceTree = "<group>"; };
+		2328F5651EEE2AB100FA0A62 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		2328F5671EEE2AB500FA0A62 /* Himotoki.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Himotoki.framework; path = Carthage/Build/iOS/Himotoki.framework; sourceTree = "<group>"; };
+		2328F5691EEE2AC100FA0A62 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		235B0DA81EE66D510007BB69 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		235B0DAB1EE673700007BB69 /* BookTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
 		23CAD1D01EE9346100C27108 /* TabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +57,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2328F5641EEE2AA800FA0A62 /* APIKit.framework in Frameworks */,
+				2328F5661EEE2AB100FA0A62 /* Result.framework in Frameworks */,
+				2328F5681EEE2AB500FA0A62 /* Himotoki.framework in Frameworks */,
+				2328F56A1EEE2AC100FA0A62 /* Kingfisher.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,11 +76,23 @@
 			path = Utility;
 			sourceTree = "<group>";
 		};
+		2328F5621EEE2AA800FA0A62 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2328F5691EEE2AC100FA0A62 /* Kingfisher.framework */,
+				2328F5671EEE2AB500FA0A62 /* Himotoki.framework */,
+				2328F5651EEE2AB100FA0A62 /* Result.framework */,
+				2328F5631EEE2AA800FA0A62 /* APIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		23EB3D7B1EE4FF140038B49C = {
 			isa = PBXGroup;
 			children = (
 				23EB3D861EE4FF140038B49C /* BookManager */,
 				23EB3D851EE4FF140038B49C /* Products */,
+				2328F5621EEE2AA800FA0A62 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,7 +136,8 @@
 				23EB3D801EE4FF140038B49C /* Sources */,
 				23EB3D811EE4FF140038B49C /* Frameworks */,
 				23EB3D821EE4FF140038B49C /* Resources */,
-				23895AAD1EE69422008EDD29 /* ShellScript */,
+				23895AAD1EE69422008EDD29 /* SwiftLint Run Script */,
+				2328F56B1EEE2B0B00FA0A62 /* Framework Run Script */,
 			);
 			buildRules = (
 			);
@@ -172,13 +197,32 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		23895AAD1EE69422008EDD29 /* ShellScript */ = {
+		2328F56B1EEE2B0B00FA0A62 /* Framework Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/APIKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Himotoki.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
+			);
+			name = "Framework Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		23895AAD1EE69422008EDD29 /* SwiftLint Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = "SwiftLint Run Script";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -329,6 +373,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9FRH8X6ZFY;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = BookManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.caraquri.hatamoto.BookManager;
@@ -342,6 +390,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9FRH8X6ZFY;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = BookManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.caraquri.hatamoto.BookManager;
