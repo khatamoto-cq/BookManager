@@ -56,8 +56,7 @@ class AccountViewController: UIViewController {
     }
 
     func saveLoginState() {
-        let userDefaults = UserDefaults.standard
-        userDefaults.set(true, forKey: "logined")
-        userDefaults.synchronize()
+        UserDefaults.standard.set(true, forKey: "logined")
+        UserDefaults.standard.synchronize()
     }
 }

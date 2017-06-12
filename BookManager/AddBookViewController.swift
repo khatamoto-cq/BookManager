@@ -14,7 +14,6 @@ class AddBookViewController: UIViewController, UIImagePickerControllerDelegate, 
 
     @IBAction func popupDatepickerAction(_ sender: UITextField) {
         DatePickerHelper.load(self, action: #selector(pickerChanged), sender: sender)
-
     }
 
     @IBAction func attachImageAction(_ sender: Any) {
