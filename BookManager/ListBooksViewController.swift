@@ -29,12 +29,7 @@ class ListBooksViewController: UITableViewController {
             withIdentifier: R.reuseIdentifier.bookCell, for: indexPath) else {
             return UITableViewCell()
         }
-
-        let book = books[indexPath.row]
-        cell.bookImageView.image = UIImage(named: book.imageUrl)
-        cell.nameLabel.text = book.name
-        cell.priceLabel.text = book.price
-        cell.purchaseDateLabel.text = book.purchaseDate
+        cell.set(books[indexPath.row])
 
         return cell
     }
