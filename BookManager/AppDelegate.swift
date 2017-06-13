@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        userDefaults.set(false, forKey: "logined")
 //        userDefaults.synchronize()
 
-        if UserDefaults.standard.bool(forKey: "logined") == false {
+        if !UserDefaults.standard.bool(forKey: "logined") {
             self.window?.rootViewController = R.storyboard.main.accountNav()
             self.window?.makeKeyAndVisible()
         }
