@@ -1,6 +1,6 @@
 import UIKit
 
-class AddBookViewController: UIViewController {
+class AddBookViewController: UIViewController, FileAttachable {
 
     @IBOutlet weak var imageView: UIImageView!
 
@@ -62,6 +62,6 @@ class AddBookViewController: UIViewController {
 
 extension AddBookViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        FileAttachHelper.setImage(self, imageView: self.imageView, info: info)
+        FileAttachHelper.setImage(self, info: info)
     }
 }

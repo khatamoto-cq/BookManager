@@ -13,11 +13,11 @@ class FileAttachHelper {
         }
     }
 
-    class func setImage(_ controller: UIViewController, imageView: UIImageView, info: [String : Any]) {
+    class func setImage(_ controller: FileAttachable, info: [String : Any]) {
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            imageView.image = image
+            controller.imageView.image = image
         }
 
-        controller.dismiss(animated: true)
+        (controller as? UIViewController)?.dismiss(animated: true)
     }
 }

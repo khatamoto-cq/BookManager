@@ -1,6 +1,6 @@
 import UIKit
 
-class EditBookViewController: UIViewController {
+class EditBookViewController: UIViewController, FileAttachable {
 
     var book: Book!
 
@@ -63,6 +63,6 @@ class EditBookViewController: UIViewController {
 
 extension EditBookViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        FileAttachHelper.setImage(self, imageView: self.imageView, info: info)
+        FileAttachHelper.setImage(self, info: info)
     }
 }
