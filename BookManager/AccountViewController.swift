@@ -37,7 +37,7 @@ class AccountViewController: UIViewController {
     }
 
     @IBAction func didSaveButtonTapped(_ sender: Any) {
-        print("Log-RegistAccount")
+        print(NSLocalizedString("Log-RegistAccount", comment: ""))
 
         if !UserDefaults.standard.bool(forKey: "logined") {
             saveLoginState()
