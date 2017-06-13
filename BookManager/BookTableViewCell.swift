@@ -23,7 +23,7 @@ class BookTableViewCell: UITableViewCell {
     func set(_ book: Book) {
         bookImageView.image = UIImage(named: book.imageUrl)
         nameLabel.text = book.name
-        priceLabel.text = book.price
+        priceLabel.text = String(book.price)
         purchaseDateLabel.text = book.purchaseDate
     }
 }

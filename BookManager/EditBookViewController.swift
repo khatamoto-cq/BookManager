@@ -18,7 +18,7 @@ class EditBookViewController: UIViewController, FileAttachable {
         didSet {
             priceTextField.apply(borderWidth: Const.TextFieldBorderWidth, borderColor: Const.TextFieldBorderColor,
                                radius: Const.TextFieldCornerRadius, masksToBound: Const.TextFieldMasksToBounds)
-            priceTextField.text = book.price
+            priceTextField.text = String(book.price)
         }
     }
 
