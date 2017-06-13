@@ -24,7 +24,13 @@ class AccountViewController: UIViewController {
         }
     }
 
-    @IBOutlet weak var closeButton: UIButton!
+    @IBOutlet weak var closeButton: UIButton! {
+        didSet {
+            let logined = UserDefaults.standard.bool(forKey: "logined")
+            closeButton.isEnabled = logined
+            closeButton.isHidden = !logined
+        }
+    }
 
     @IBAction func closeAction(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
@@ -43,10 +49,6 @@ class AccountViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let logined = UserDefaults.standard.bool(forKey: "logined")
-        closeButton.isEnabled = logined
-        closeButton.isHidden = !logined
     }
 
     func saveLoginState() {
