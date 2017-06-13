@@ -1,4 +1,5 @@
 import UIKit
+import Kingfisher
 
 class BookTableViewCell: UITableViewCell {
 
@@ -21,7 +22,8 @@ class BookTableViewCell: UITableViewCell {
     }
 
     func set(_ book: Book) {
-        bookImageView.image = UIImage(named: book.imageUrl)
+        let url = URL(string: book.imageUrl)!
+        bookImageView.kf.setImage(with: url)
         nameLabel.text = book.name
         priceLabel.text = String(book.price)
         purchaseDateLabel.text = book.purchaseDate
