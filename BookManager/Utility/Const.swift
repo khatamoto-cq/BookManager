@@ -6,4 +6,5 @@ struct Const {
     static let TextFieldCornerRadius = CGFloat(5)
     static let TextFieldBorderColor = UIColor.lightGray.cgColor
     static let TextFieldMasksToBounds = true
+    static let ButtonCornerRadius = CGFloat(5)
 }

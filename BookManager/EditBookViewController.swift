@@ -5,40 +5,34 @@ class EditBookViewController: UIViewController, UIImagePickerControllerDelegate,
     var book: Book!
 
     @IBOutlet weak var imageView: UIImageView!
-    
+
     @IBOutlet weak var nameTextField: UITextField! {
         didSet {
-            nameTextField.layer.borderWidth = Const.TextFieldBorderWidth
-            nameTextField.layer.cornerRadius = Const.TextFieldCornerRadius
-            nameTextField.layer.borderColor = Const.TextFieldBorderColor
-            nameTextField.layer.masksToBounds = Const.TextFieldMasksToBounds
+            nameTextField.ext(borderWidth: Const.TextFieldBorderWidth, borderColor: Const.TextFieldBorderColor,
+                              radius: Const.TextFieldCornerRadius, masksToBound: Const.TextFieldMasksToBounds)
             nameTextField.text = book.name
         }
     }
 
     @IBOutlet weak var priceTextField: UITextField! {
         didSet {
-            priceTextField.layer.borderWidth = Const.TextFieldBorderWidth
-            priceTextField.layer.cornerRadius = Const.TextFieldCornerRadius
-            priceTextField.layer.borderColor = Const.TextFieldBorderColor
-            priceTextField.layer.masksToBounds = Const.TextFieldMasksToBounds
+            priceTextField.ext(borderWidth: Const.TextFieldBorderWidth, borderColor: Const.TextFieldBorderColor,
+                               radius: Const.TextFieldCornerRadius, masksToBound: Const.TextFieldMasksToBounds)
             priceTextField.text = book.price
         }
     }
 
     @IBOutlet weak var purchaseDateTextField: UITextField! {
         didSet {
-            purchaseDateTextField.layer.borderWidth = Const.TextFieldBorderWidth
-            purchaseDateTextField.layer.cornerRadius = Const.TextFieldCornerRadius
-            purchaseDateTextField.layer.borderColor = Const.TextFieldBorderColor
-            purchaseDateTextField.layer.masksToBounds = Const.TextFieldMasksToBounds
+            purchaseDateTextField.ext(borderWidth: Const.TextFieldBorderWidth, borderColor: Const.TextFieldBorderColor,
+                                      radius: Const.TextFieldCornerRadius, masksToBound: Const.TextFieldMasksToBounds)
             purchaseDateTextField.text = book.purchaseDate
         }
     }
 
     @IBOutlet weak var imageAttachButton: UIButton! {
         didSet {
-            imageAttachButton.layer.cornerRadius = 5
+            imageAttachButton.radius()
         }
     }
 

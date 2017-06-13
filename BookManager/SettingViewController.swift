@@ -3,7 +3,7 @@ import UIKit
 class SettingViewController: UIViewController {
     @IBOutlet weak var settingButton: UIButton! {
         didSet {
-            settingButton.layer.cornerRadius = 5
+            settingButton.radius()
         }
     }
 
