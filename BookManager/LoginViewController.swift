@@ -1,4 +1,5 @@
 import UIKit
+import APIKit
 
 class LoginViewController: UIViewController {
 
@@ -24,16 +25,11 @@ class LoginViewController: UIViewController {
 
     @IBAction func didLoginButtonTapped(_ sender: Any) {
         guard validate() else {
-            let alertWindow = UIAlertController(title: R.string.localizable.loginErrorTitle(),
-                    message: R.string.localizable.loginErrorMessage(), preferredStyle: .alert)
-            let canselAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-            alertWindow.addAction(canselAction)
-            return present(alertWindow, animated: true, completion: nil)
+            return AlertHelper.showAlert(self, title: R.string.localizable.loginErrorTitle(),
+                                  message: R.string.localizable.loginErrorMessage())
         }
 
-        let controller = R.storyboard.main.tabViewController()
-        controller?.modalTransitionStyle = .crossDissolve
-        return present(controller!, animated: true, completion: nil)
+        requestLogin()
     }
 
     override func viewDidLoad() {
@@ -46,5 +42,33 @@ class LoginViewController: UIViewController {
         }
 
         return true
+    }
+
+    func requestLogin() {
+        let loginRequest = LoginRequest(email: emailTextField.text!, password: passwordTextField.text!)
+
+        Session.send(loginRequest) { result in
+            switch result {
+            case .success(let auth):
+                self.saveAuthInfo(auth)
+                self.moveListViewController()
+            case .failure(let error):
+                print("error: \(error)")
+                AlertHelper.showAlert(self, title: R.string.localizable.loginErrorTitle(),
+                                      message: R.string.localizable.loginErrorMessage())
+            }
+        }
+    }
+
+    func saveAuthInfo(_ auth: Auth) {
+        UserDefaults.standard.set(auth.requestToken, forKey: "request_token")
+        UserDefaults.standard.set(auth.userId, forKey: "login_id")
+        UserDefaults.standard.synchronize()
+    }
+
+    func moveListViewController() {
+        let controller = R.storyboard.main.tabViewController()
+        controller?.modalTransitionStyle = .crossDissolve
+        present(controller!, animated: true, completion: nil)
     }
 }
