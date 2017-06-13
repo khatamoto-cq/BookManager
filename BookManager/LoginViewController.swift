@@ -45,7 +45,6 @@ class LoginViewController: UIViewController {
             return false
         }
 
-        // (todo) APIと連携時にID/PWチェック
         return true
     }
 }
