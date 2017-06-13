@@ -44,7 +44,7 @@ class AddBookViewController: UIViewController, FileAttachable {
     }
 
     @IBAction func didSaveButtonTapped(_ sender: Any) {
-        print("登録しました")
+        print(NSLocalizedString("Log-RegistBook", comment: ""))
     }
 
     override func viewDidLoad() {

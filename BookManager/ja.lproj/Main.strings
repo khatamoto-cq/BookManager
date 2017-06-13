@@ -1,0 +1,120 @@
+
+/* Class = "UINavigationItem"; title = "書籍編集"; ObjectID = "2U6-Bx-pOc"; */
+"2U6-Bx-pOc.title" = "書籍編集";
+
+/* Class = "UILabel"; text = "金額"; ObjectID = "3A6-2O-NoC"; */
+"3A6-2O-NoC.text" = "金額";
+
+/* Class = "UINavigationItem"; title = "アカウント設定"; ObjectID = "3P6-NV-Ud0"; */
+"3P6-NV-Ud0.title" = "アカウント設定";
+
+/* Class = "UITextField"; placeholder = "メールアドレス"; ObjectID = "4Co-vp-ANO"; */
+"4Co-vp-ANO.placeholder" = "メールアドレス";
+
+/* Class = "UILabel"; text = "パスワード確認"; ObjectID = "4yt-vy-0bR"; */
+"4yt-vy-0bR.text" = "パスワード確認";
+
+/* Class = "UINavigationItem"; title = "書籍追加"; ObjectID = "66O-n2-QXT"; */
+"66O-n2-QXT.title" = "書籍追加";
+
+/* Class = "UIButton"; normalTitle = "画像添付ボタン"; ObjectID = "7ez-7M-TU7"; */
+"7ez-7M-TU7.normalTitle" = "画像添付ボタン";
+
+/* Class = "UILabel"; text = "パスワード"; ObjectID = "8oa-I9-h3e"; */
+"8oa-I9-h3e.text" = "パスワード";
+
+/* Class = "UILabel"; text = "パスワード"; ObjectID = "Ayp-GC-qxg"; */
+"Ayp-GC-qxg.text" = "パスワード";
+
+/* Class = "UITabBarItem"; title = "設定"; ObjectID = "CZO-EL-43b"; */
+"CZO-EL-43b.title" = "設定";
+
+/* Class = "UIButton"; normalTitle = "ログイン"; ObjectID = "CuC-qf-eQY"; */
+"CuC-qf-eQY.normalTitle" = "ログイン";
+
+/* Class = "UILabel"; text = "書籍名"; ObjectID = "EJJ-Ad-lRH"; */
+"EJJ-Ad-lRH.text" = "書籍名";
+
+/* Class = "UIButton"; normalTitle = "閉じる"; ObjectID = "FF9-NC-XXE"; */
+"FF9-NC-XXE.normalTitle" = "閉じる";
+
+/* Class = "UITextField"; placeholder = "メールアドレス"; ObjectID = "FsL-1B-fq5"; */
+"FsL-1B-fq5.placeholder" = "メールアドレス";
+
+/* Class = "UIButton"; normalTitle = "アカウント設定"; ObjectID = "LHX-eA-Yb7"; */
+"LHX-eA-Yb7.normalTitle" = "アカウント設定";
+
+/* Class = "UILabel"; text = "書籍名"; ObjectID = "Lqn-8Q-Eek"; */
+"Lqn-8Q-Eek.text" = "書籍名";
+
+/* Class = "UIButton"; normalTitle = "保存"; ObjectID = "MZx-G2-FHQ"; */
+"MZx-G2-FHQ.normalTitle" = "保存";
+
+/* Class = "UITextField"; placeholder = "パスワード"; ObjectID = "NAA-TH-S4P"; */
+"NAA-TH-S4P.placeholder" = "パスワード";
+
+/* Class = "UITextField"; placeholder = "書籍名"; ObjectID = "Qse-Rk-bhO"; */
+"Qse-Rk-bhO.placeholder" = "書籍名";
+
+/* Class = "UITabBarItem"; title = "書籍一覧"; ObjectID = "RIl-Uy-SMh"; */
+"RIl-Uy-SMh.title" = "書籍一覧";
+
+/* Class = "UIButton"; normalTitle = "画像添付ボタン"; ObjectID = "XKj-Je-YwH"; */
+"XKj-Je-YwH.normalTitle" = "画像添付ボタン";
+
+/* Class = "UILabel"; text = "購入日"; ObjectID = "XxH-1m-ma3"; */
+"XxH-1m-ma3.text" = "購入日";
+
+/* Class = "UIButton"; normalTitle = "追加"; ObjectID = "bWu-HG-0jL"; */
+"bWu-HG-0jL.normalTitle" = "追加";
+
+/* Class = "UILabel"; text = "購入日"; ObjectID = "cr8-ra-mcX"; */
+"cr8-ra-mcX.text" = "購入日";
+
+/* Class = "UILabel"; text = "メールアドレス"; ObjectID = "eGn-wd-G5I"; */
+"eGn-wd-G5I.text" = "メールアドレス";
+
+/* Class = "UITextField"; placeholder = "パスワード確認"; ObjectID = "h3d-7V-970"; */
+"h3d-7V-970.placeholder" = "パスワード確認";
+
+/* Class = "UIButton"; normalTitle = "保存"; ObjectID = "hJ8-oY-oBR"; */
+"hJ8-oY-oBR.normalTitle" = "保存";
+
+/* Class = "UITextField"; placeholder = "金額"; ObjectID = "hcp-60-fr5"; */
+"hcp-60-fr5.placeholder" = "金額";
+
+/* Class = "UIButton"; normalTitle = "保存"; ObjectID = "hwS-P0-yTm"; */
+"hwS-P0-yTm.normalTitle" = "保存";
+
+/* Class = "UITextField"; placeholder = "パスワード"; ObjectID = "hyu-Fy-65Q"; */
+"hyu-Fy-65Q.placeholder" = "パスワード";
+
+/* Class = "UILabel"; text = "価格"; ObjectID = "iRd-i6-Bk9"; */
+"iRd-i6-Bk9.text" = "価格";
+
+/* Class = "UINavigationItem"; title = "設定"; ObjectID = "iVR-QU-eSk"; */
+"iVR-QU-eSk.title" = "設定";
+
+/* Class = "UIButton"; normalTitle = "閉じる"; ObjectID = "kXs-re-3JH"; */
+"kXs-re-3JH.normalTitle" = "閉じる";
+
+/* Class = "UILabel"; text = "書籍名"; ObjectID = "pre-vd-Uix"; */
+"pre-vd-Uix.text" = "書籍名";
+
+/* Class = "UILabel"; text = "メールアドレス"; ObjectID = "rIH-fK-Wrd"; */
+"rIH-fK-Wrd.text" = "メールアドレス";
+
+/* Class = "UITextField"; placeholder = "書籍名"; ObjectID = "s5w-fb-dde"; */
+"s5w-fb-dde.placeholder" = "書籍名";
+
+/* Class = "UILabel"; text = "金額"; ObjectID = "vy8-2F-F4O"; */
+"vy8-2F-F4O.text" = "金額";
+
+/* Class = "UILabel"; text = "購入日"; ObjectID = "x4J-MC-twX"; */
+"x4J-MC-twX.text" = "購入日";
+
+/* Class = "UITextField"; placeholder = "金額"; ObjectID = "xhV-PR-xjO"; */
+"xhV-PR-xjO.placeholder" = "金額";
+
+/* Class = "UINavigationItem"; title = "書籍一覧"; ObjectID = "y0b-fa-1XR"; */
+"y0b-fa-1XR.title" = "書籍一覧";

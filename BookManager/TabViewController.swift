@@ -15,6 +15,6 @@ class TabViewController: UITabBarController {
 extension TabViewController: UITabBarControllerDelegate {
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
         // Tabを押したら中のViewControllerを指定する処理を調査中
-        print("タブがタップされました")
+        print(NSLocalizedString("Log-TapTapped", comment: ""))
     }
 }

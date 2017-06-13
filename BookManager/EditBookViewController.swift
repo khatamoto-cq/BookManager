@@ -45,7 +45,7 @@ class EditBookViewController: UIViewController, FileAttachable {
     }
 
     @IBAction func didSaveButtonTapped(_ sender: Any) {
-        print("書籍を編集しました。") // (todo) APIにて登録
+        print(NSLocalizedString("Log-RegistBook", comment: "")) // (todo) APIにて登録
     }
 
     override func viewDidLoad() {

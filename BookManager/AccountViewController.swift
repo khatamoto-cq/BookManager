@@ -37,7 +37,7 @@ class AccountViewController: UIViewController {
     }
 
     @IBAction func didSaveButtonTapped(_ sender: Any) {
-        print("アカウント設定を登録しました")
+        print("Log-RegistAccount")
 
         if !UserDefaults.standard.bool(forKey: "logined") {
             saveLoginState()

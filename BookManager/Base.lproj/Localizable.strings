@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  BookManager
+
+  Created by hatamoto kanji on 2017/06/13.
+  Copyright © 2017年 hatamoto kanji. All rights reserved.
+*/
+
+"LoginErrorTitle" = "Login Error";

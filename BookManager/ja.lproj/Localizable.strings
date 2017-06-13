@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  BookManager
+
+  Created by hatamoto kanji on 2017/06/13.
+  Copyright © 2017年 hatamoto kanji. All rights reserved.
+*/
+
+"LoginErrorTitle" = "ログインエラー";
+"LoginErrorMessage" = "メールアドレスもしくはパスワードが違います";
+
+"Log-TapTapped" = "タブがタップされました";
+"Log-RegistBook" = "登録しました";
+"Log-RegistAccount" = "アカウント設定を登録しました";
