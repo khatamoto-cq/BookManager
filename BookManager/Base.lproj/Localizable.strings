@@ -7,3 +7,8 @@
 */
 
 "LoginErrorTitle" = "Login Error";
+"LoginErrorMessage" = "Invalid email or password";
+
+"Log-TapTapped" = "tapped tab";
+"Log-RegistBook" = "register book";
+"Log-RegistAccount" = "register account";

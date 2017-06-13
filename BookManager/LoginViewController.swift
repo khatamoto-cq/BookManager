@@ -24,8 +24,8 @@ class LoginViewController: UIViewController {
 
     @IBAction func didLoginButtonTapped(_ sender: Any) {
         guard validate() else {
-            let alertWindow = UIAlertController(title: NSLocalizedString("LoginErrorTitle", comment: ""),
-                    message: NSLocalizedString("LoginErrorMessage", comment: ""), preferredStyle: .alert)
+            let alertWindow = UIAlertController(title: R.string.localizable.loginErrorTitle(),
+                    message: R.string.localizable.loginErrorMessage(), preferredStyle: .alert)
             let canselAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
             alertWindow.addAction(canselAction)
             return present(alertWindow, animated: true, completion: nil)
