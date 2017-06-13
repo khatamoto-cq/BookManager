@@ -2,9 +2,33 @@ import UIKit
 
 class AccountViewController: UIViewController {
 
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var passwordConfirmTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField! {
+        didSet {
+            emailTextField.layer.borderWidth = Const.TextFieldBorderWidth
+            emailTextField.layer.cornerRadius = Const.TextFieldCornerRadius
+            emailTextField.layer.borderColor = Const.TextFieldBorderColor
+            emailTextField.layer.masksToBounds = Const.TextFieldMasksToBounds
+        }
+    }
+
+    @IBOutlet weak var passwordTextField: UITextField! {
+        didSet {
+            passwordTextField.layer.borderWidth = Const.TextFieldBorderWidth
+            passwordTextField.layer.cornerRadius = Const.TextFieldCornerRadius
+            passwordTextField.layer.borderColor = Const.TextFieldBorderColor
+            passwordTextField.layer.masksToBounds = Const.TextFieldMasksToBounds
+        }
+    }
+
+    @IBOutlet weak var passwordConfirmTextField: UITextField! {
+        didSet {
+            passwordConfirmTextField.layer.borderWidth = Const.TextFieldBorderWidth
+            passwordConfirmTextField.layer.cornerRadius = Const.TextFieldCornerRadius
+            passwordConfirmTextField.layer.borderColor = Const.TextFieldBorderColor
+            passwordConfirmTextField.layer.masksToBounds = Const.TextFieldMasksToBounds
+        }
+    }
+
     @IBOutlet weak var closeButton: UIButton!
 
     @IBAction func closeAction(_ sender: Any) {
@@ -24,31 +48,10 @@ class AccountViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        initControls()
 
         let logined = UserDefaults.standard.bool(forKey: "logined")
         closeButton.isEnabled = logined
         closeButton.isHidden = !logined
-    }
-
-    func initControls() {
-        // メール(テキストフィールド)
-        emailTextField.layer.borderWidth = Const.TextFieldBorderWidth
-        emailTextField.layer.cornerRadius = Const.TextFieldCornerRadius
-        emailTextField.layer.borderColor = Const.TextFieldBorderColor
-        emailTextField.layer.masksToBounds = Const.TextFieldMasksToBounds
-
-        // パスワード(テキストフィールド)
-        passwordTextField.layer.borderWidth = Const.TextFieldBorderWidth
-        passwordTextField.layer.cornerRadius = Const.TextFieldCornerRadius
-        passwordTextField.layer.borderColor = Const.TextFieldBorderColor
-        passwordTextField.layer.masksToBounds = Const.TextFieldMasksToBounds
-
-        // パスワード(テキストフィールド)
-        passwordConfirmTextField.layer.borderWidth = Const.TextFieldBorderWidth
-        passwordConfirmTextField.layer.cornerRadius = Const.TextFieldCornerRadius
-        passwordConfirmTextField.layer.borderColor = Const.TextFieldBorderColor
-        passwordConfirmTextField.layer.masksToBounds = Const.TextFieldMasksToBounds
     }
 
     func saveLoginState() {

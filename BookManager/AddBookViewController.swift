@@ -3,10 +3,39 @@ import UIKit
 class AddBookViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var priceTextField: UITextField!
-    @IBOutlet weak var purchaseDateTextField: UITextField!
-    @IBOutlet weak var imageAttachButton: UIButton!
+
+    @IBOutlet weak var nameTextField: UITextField! {
+        didSet {
+            nameTextField.layer.borderWidth = Const.TextFieldBorderWidth
+            nameTextField.layer.cornerRadius = Const.TextFieldCornerRadius
+            nameTextField.layer.borderColor = Const.TextFieldBorderColor
+            nameTextField.layer.masksToBounds = Const.TextFieldMasksToBounds
+        }
+    }
+
+    @IBOutlet weak var priceTextField: UITextField! {
+        didSet {
+            priceTextField.layer.borderWidth = Const.TextFieldBorderWidth
+            priceTextField.layer.cornerRadius = Const.TextFieldCornerRadius
+            priceTextField.layer.borderColor = Const.TextFieldBorderColor
+            priceTextField.layer.masksToBounds = Const.TextFieldMasksToBounds
+        }
+    }
+
+    @IBOutlet weak var purchaseDateTextField: UITextField! {
+        didSet {
+            purchaseDateTextField.layer.borderWidth = Const.TextFieldBorderWidth
+            purchaseDateTextField.layer.cornerRadius = Const.TextFieldCornerRadius
+            purchaseDateTextField.layer.borderColor = Const.TextFieldBorderColor
+            purchaseDateTextField.layer.masksToBounds = Const.TextFieldMasksToBounds
+        }
+    }
+
+    @IBOutlet weak var imageAttachButton: UIButton! {
+        didSet {
+            imageAttachButton.layer.cornerRadius = Const.TextFieldCornerRadius
+        }
+    }
 
     @IBAction func closeAction(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
@@ -26,7 +55,6 @@ class AddBookViewController: UIViewController, UIImagePickerControllerDelegate, 
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        initControls()
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,24 +67,5 @@ class AddBookViewController: UIViewController, UIImagePickerControllerDelegate, 
 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         FileAttachHelper.setImage(self, imageView: self.imageView, info: info)
-    }
-
-    func initControls() {
-        nameTextField.layer.borderWidth = Const.TextFieldBorderWidth
-        nameTextField.layer.cornerRadius = Const.TextFieldCornerRadius
-        nameTextField.layer.borderColor = Const.TextFieldBorderColor
-        nameTextField.layer.masksToBounds = Const.TextFieldMasksToBounds
-
-        priceTextField.layer.borderWidth = Const.TextFieldBorderWidth
-        priceTextField.layer.cornerRadius = Const.TextFieldCornerRadius
-        priceTextField.layer.borderColor = Const.TextFieldBorderColor
-        priceTextField.layer.masksToBounds = Const.TextFieldMasksToBounds
-
-        purchaseDateTextField.layer.borderWidth = Const.TextFieldBorderWidth
-        purchaseDateTextField.layer.cornerRadius = Const.TextFieldCornerRadius
-        purchaseDateTextField.layer.borderColor = Const.TextFieldBorderColor
-        purchaseDateTextField.layer.masksToBounds = Const.TextFieldMasksToBounds
-
-        imageAttachButton.layer.cornerRadius = Const.TextFieldCornerRadius
     }
 }

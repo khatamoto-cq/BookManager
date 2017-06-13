@@ -2,9 +2,29 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var emailTextField: UITextField! {
+        didSet {
+            emailTextField.layer.borderWidth = Const.TextFieldBorderWidth
+            emailTextField.layer.cornerRadius = Const.TextFieldCornerRadius
+            emailTextField.layer.borderColor = Const.TextFieldBorderColor
+            emailTextField.layer.masksToBounds = Const.TextFieldMasksToBounds
+        }
+    }
+
+    @IBOutlet weak var passwordTextField: UITextField! {
+        didSet {
+            passwordTextField.layer.borderWidth = Const.TextFieldBorderWidth
+            passwordTextField.layer.cornerRadius = Const.TextFieldCornerRadius
+            passwordTextField.layer.borderColor = Const.TextFieldBorderColor
+            passwordTextField.layer.masksToBounds = Const.TextFieldMasksToBounds
+        }
+    }
+
+    @IBOutlet weak var loginButton: UIButton! {
+        didSet {
+            loginButton.layer.cornerRadius = Const.TextFieldCornerRadius
+        }
+    }
 
     @IBAction func tapLoginAction(_ sender: Any) {
         if validate() {
@@ -22,24 +42,6 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        initControls()
-    }
-
-    func initControls() {
-        // メール(テキストフィールド)
-        emailTextField.layer.borderWidth = Const.TextFieldBorderWidth
-        emailTextField.layer.cornerRadius = Const.TextFieldCornerRadius
-        emailTextField.layer.borderColor = Const.TextFieldBorderColor
-        emailTextField.layer.masksToBounds = Const.TextFieldMasksToBounds
-
-        // パスワード(テキストフィールド)
-        passwordTextField.layer.borderWidth = Const.TextFieldBorderWidth
-        passwordTextField.layer.cornerRadius = Const.TextFieldCornerRadius
-        passwordTextField.layer.borderColor = Const.TextFieldBorderColor
-        passwordTextField.layer.masksToBounds = Const.TextFieldMasksToBounds
-
-        // ログイン(ボタン)
-        loginButton.layer.cornerRadius = Const.TextFieldCornerRadius
     }
 
     func validate() -> Bool {
