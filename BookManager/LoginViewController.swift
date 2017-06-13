@@ -41,7 +41,7 @@ class LoginViewController: UIViewController {
     }
 
     func validate() -> Bool {
-        if emailTextField.text == "" || passwordTextField.text == "" {
+        if (emailTextField.text?.isEmpty)! || (passwordTextField.text?.isEmpty)! {
             return false
         }
 
