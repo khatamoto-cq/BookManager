@@ -18,21 +18,18 @@ extension Book {
     static var allBooks: [Book] {
         var books = [Book]()
         for book in Book.load() {
-            books.append(Book(name: book[Book.Name]!, price: book[Book.Price]!,
-                              purchaseDate: book[Book.PurchaseDate]!, imageUrl: book[Book.ImageUrl]!))
+            books.append(book)
         }
 
         return books
     }
 
-    static func load() -> [[String : String]] {
+    static func load() -> [Book] {
         return [
-            [Book.Name: "パーフェクトPHP", Book.Price: "3000", Book.PurchaseDate: "2013/04/13", Book.ImageUrl: "image1.png"],
-            [Book.Name: "CakePHP辞典", Book.Price: "3000", Book.PurchaseDate: "2013/04/13", Book.ImageUrl: "image2.png"],
-            [Book.Name: "パーフェクトじゃないPHP", Book.Price: "3000", Book.PurchaseDate: "2013/04/13",
-             Book.ImageUrl: "image3.png"],
-            [Book.Name: "CakePHPじゃない辞典", Book.Price: "3000", Book.PurchaseDate: "2013/04/13",
-             Book.ImageUrl: "image4.png"]
+            Book(name: "パーフェクトPHP", price: "3000", purchaseDate: "2013/04/13", imageUrl: "image1.png"),
+            Book(name: "CakePHP辞典", price: "3000", purchaseDate: "2013/04/13", imageUrl: "image2.png"),
+            Book(name: "パーフェクトじゃないPHP", price: "3000", purchaseDate: "2013/04/13", imageUrl: "image3.png"),
+            Book(name: "CakePHPじゃない辞典", price: "3000", purchaseDate: "2013/04/13", imageUrl: "image4.png")
         ]
     }
 }
