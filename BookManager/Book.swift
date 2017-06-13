@@ -7,11 +7,6 @@ struct Book {
     let price: String
     let purchaseDate: String
     let imageUrl: String
-
-    static let Name = "name"
-    static let Price = "price"
-    static let PurchaseDate = "purchaseDate"
-    static let ImageUrl = "imageUrl"
 }
 
 extension Book {
