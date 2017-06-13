@@ -41,7 +41,7 @@ class EditBookViewController: UIViewController, UIImagePickerControllerDelegate,
     }
 
     @IBAction func attachImageAction(_ sender: Any) {
-        FileAttachHelper.load(self, delegate: self)
+        FileAttachHelper.load(self)
     }
 
     @IBAction func saveAction(_ sender: Any) {

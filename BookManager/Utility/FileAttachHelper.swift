@@ -2,8 +2,9 @@ import Foundation
 import UIKit
 
 class FileAttachHelper {
-    class func load(_ target: UIViewController,
-                    delegate: UIImagePickerControllerDelegate & UINavigationControllerDelegate) {
+    class func load(_ target: UIViewController) {
+        let delegate = target as! UIImagePickerControllerDelegate & UINavigationControllerDelegate
+
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
             let picker = UIImagePickerController()
             picker.sourceType = .photoLibrary
