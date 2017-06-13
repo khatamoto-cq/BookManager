@@ -4,14 +4,14 @@ class LoginViewController: UIViewController {
 
     @IBOutlet weak var emailTextField: UITextField! {
         didSet {
-            emailTextField.ext(borderWidth: Const.TextFieldBorderWidth, borderColor: Const.TextFieldBorderColor,
+            emailTextField.apply(borderWidth: Const.TextFieldBorderWidth, borderColor: Const.TextFieldBorderColor,
                                radius: Const.TextFieldCornerRadius, masksToBound: Const.TextFieldMasksToBounds)
         }
     }
 
     @IBOutlet weak var passwordTextField: UITextField! {
         didSet {
-            passwordTextField.ext(borderWidth: Const.TextFieldBorderWidth, borderColor: Const.TextFieldBorderColor,
+            passwordTextField.apply(borderWidth: Const.TextFieldBorderWidth, borderColor: Const.TextFieldBorderColor,
                                   radius: Const.TextFieldCornerRadius, masksToBound: Const.TextFieldMasksToBounds)
         }
     }

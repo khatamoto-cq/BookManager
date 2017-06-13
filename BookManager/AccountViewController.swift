@@ -4,21 +4,21 @@ class AccountViewController: UIViewController {
 
     @IBOutlet weak var emailTextField: UITextField! {
         didSet {
-            emailTextField.ext(borderWidth: Const.TextFieldBorderWidth, borderColor: Const.TextFieldBorderColor,
+            emailTextField.apply(borderWidth: Const.TextFieldBorderWidth, borderColor: Const.TextFieldBorderColor,
                                radius: Const.TextFieldCornerRadius, masksToBound: Const.TextFieldMasksToBounds)
         }
     }
 
     @IBOutlet weak var passwordTextField: UITextField! {
         didSet {
-            passwordTextField.ext(borderWidth: Const.TextFieldBorderWidth, borderColor: Const.TextFieldBorderColor,
+            passwordTextField.apply(borderWidth: Const.TextFieldBorderWidth, borderColor: Const.TextFieldBorderColor,
                                   radius: Const.TextFieldCornerRadius, masksToBound: Const.TextFieldMasksToBounds)
         }
     }
 
     @IBOutlet weak var passwordConfirmTextField: UITextField! {
         didSet {
-            passwordConfirmTextField.ext(borderWidth: Const.TextFieldBorderWidth,
+            passwordConfirmTextField.apply(borderWidth: Const.TextFieldBorderWidth,
                 borderColor: Const.TextFieldBorderColor, radius: Const.TextFieldCornerRadius,
                 masksToBound: Const.TextFieldMasksToBounds)
         }

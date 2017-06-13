@@ -8,7 +8,7 @@ class EditBookViewController: UIViewController, FileAttachable {
 
     @IBOutlet weak var nameTextField: UITextField! {
         didSet {
-            nameTextField.ext(borderWidth: Const.TextFieldBorderWidth, borderColor: Const.TextFieldBorderColor,
+            nameTextField.apply(borderWidth: Const.TextFieldBorderWidth, borderColor: Const.TextFieldBorderColor,
                               radius: Const.TextFieldCornerRadius, masksToBound: Const.TextFieldMasksToBounds)
             nameTextField.text = book.name
         }
@@ -16,7 +16,7 @@ class EditBookViewController: UIViewController, FileAttachable {
 
     @IBOutlet weak var priceTextField: UITextField! {
         didSet {
-            priceTextField.ext(borderWidth: Const.TextFieldBorderWidth, borderColor: Const.TextFieldBorderColor,
+            priceTextField.apply(borderWidth: Const.TextFieldBorderWidth, borderColor: Const.TextFieldBorderColor,
                                radius: Const.TextFieldCornerRadius, masksToBound: Const.TextFieldMasksToBounds)
             priceTextField.text = book.price
         }
@@ -24,8 +24,10 @@ class EditBookViewController: UIViewController, FileAttachable {
 
     @IBOutlet weak var purchaseDateTextField: UITextField! {
         didSet {
-            purchaseDateTextField.ext(borderWidth: Const.TextFieldBorderWidth, borderColor: Const.TextFieldBorderColor,
-                                      radius: Const.TextFieldCornerRadius, masksToBound: Const.TextFieldMasksToBounds)
+            purchaseDateTextField.apply(borderWidth: Const.TextFieldBorderWidth,
+                                        borderColor: Const.TextFieldBorderColor,
+                                        radius: Const.TextFieldCornerRadius,
+                                        masksToBound: Const.TextFieldMasksToBounds)
             purchaseDateTextField.text = book.purchaseDate
         }
     }
