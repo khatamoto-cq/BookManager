@@ -8,6 +8,7 @@
 
 "LoginErrorTitle" = "ログインエラー";
 "LoginErrorMessage" = "メールアドレスもしくはパスワードが違います";
+"DateFormatError" = "日付のフォーマット変換に失敗しました";
 
 "Log-TapTapped" = "タブがタップされました";
 "Log-RegistBook" = "登録しました";

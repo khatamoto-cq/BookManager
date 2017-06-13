@@ -8,6 +8,7 @@
 
 "LoginErrorTitle" = "Login Error";
 "LoginErrorMessage" = "Invalid email or password";
+"DateFormatError" = "You can't format";
 
 "Log-TapTapped" = "tapped tab";
 "Log-RegistBook" = "register book";

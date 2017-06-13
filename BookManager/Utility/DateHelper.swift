@@ -4,6 +4,9 @@ class DateHelper {
     class func transform(date: String) -> String {
         let inFmt = DateFormatter()
         inFmt.dateFormat = "EEE, dd MMM yyyy HH:mm:ss zzz"
+        inFmt.timeZone = TimeZone.current
+        inFmt.locale = Locale(identifier: "en_US_POSIX")
+
         let outFmt = DateFormatter()
         outFmt.dateFormat = "yyyy/MM/dd"
 
@@ -11,7 +14,7 @@ class DateHelper {
             return outFmt.string(from: formatedDate)
         }
 
-        print("日付のフォーマット変換に失敗しました")
+        print(R.string.localizable.dateFormatError())
         return date
     }
 }
