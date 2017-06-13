@@ -26,6 +26,6 @@ class BookTableViewCell: UITableViewCell {
         bookImageView.kf.setImage(with: url)
         nameLabel.text = book.name
         priceLabel.text = String(book.price)
-        purchaseDateLabel.text = book.purchaseDate
+        purchaseDateLabel.text = DateHelper.transform(date: book.purchaseDate)
     }
 }
