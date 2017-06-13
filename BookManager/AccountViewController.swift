@@ -18,8 +18,9 @@ class AccountViewController: UIViewController {
 
     @IBOutlet weak var passwordConfirmTextField: UITextField! {
         didSet {
-            passwordConfirmTextField.ext(borderWidth: Const.TextFieldBorderWidth, borderColor: Const.TextFieldBorderColor,
-                                         radius: Const.TextFieldCornerRadius, masksToBound: Const.TextFieldMasksToBounds)
+            passwordConfirmTextField.ext(borderWidth: Const.TextFieldBorderWidth,
+                borderColor: Const.TextFieldBorderColor, radius: Const.TextFieldCornerRadius,
+                masksToBound: Const.TextFieldMasksToBounds)
         }
     }
 
