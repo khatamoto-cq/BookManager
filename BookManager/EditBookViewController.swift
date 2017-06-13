@@ -1,6 +1,6 @@
 import UIKit
 
-class EditBookViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class EditBookViewController: UIViewController {
 
     var book: Book!
 
@@ -59,7 +59,9 @@ class EditBookViewController: UIViewController, UIImagePickerControllerDelegate,
     func pickerChanged(sender: UIDatePicker) {
         DatePickerHelper.setValue(sender, target: self.purchaseDateTextField)
     }
+}
 
+extension EditBookViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         FileAttachHelper.setImage(self, imageView: self.imageView, info: info)
     }

@@ -1,6 +1,6 @@
 import UIKit
 
-class AddBookViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class AddBookViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
 
@@ -58,7 +58,9 @@ class AddBookViewController: UIViewController, UIImagePickerControllerDelegate, 
     func pickerChanged(sender: UIDatePicker) {
         DatePickerHelper.setValue(sender, target: self.purchaseDateTextField)
     }
+}
 
+extension AddBookViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         FileAttachHelper.setImage(self, imageView: self.imageView, info: info)
     }
