@@ -21,6 +21,7 @@
 		233EFCC51EEF8B0B00EEB8A7 /* UIControlExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233EFCC41EEF8B0B00EEB8A7 /* UIControlExtention.swift */; };
 		233EFCCF1EEFC10F00EEB8A7 /* FileAttachable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233EFCCE1EEFC10F00EEB8A7 /* FileAttachable.swift */; };
 		233EFCD41EEFC51C00EEB8A7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 233EFCD21EEFC51C00EEB8A7 /* Localizable.strings */; };
+		233EFCE51EEFDED900EEB8A7 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233EFCE41EEFDED900EEB8A7 /* Base.swift */; };
 		235B0DA91EE66D510007BB69 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235B0DA81EE66D510007BB69 /* Book.swift */; };
 		235B0DAC1EE673700007BB69 /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235B0DAB1EE673700007BB69 /* BookTableViewCell.swift */; };
 		23CAD1D11EE9346100C27108 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CAD1D01EE9346100C27108 /* TabViewController.swift */; };
@@ -52,6 +53,7 @@
 		233EFCD11EEFC48200EEB8A7 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		233EFCD31EEFC51C00EEB8A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = BookManager/Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		233EFCD51EEFC85500EEB8A7 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = BookManager/ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		233EFCE41EEFDED900EEB8A7 /* Base.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Base.swift; path = Api/Base.swift; sourceTree = "<group>"; };
 		235B0DA81EE66D510007BB69 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		235B0DAB1EE673700007BB69 /* BookTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
 		23CAD1D01EE9346100C27108 /* TabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +108,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		233EFCE61EEFDEE200EEB8A7 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				233EFCE41EEFDED900EEB8A7 /* Base.swift */,
+			);
+			name = Api;
+			sourceTree = "<group>";
+		};
 		23EB3D7B1EE4FF140038B49C = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +137,7 @@
 		23EB3D861EE4FF140038B49C /* BookManager */ = {
 			isa = PBXGroup;
 			children = (
+				233EFCE61EEFDEE200EEB8A7 /* Api */,
 				231B69A01EEA8017006F2CBD /* Utility */,
 				23EB3D871EE4FF140038B49C /* AppDelegate.swift */,
 				23EB3D891EE4FF140038B49C /* LoginViewController.swift */,
@@ -284,6 +295,7 @@
 				235B0DA91EE66D510007BB69 /* Book.swift in Sources */,
 				235B0DAC1EE673700007BB69 /* BookTableViewCell.swift in Sources */,
 				2328F59B1EEE402A00FA0A62 /* R.generated.swift in Sources */,
+				233EFCE51EEFDED900EEB8A7 /* Base.swift in Sources */,
 				233EFCCF1EEFC10F00EEB8A7 /* FileAttachable.swift in Sources */,
 				23EB3D8A1EE4FF140038B49C /* LoginViewController.swift in Sources */,
 				23EB3D881EE4FF140038B49C /* AppDelegate.swift in Sources */,
