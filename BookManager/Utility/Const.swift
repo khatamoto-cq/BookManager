@@ -1,11 +1,3 @@
-//
-//  Const.swift
-//  BookManager
-//
-//  Created by hatamoto kanji on 2017/06/12.
-//  Copyright © 2017年 hatamoto kanji. All rights reserved.
-//
-
 import Foundation
 import UIKit
 
