@@ -38,7 +38,7 @@ class AccountViewController: UIViewController {
     @IBAction func saveAction(_ sender: Any) {
         print("アカウント設定を登録しました")
 
-        if UserDefaults.standard.bool(forKey: "logined") == false {
+        if !UserDefaults.standard.bool(forKey: "logined") {
             saveLoginState()
             let controller = R.storyboard.main.tabViewController()
             controller?.modalTransitionStyle = .crossDissolve
