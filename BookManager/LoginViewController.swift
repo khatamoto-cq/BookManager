@@ -23,17 +23,17 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func tapLoginAction(_ sender: Any) {
-        if validate() {
-            let controller = R.storyboard.main.tabViewController()
-            controller?.modalTransitionStyle = .crossDissolve
-            return present(controller!, animated: true, completion: nil)
+        guard validate() else {
+            let alertWindow = UIAlertController(title: "ログインエラー",
+                                                message: "メールアドレスもしくはパスワードが違います", preferredStyle: .alert)
+            let canselAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alertWindow.addAction(canselAction)
+            return present(alertWindow, animated: true, completion: nil)
         }
 
-        let alertWindow = UIAlertController(title: "ログインエラー",
-                        message: "メールアドレスもしくはパスワードが違います", preferredStyle: .alert)
-        let canselAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-        alertWindow.addAction(canselAction)
-        present(alertWindow, animated: true, completion: nil)
+        let controller = R.storyboard.main.tabViewController()
+        controller?.modalTransitionStyle = .crossDissolve
+        return present(controller!, animated: true, completion: nil)
     }
 
     override func viewDidLoad() {
