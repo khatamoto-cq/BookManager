@@ -22,7 +22,7 @@ class LoginViewController: UIViewController {
         }
     }
 
-    @IBAction func tapLoginAction(_ sender: Any) {
+    @IBAction func didLoginButtonTapped(_ sender: Any) {
         guard validate() else {
             let alertWindow = UIAlertController(title: "ログインエラー",
                                                 message: "メールアドレスもしくはパスワードが違います", preferredStyle: .alert)

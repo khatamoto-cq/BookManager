@@ -7,7 +7,7 @@ class SettingViewController: UIViewController {
         }
     }
 
-    @IBAction func tapSettingAction(_ sender: Any) {
+    @IBAction func didSettingButtonTapped(_ sender: Any) {
         present(R.storyboard.main.accountNav()!, animated: true, completion: nil)
     }
 

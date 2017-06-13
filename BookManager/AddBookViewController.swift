@@ -31,19 +31,19 @@ class AddBookViewController: UIViewController {
         }
     }
 
-    @IBAction func closeAction(_ sender: Any) {
+    @IBAction func didCloseButtonTapped(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
 
-    @IBAction func popupDatepickerAction(_ sender: UITextField) {
+    @IBAction func popupDatepicker(_ sender: UITextField) {
         DatePickerHelper.load(self, action: #selector(pickerChanged), sender: sender)
     }
 
-    @IBAction func attachImageAction(_ sender: Any) {
+    @IBAction func didAttachButtonTapped(_ sender: Any) {
         FileAttachHelper.load(self)
     }
 
-    @IBAction func saveAction(_ sender: Any) {
+    @IBAction func didSaveButtonTapped(_ sender: Any) {
         print("登録しました")
     }
 

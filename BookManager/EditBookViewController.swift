@@ -36,15 +36,15 @@ class EditBookViewController: UIViewController {
         }
     }
 
-    @IBAction func popupDatepickerAction(_ sender: UITextField) {
+    @IBAction func popupDatepicker(_ sender: UITextField) {
         DatePickerHelper.load(self, action: #selector(pickerChanged), sender: sender)
     }
 
-    @IBAction func attachImageAction(_ sender: Any) {
+    @IBAction func didAttachButtonTapped(_ sender: Any) {
         FileAttachHelper.load(self)
     }
 
-    @IBAction func saveAction(_ sender: Any) {
+    @IBAction func didSaveButtonTapped(_ sender: Any) {
         print("書籍を編集しました。") // (todo) APIにて登録
     }
 

@@ -32,11 +32,11 @@ class AccountViewController: UIViewController {
         }
     }
 
-    @IBAction func closeAction(_ sender: Any) {
+    @IBAction func didCloseButtonTapped(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
 
-    @IBAction func saveAction(_ sender: Any) {
+    @IBAction func didSaveButtonTapped(_ sender: Any) {
         print("アカウント設定を登録しました")
 
         if !UserDefaults.standard.bool(forKey: "logined") {

@@ -60,7 +60,7 @@
                                 <color key="tintColor" white="0.96999999999999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="ログイン"/>
                                 <connections>
-                                    <action selector="tapLoginAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eIY-r4-jcq"/>
+                                    <action selector="didLoginButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yzs-Mf-r3p"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -169,7 +169,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="閉じる"/>
                                 <connections>
-                                    <action selector="closeAction:" destination="Bnp-72-Stm" eventType="touchUpInside" id="tTq-bg-HDf"/>
+                                    <action selector="didCloseButtonTapped:" destination="Bnp-72-Stm" eventType="touchUpInside" id="0mw-Dg-CQc"/>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -179,7 +179,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="保存"/>
                                 <connections>
-                                    <action selector="saveAction:" destination="Bnp-72-Stm" eventType="touchUpInside" id="yxR-rc-Hwe"/>
+                                    <action selector="didSaveButtonTapped:" destination="Bnp-72-Stm" eventType="touchUpInside" id="oUl-fx-LUB"/>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -216,7 +216,7 @@
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="アカウント設定"/>
                                 <connections>
-                                    <action selector="tapSettingAction:" destination="Hda-4J-GHu" eventType="touchUpInside" id="gPd-Tg-Okg"/>
+                                    <action selector="didSettingButtonTapped:" destination="Hda-4J-GHu" eventType="touchUpInside" id="s6N-8H-inI"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -368,7 +368,7 @@
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="画像添付ボタン"/>
                                 <connections>
-                                    <action selector="attachImageAction:" destination="9CG-ZW-5OY" eventType="touchUpInside" id="Ogg-4J-1YR"/>
+                                    <action selector="didAttachButtonTapped:" destination="9CG-ZW-5OY" eventType="touchUpInside" id="LBc-lR-HjZ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="書籍名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJJ-Ad-lRH">
@@ -416,7 +416,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="popupDatepickerAction:" destination="9CG-ZW-5OY" eventType="editingDidBegin" id="d7G-C6-vcz"/>
+                                    <action selector="popupDatepicker:" destination="9CG-ZW-5OY" eventType="editingDidBegin" id="h19-Rf-uM4"/>
                                 </connections>
                             </textField>
                         </subviews>
@@ -448,7 +448,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="閉じる"/>
                                 <connections>
-                                    <action selector="closeAction:" destination="9CG-ZW-5OY" eventType="touchUpInside" id="we5-Fs-Fyl"/>
+                                    <action selector="didCloseButtonTapped:" destination="9CG-ZW-5OY" eventType="touchUpInside" id="Y6b-OB-Bob"/>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -458,7 +458,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="保存"/>
                                 <connections>
-                                    <action selector="saveAction:" destination="9CG-ZW-5OY" eventType="touchUpInside" id="aB1-lA-1XE"/>
+                                    <action selector="didSaveButtonTapped:" destination="9CG-ZW-5OY" eventType="touchUpInside" id="sdX-BK-8ad"/>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -500,7 +500,7 @@
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="画像添付ボタン"/>
                                 <connections>
-                                    <action selector="attachImageAction:" destination="SwA-HA-3Wn" eventType="touchUpInside" id="jBl-TJ-zjx"/>
+                                    <action selector="didAttachButtonTapped:" destination="SwA-HA-3Wn" eventType="touchUpInside" id="Qgg-ov-HWx"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="書籍名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pre-vd-Uix">
@@ -552,7 +552,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="popupDatepickerAction:" destination="SwA-HA-3Wn" eventType="editingDidBegin" id="3tR-xg-zAq"/>
+                                    <action selector="popupDatepicker:" destination="SwA-HA-3Wn" eventType="editingDidBegin" id="5wj-fG-HHz"/>
                                 </connections>
                             </textField>
                         </subviews>
@@ -585,7 +585,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="保存"/>
                                 <connections>
-                                    <action selector="saveAction:" destination="SwA-HA-3Wn" eventType="touchUpInside" id="2Tk-Ht-Fzu"/>
+                                    <action selector="didSaveButtonTapped:" destination="SwA-HA-3Wn" eventType="touchUpInside" id="Fse-rb-Jga"/>
                                 </connections>
                             </button>
                         </barButtonItem>
