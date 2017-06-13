@@ -12,13 +12,6 @@ struct Book {
     static let Price = "price"
     static let PurchaseDate = "purchaseDate"
     static let ImageUrl = "imageUrl"
-
-    init(name: String, price: String, purchaseDate: String, imageUrl: String) {
-        self.name = name
-        self.price = price
-        self.purchaseDate = purchaseDate
-        self.imageUrl = imageUrl
-    }
 }
 
 extension Book {
