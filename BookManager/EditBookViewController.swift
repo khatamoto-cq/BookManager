@@ -1,10 +1,16 @@
 import UIKit
+import Kingfisher
 
 class EditBookViewController: UIViewController, FileAttachable {
 
     var book: Book!
 
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var imageView: UIImageView! {
+        didSet {
+            let url = URL(string: book.imageUrl)!
+            imageView.kf.setImage(with: ImageResource.init(downloadURL: url))
+        }
+    }
 
     @IBOutlet weak var nameTextField: UITextField! {
         didSet {
@@ -28,7 +34,7 @@ class EditBookViewController: UIViewController, FileAttachable {
                                         borderColor: Const.TextFieldBorderColor,
                                         radius: Const.TextFieldCornerRadius,
                                         masksToBound: Const.TextFieldMasksToBounds)
-            purchaseDateTextField.text = book.purchaseDate
+            purchaseDateTextField.text = DateHelper.transform(date: book.purchaseDate)
         }
     }
 
