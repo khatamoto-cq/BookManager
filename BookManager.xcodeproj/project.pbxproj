@@ -149,8 +149,8 @@
 		233EFCE91EEFE04600EEB8A7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				234405D11EF0DF940001FDC6 /* BookResult.swift */,
 				233EFCE71EEFE04000EEB8A7 /* Auth.swift */,
+				234405D11EF0DF940001FDC6 /* BookResult.swift */,
 				233EFCEE1EEFE6D900EEB8A7 /* Book.swift */,
 				233EFCF21EEFEA4D00EEB8A7 /* BookCollection.swift */,
 			);

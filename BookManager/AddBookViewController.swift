@@ -57,7 +57,7 @@ class AddBookViewController: BaseBookViewController, FileAttachable {
         let userId = UserDefaults.standard.integer(forKey: "user_id")
         if token == nil || userId == 0 {
             return AlertHelper.showAlert(self, title: R.string.localizable.errorTitle(),
-                                         message: R.string.localizable.authenticationError())
+                                         message: R.string.localizable.errorAuthentication())
         }
 
         let addBookRequest = AddBookRequest(name: nameTextField.text!, price: Int(priceTextField.text!)!,

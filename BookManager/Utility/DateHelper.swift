@@ -14,7 +14,7 @@ class DateHelper {
             return outFmt.string(from: formatedDate)
         }
 
-        print(R.string.localizable.dateFormatError())
+        print(R.string.localizable.errorDateFormatter())
         return date
     }
 }

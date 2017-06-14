@@ -1,10 +1,16 @@
-"LoginErrorTitle" = "ログインエラー";
-"LoginErrorMessage" = "メールアドレスもしくはパスワードが違います";
-"DateFormatError" = "日付のフォーマット変換に失敗しました";
+"ValidateErrorTitle" = "入力エラー";
 "ValidateErrorRequireBookName" = "・書籍名が入力されていません";
 "ValidateErrorRequireBookPrice" = "・金額が入力されていません";
 "ValidateErrorNumericBookPrice" = "・金額は数値で入力で入力してください";
-"ValidateErrorTitle" = "入力エラー";
+"ValidateErrorRequireAccountEmail" = "・メールアドレスが入力されていません";
+"ValidateErrorInvalidEmail" = "・メールアドレスは正しい形式で入力してください";
+"ValidateErrorRequireAccountPassword" = "・パスワードが入力されていません";
+"ValidateErrorRequireAccountPasswordConfirm" = "・パスワード(確認)が入力されていません";
+"ValidateErrorCompareAccountPassword" = "・パスワードとパスワード(確認)が一致しません";
+
 "ErrorTitle" = "エラー";
-"AuthenticationError" = "認証に失敗しました。再度ログインしてください。";
+"ErrorLoginTitle" = "ログインエラー";
+"ErrorLogin" = "メールアドレスもしくはパスワードが違います";
+"ErrorAuthentication" = "認証に失敗しました。再度ログインしてください。";
 "ErrorNetworing" = "通信中エラーが発生しました。時間をおいてからやり直してみてください。";
+"ErrorDateFormatter" = "日付のフォーマット変換に失敗しました";
