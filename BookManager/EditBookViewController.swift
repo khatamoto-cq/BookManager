@@ -54,25 +54,36 @@ class EditBookViewController: BaseBookViewController, FileAttachable {
     }
 
     @IBAction func didSaveButtonTapped(_ sender: Any) {
+        let errors = validate()
+        if errors.count > 0 {
+            return AlertHelper.showAlert(self, title: R.string.localizable.validateErrorTitle(),
+                                         message: errors.joined(separator: "\n"))
+        }
+
         let token = UserDefaults.standard.string(forKey: "request_token")
+        let userId = UserDefaults.standard.integer(forKey: "user_id")
+        if token == nil || userId == 0 {
+            return AlertHelper.showAlert(self, title: R.string.localizable.errorTitle(),
+                                         message: R.string.localizable.authenticationError())
+        }
 
         book.name = nameTextField.text!
         book.price = Int(priceTextField.text!)!
         book.purchaseDate = purchaseDateTextField.text!
 
-        print(book)
-
         let editBookRequest = EditBookRequest(id: book.id, name: book.name, price: book.price,
-                                             purchaseDate: book.purchaseDate!, image: "",
+                                             purchaseDate: book.purchaseDate!,
+                                             image: ImageHelper.encode(image: imageView.image!)!,
                                              token: token!)
 
         Session.send(editBookRequest) { result in
             switch result {
             case .success(let bookResult):
-                print(bookResult)
-                print("あああああああああああああああああああああ")
+                print("[書籍編集完了] 書籍ID: \(bookResult.bookId)")
             case .failure(let error):
                 print("error: \(error)")
+                AlertHelper.showAlert(self, title: R.string.localizable.validateErrorTitle(),
+                                      message: R.string.localizable.errorNetworing())
             }
         }
     }

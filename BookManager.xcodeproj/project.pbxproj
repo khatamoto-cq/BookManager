@@ -137,10 +137,10 @@
 			isa = PBXGroup;
 			children = (
 				233EFCE91EEFE04600EEB8A7 /* Models */,
-				234405D51EF0F7090001FDC6 /* AddBookRequest.swift */,
+				233EFCE41EEFDED900EEB8A7 /* Base.swift */,
 				233EFCEA1EEFE07E00EEB8A7 /* LoginRequest.swift */,
 				233EFCF01EEFE9FB00EEB8A7 /* ListBooksRequest.swift */,
-				233EFCE41EEFDED900EEB8A7 /* Base.swift */,
+				234405D51EF0F7090001FDC6 /* AddBookRequest.swift */,
 				234405D31EF0E0780001FDC6 /* EditBookRequest.swift */,
 			);
 			name = Api;

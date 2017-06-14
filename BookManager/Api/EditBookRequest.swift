@@ -13,7 +13,7 @@ struct EditBookRequest: Base {
     let token: String
 
     var method: HTTPMethod {
-        return .post
+        return .patch
     }
 
     var path: String {
