@@ -22,8 +22,10 @@ class BookTableViewCell: UITableViewCell {
     }
 
     func set(_ book: Book) {
-        let url = URL(string: book.imageUrl)!
-        bookImageView.kf.setImage(with: url)
+        if !book.imageUrl.isEmpty {
+            let url = URL(string: book.imageUrl)
+            bookImageView.kf.setImage(with: url)
+        }
         nameLabel.text = book.name
         priceLabel.text = String(book.price) + "円" + " + 税"
         if let date = book.purchaseDate {

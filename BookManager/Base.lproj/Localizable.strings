@@ -1,15 +1,10 @@
-/* 
-  Localizable.strings
-  BookManager
-
-  Created by hatamoto kanji on 2017/06/13.
-  Copyright © 2017年 hatamoto kanji. All rights reserved.
-*/
-
-"LoginErrorTitle" = "Login Error";
-"LoginErrorMessage" = "Invalid email or password";
-"DateFormatError" = "You can't format";
-
-"Log-TapTapped" = "tapped tab";
-"Log-RegistBook" = "register book";
-"Log-RegistAccount" = "register account";
+"LoginErrorTitle" = "ログインエラー";
+"LoginErrorMessage" = "メールアドレスもしくはパスワードが違います";
+"DateFormatError" = "日付のフォーマット変換に失敗しました";
+"ValidateErrorRequireBookName" = "・書籍名が入力されていません";
+"ValidateErrorRequireBookPrice" = "・金額が入力されていません";
+"ValidateErrorNumericBookPrice" = "・金額は数値で入力で入力してください";
+"ValidateErrorTitle" = "入力エラー";
+"ErrorTitle" = "エラー";
+"AuthenticationError" = "認証に失敗しました。再度ログインしてください。";
+"ErrorNetworing" = "通信中エラーが発生しました。時間をおいてからやり直してみてください。";

@@ -1,5 +1,6 @@
 import UIKit
 import Kingfisher
+import APIKit
 
 class EditBookViewController: UIViewController, FileAttachable {
 
@@ -34,7 +35,7 @@ class EditBookViewController: UIViewController, FileAttachable {
                                         borderColor: Const.TextFieldBorderColor,
                                         radius: Const.TextFieldCornerRadius,
                                         masksToBound: Const.TextFieldMasksToBounds)
-            purchaseDateTextField.text = DateHelper.transform(date: book.purchaseDate)
+            purchaseDateTextField.text = DateHelper.transform(date: book.purchaseDate!)
         }
     }
 
@@ -53,7 +54,27 @@ class EditBookViewController: UIViewController, FileAttachable {
     }
 
     @IBAction func didSaveButtonTapped(_ sender: Any) {
-        print(R.string.localizable.logRegistBook)
+        let token = UserDefaults.standard.string(forKey: "request_token")
+
+        book.name = nameTextField.text!
+        book.price = Int(priceTextField.text!)!
+        book.purchaseDate = purchaseDateTextField.text!
+
+        print(book)
+
+        let editBookRequest = EditBookRequest(id: book.id, name: book.name, price: book.price,
+                                             purchaseDate: book.purchaseDate!, image: "",
+                                             token: token!)
+
+        Session.send(editBookRequest) { result in
+            switch result {
+            case .success(let bookResult):
+                print(bookResult)
+                print("あああああああああああああああああああああ")
+            case .failure(let error):
+                print("error: \(error)")
+            }
+        }
     }
 
     override func viewDidLoad() {

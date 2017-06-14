@@ -29,6 +29,10 @@
 		233EFCF11EEFE9FB00EEB8A7 /* ListBooksRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233EFCF01EEFE9FB00EEB8A7 /* ListBooksRequest.swift */; };
 		233EFCF31EEFEA4D00EEB8A7 /* BookCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233EFCF21EEFEA4D00EEB8A7 /* BookCollection.swift */; };
 		233EFCF51EF00F9100EEB8A7 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233EFCF41EF00F9100EEB8A7 /* DateHelper.swift */; };
+		234405D21EF0DF940001FDC6 /* BookResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234405D11EF0DF940001FDC6 /* BookResult.swift */; };
+		234405D41EF0E0780001FDC6 /* EditBookRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234405D31EF0E0780001FDC6 /* EditBookRequest.swift */; };
+		234405D61EF0F7090001FDC6 /* AddBookRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234405D51EF0F7090001FDC6 /* AddBookRequest.swift */; };
+		234405D81EF106D00001FDC6 /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234405D71EF106D00001FDC6 /* ImageHelper.swift */; };
 		235B0DAC1EE673700007BB69 /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235B0DAB1EE673700007BB69 /* BookTableViewCell.swift */; };
 		23CAD1D11EE9346100C27108 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CAD1D01EE9346100C27108 /* TabViewController.swift */; };
 		23EB3D881EE4FF140038B49C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EB3D871EE4FF140038B49C /* AppDelegate.swift */; };
@@ -67,6 +71,10 @@
 		233EFCF01EEFE9FB00EEB8A7 /* ListBooksRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListBooksRequest.swift; path = Api/ListBooksRequest.swift; sourceTree = "<group>"; };
 		233EFCF21EEFEA4D00EEB8A7 /* BookCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookCollection.swift; sourceTree = "<group>"; };
 		233EFCF41EF00F9100EEB8A7 /* DateHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
+		234405D11EF0DF940001FDC6 /* BookResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BookResult.swift; path = Api/Models/BookResult.swift; sourceTree = "<group>"; };
+		234405D31EF0E0780001FDC6 /* EditBookRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EditBookRequest.swift; path = Api/EditBookRequest.swift; sourceTree = "<group>"; };
+		234405D51EF0F7090001FDC6 /* AddBookRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddBookRequest.swift; path = Api/AddBookRequest.swift; sourceTree = "<group>"; };
+		234405D71EF106D00001FDC6 /* ImageHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageHelper.swift; sourceTree = "<group>"; };
 		235B0DAB1EE673700007BB69 /* BookTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
 		23CAD1D01EE9346100C27108 /* TabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		23EB3D841EE4FF140038B49C /* BookManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,6 +114,7 @@
 				233EFCC41EEF8B0B00EEB8A7 /* UIControlExtention.swift */,
 				233EFCEC1EEFE46D00EEB8A7 /* AlertHelper.swift */,
 				233EFCF41EF00F9100EEB8A7 /* DateHelper.swift */,
+				234405D71EF106D00001FDC6 /* ImageHelper.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -126,9 +135,11 @@
 			isa = PBXGroup;
 			children = (
 				233EFCE91EEFE04600EEB8A7 /* Models */,
+				234405D51EF0F7090001FDC6 /* AddBookRequest.swift */,
 				233EFCEA1EEFE07E00EEB8A7 /* LoginRequest.swift */,
 				233EFCF01EEFE9FB00EEB8A7 /* ListBooksRequest.swift */,
 				233EFCE41EEFDED900EEB8A7 /* Base.swift */,
+				234405D31EF0E0780001FDC6 /* EditBookRequest.swift */,
 			);
 			name = Api;
 			sourceTree = "<group>";
@@ -136,6 +147,7 @@
 		233EFCE91EEFE04600EEB8A7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				234405D11EF0DF940001FDC6 /* BookResult.swift */,
 				233EFCE71EEFE04000EEB8A7 /* Auth.swift */,
 				233EFCEE1EEFE6D900EEB8A7 /* Book.swift */,
 				233EFCF21EEFEA4D00EEB8A7 /* BookCollection.swift */,
@@ -315,9 +327,11 @@
 			files = (
 				23EB3D9A1EE50C740038B49C /* ListBooksViewController.swift in Sources */,
 				231B23901EE6BEDA004C3221 /* AddBookViewController.swift in Sources */,
+				234405D81EF106D00001FDC6 /* ImageHelper.swift in Sources */,
 				233EFCEF1EEFE6D900EEB8A7 /* Book.swift in Sources */,
 				233EFCEB1EEFE07E00EEB8A7 /* LoginRequest.swift in Sources */,
 				233EFCF31EEFEA4D00EEB8A7 /* BookCollection.swift in Sources */,
+				234405D21EF0DF940001FDC6 /* BookResult.swift in Sources */,
 				233EFCC51EEF8B0B00EEB8A7 /* UIControlExtention.swift in Sources */,
 				231B69A41EEA8017006F2CBD /* FileAttachHelper.swift in Sources */,
 				23EB3E981EE5574D0038B49C /* AccountViewController.swift in Sources */,
@@ -327,8 +341,10 @@
 				2328F59B1EEE402A00FA0A62 /* R.generated.swift in Sources */,
 				233EFCE51EEFDED900EEB8A7 /* Base.swift in Sources */,
 				233EFCCF1EEFC10F00EEB8A7 /* FileAttachable.swift in Sources */,
+				234405D41EF0E0780001FDC6 /* EditBookRequest.swift in Sources */,
 				23EB3D8A1EE4FF140038B49C /* LoginViewController.swift in Sources */,
 				23EB3D881EE4FF140038B49C /* AppDelegate.swift in Sources */,
+				234405D61EF0F7090001FDC6 /* AddBookRequest.swift in Sources */,
 				231B23921EE6BF03004C3221 /* EditBookViewController.swift in Sources */,
 				231B69A31EEA8017006F2CBD /* DatePickerHelper.swift in Sources */,
 				23CAD1D11EE9346100C27108 /* TabViewController.swift in Sources */,

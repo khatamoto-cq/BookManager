@@ -1,4 +1,5 @@
 import UIKit
+import APIKit
 
 class AddBookViewController: UIViewController, FileAttachable {
 
@@ -46,7 +47,35 @@ class AddBookViewController: UIViewController, FileAttachable {
     }
 
     @IBAction func didSaveButtonTapped(_ sender: Any) {
-        print(R.string.localizable.logRegistBook)
+        let errors = validate()
+        if errors.count > 0 {
+            return AlertHelper.showAlert(self, title: R.string.localizable.validateErrorTitle(),
+                                         message: errors.joined(separator: "\n"))
+        }
+
+        let token = UserDefaults.standard.string(forKey: "request_token")
+        let userId = UserDefaults.standard.integer(forKey: "user_id")
+        if token == nil || userId == 0 {
+            return AlertHelper.showAlert(self, title: R.string.localizable.errorTitle(),
+                                         message: R.string.localizable.authenticationError())
+        }
+
+        let addBookRequest = AddBookRequest(name: nameTextField.text!, price: Int(priceTextField.text!)!,
+                                            purchaseDate: purchaseDateTextField.text!,
+                                            image: ImageHelper.encode(image: imageView.image!)!,
+                                            userId: userId, token: token!)
+
+        Session.send(addBookRequest) { result in
+            switch result {
+            case .success(let bookResult):
+                print("[書籍追加完了] 書籍ID: \(bookResult.bookId)")
+                self.dismiss(animated: true, completion: nil)
+            case .failure(let error):
+                print("error: \(error)")
+                AlertHelper.showAlert(self, title: R.string.localizable.validateErrorTitle(),
+                                    message: R.string.localizable.errorNetworing())
+            }
+        }
     }
 
     override func viewDidLoad() {
@@ -59,6 +88,23 @@ class AddBookViewController: UIViewController, FileAttachable {
 
     func pickerChanged(sender: UIDatePicker) {
         DatePickerHelper.setValue(sender, target: self.purchaseDateTextField)
+    }
+
+    func validate() -> [String] {
+        var errors: [String] = []
+        let predicate = NSPredicate(format: "SELF MATCHES '\\\\d+'")
+
+        if (nameTextField.text?.isEmpty)! {
+            errors.append(R.string.localizable.validateErrorRequireBookName())
+        }
+
+        if (priceTextField.text?.isEmpty)! {
+            errors.append(R.string.localizable.validateErrorNumericBookPrice())
+        } else if !predicate.evaluate(with: priceTextField.text) {
+            errors.append(R.string.localizable.validateErrorNumericBookPrice())
+        }
+
+        return errors
     }
 }
 
