@@ -1,25 +1,25 @@
 import UIKit
 import APIKit
 
-class AddBookViewController: UIViewController, FileAttachable {
+class AddBookViewController: BaseBookViewController, FileAttachable {
 
     @IBOutlet weak var imageView: UIImageView!
 
-    @IBOutlet weak var nameTextField: UITextField! {
+    @IBOutlet override weak var nameTextField: UITextField! {
         didSet {
             nameTextField.apply(borderWidth: Const.TextFieldBorderWidth, borderColor: Const.TextFieldBorderColor,
                               radius: Const.TextFieldCornerRadius, masksToBound: Const.TextFieldMasksToBounds)
         }
     }
 
-    @IBOutlet weak var priceTextField: UITextField! {
+    @IBOutlet override weak var priceTextField: UITextField! {
         didSet {
             priceTextField.apply(borderWidth: Const.TextFieldBorderWidth, borderColor: Const.TextFieldBorderColor,
                                radius: Const.TextFieldCornerRadius, masksToBound: Const.TextFieldMasksToBounds)
         }
     }
 
-    @IBOutlet weak var purchaseDateTextField: UITextField! {
+    @IBOutlet override weak var purchaseDateTextField: UITextField! {
         didSet {
             purchaseDateTextField.apply(borderWidth: Const.TextFieldBorderWidth,
                                         borderColor: Const.TextFieldBorderColor,
@@ -84,27 +84,6 @@ class AddBookViewController: UIViewController, FileAttachable {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-    }
-
-    func pickerChanged(sender: UIDatePicker) {
-        DatePickerHelper.setValue(sender, target: self.purchaseDateTextField)
-    }
-
-    func validate() -> [String] {
-        var errors: [String] = []
-        let predicate = NSPredicate(format: "SELF MATCHES '\\\\d+'")
-
-        if (nameTextField.text?.isEmpty)! {
-            errors.append(R.string.localizable.validateErrorRequireBookName())
-        }
-
-        if (priceTextField.text?.isEmpty)! {
-            errors.append(R.string.localizable.validateErrorNumericBookPrice())
-        } else if !predicate.evaluate(with: priceTextField.text) {
-            errors.append(R.string.localizable.validateErrorNumericBookPrice())
-        }
-
-        return errors
     }
 }
 

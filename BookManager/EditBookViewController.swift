@@ -2,7 +2,7 @@ import UIKit
 import Kingfisher
 import APIKit
 
-class EditBookViewController: UIViewController, FileAttachable {
+class EditBookViewController: BaseBookViewController, FileAttachable {
 
     var book: Book!
 
@@ -13,7 +13,7 @@ class EditBookViewController: UIViewController, FileAttachable {
         }
     }
 
-    @IBOutlet weak var nameTextField: UITextField! {
+    @IBOutlet override weak var nameTextField: UITextField! {
         didSet {
             nameTextField.apply(borderWidth: Const.TextFieldBorderWidth, borderColor: Const.TextFieldBorderColor,
                               radius: Const.TextFieldCornerRadius, masksToBound: Const.TextFieldMasksToBounds)
@@ -21,7 +21,7 @@ class EditBookViewController: UIViewController, FileAttachable {
         }
     }
 
-    @IBOutlet weak var priceTextField: UITextField! {
+    @IBOutlet override weak var priceTextField: UITextField! {
         didSet {
             priceTextField.apply(borderWidth: Const.TextFieldBorderWidth, borderColor: Const.TextFieldBorderColor,
                                radius: Const.TextFieldCornerRadius, masksToBound: Const.TextFieldMasksToBounds)
@@ -29,7 +29,7 @@ class EditBookViewController: UIViewController, FileAttachable {
         }
     }
 
-    @IBOutlet weak var purchaseDateTextField: UITextField! {
+    @IBOutlet override weak var purchaseDateTextField: UITextField! {
         didSet {
             purchaseDateTextField.apply(borderWidth: Const.TextFieldBorderWidth,
                                         borderColor: Const.TextFieldBorderColor,
@@ -83,10 +83,6 @@ class EditBookViewController: UIViewController, FileAttachable {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-    }
-
-    func pickerChanged(sender: UIDatePicker) {
-        DatePickerHelper.setValue(sender, target: self.purchaseDateTextField)
     }
 }
 
