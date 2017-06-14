@@ -37,8 +37,6 @@ class AccountViewController: UIViewController {
     }
 
     @IBAction func didSaveButtonTapped(_ sender: Any) {
-        print(R.string.localizable.logRegistAccount())
-
         if !UserDefaults.standard.bool(forKey: "logined") {
             saveLoginState()
             let controller = R.storyboard.main.tabViewController()
