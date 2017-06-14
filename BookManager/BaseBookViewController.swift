@@ -6,14 +6,6 @@ class BaseBookViewController: UIViewController {
     weak var priceTextField: UITextField!
     weak var purchaseDateTextField: UITextField!
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-
     func validate() -> [String] {
         var errors: [String] = []
         let predicate = NSPredicate(format: "SELF MATCHES '\\\\d+'")
