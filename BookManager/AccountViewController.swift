@@ -44,8 +44,6 @@ class AccountViewController: BaseAuthViewController {
                                          message: errors.joined(separator: "\n"))
         }
         saveAccount(email: emailTextField.text!, password: passwordTextField.text!)
-
-        self.dismiss(animated: true, completion: nil)
     }
 
     override func viewDidLoad() {
