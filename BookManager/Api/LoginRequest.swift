@@ -2,7 +2,7 @@ import Foundation
 import APIKit
 import Himotoki
 
-struct LoginRequest: Base {
+struct LoginRequest: BaseRequest {
     typealias Response = Auth
 
     let email: String

@@ -2,7 +2,7 @@ import Foundation
 import APIKit
 import Himotoki
 
-struct ListBooksRequest: Base {
+struct ListBooksRequest: BaseRequest {
 
     typealias Response = BookCollection
 

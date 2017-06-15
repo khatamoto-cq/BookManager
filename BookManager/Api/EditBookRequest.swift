@@ -2,7 +2,7 @@ import Foundation
 import APIKit
 import Himotoki
 
-struct EditBookRequest: Base {
+struct EditBookRequest: BaseRequest {
     typealias Response = BookResult
 
     let id: Int

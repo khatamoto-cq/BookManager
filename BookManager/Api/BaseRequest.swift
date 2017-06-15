@@ -2,15 +2,15 @@ import Foundation
 import APIKit
 import Himotoki
 
-protocol Base: Request {}
+protocol BaseRequest: Request {}
 
-extension Base {
+extension BaseRequest {
     var baseURL: URL {
         return URL(string: Const.BaseURL)!
     }
 }
 
-extension Base where Response: Decodable {
+extension BaseRequest where Response: Decodable {
     func response(from object: Any, urlResponse: HTTPURLResponse) throws -> Response {
         return try decodeValue(object)
     }

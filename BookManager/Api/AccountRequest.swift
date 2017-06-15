@@ -2,7 +2,7 @@ import Foundation
 import APIKit
 import Himotoki
 
-struct AccountRequest: Base {
+struct AccountRequest: BaseRequest {
 
     typealias Response = Auth
 

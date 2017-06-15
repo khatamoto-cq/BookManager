@@ -2,7 +2,7 @@ import Foundation
 import APIKit
 import Himotoki
 
-struct AddBookRequest: Base {
+struct AddBookRequest: BaseRequest {
     typealias Response = BookResult
 
     let name: String

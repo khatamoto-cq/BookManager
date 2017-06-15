@@ -21,7 +21,7 @@
 		233EFCC51EEF8B0B00EEB8A7 /* UIControlExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233EFCC41EEF8B0B00EEB8A7 /* UIControlExtention.swift */; };
 		233EFCCF1EEFC10F00EEB8A7 /* FileAttachable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233EFCCE1EEFC10F00EEB8A7 /* FileAttachable.swift */; };
 		233EFCD41EEFC51C00EEB8A7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 233EFCD21EEFC51C00EEB8A7 /* Localizable.strings */; };
-		233EFCE51EEFDED900EEB8A7 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233EFCE41EEFDED900EEB8A7 /* Base.swift */; };
+		233EFCE51EEFDED900EEB8A7 /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233EFCE41EEFDED900EEB8A7 /* BaseRequest.swift */; };
 		233EFCE81EEFE04000EEB8A7 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233EFCE71EEFE04000EEB8A7 /* Auth.swift */; };
 		233EFCEB1EEFE07E00EEB8A7 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233EFCEA1EEFE07E00EEB8A7 /* LoginRequest.swift */; };
 		233EFCED1EEFE46D00EEB8A7 /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233EFCEC1EEFE46D00EEB8A7 /* AlertHelper.swift */; };
@@ -66,7 +66,7 @@
 		233EFCD11EEFC48200EEB8A7 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		233EFCD31EEFC51C00EEB8A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = BookManager/Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		233EFCD51EEFC85500EEB8A7 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = BookManager/ja.lproj/Localizable.strings; sourceTree = "<group>"; };
-		233EFCE41EEFDED900EEB8A7 /* Base.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Base.swift; path = Api/Base.swift; sourceTree = "<group>"; };
+		233EFCE41EEFDED900EEB8A7 /* BaseRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseRequest.swift; path = Api/BaseRequest.swift; sourceTree = "<group>"; };
 		233EFCE71EEFE04000EEB8A7 /* Auth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Auth.swift; path = Api/Models/Auth.swift; sourceTree = "<group>"; };
 		233EFCEA1EEFE07E00EEB8A7 /* LoginRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginRequest.swift; path = Api/LoginRequest.swift; sourceTree = "<group>"; };
 		233EFCEC1EEFE46D00EEB8A7 /* AlertHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
@@ -141,7 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				233EFCE91EEFE04600EEB8A7 /* Models */,
-				233EFCE41EEFDED900EEB8A7 /* Base.swift */,
+				233EFCE41EEFDED900EEB8A7 /* BaseRequest.swift */,
 				233EFCEA1EEFE07E00EEB8A7 /* LoginRequest.swift */,
 				23BFA9E11EF21E2200EF2709 /* AccountRequest.swift */,
 				233EFCF01EEFE9FB00EEB8A7 /* ListBooksRequest.swift */,
@@ -348,7 +348,7 @@
 				235B0DAC1EE673700007BB69 /* BookTableViewCell.swift in Sources */,
 				233EFCED1EEFE46D00EEB8A7 /* AlertHelper.swift in Sources */,
 				2328F59B1EEE402A00FA0A62 /* R.generated.swift in Sources */,
-				233EFCE51EEFDED900EEB8A7 /* Base.swift in Sources */,
+				233EFCE51EEFDED900EEB8A7 /* BaseRequest.swift in Sources */,
 				233EFCCF1EEFC10F00EEB8A7 /* FileAttachable.swift in Sources */,
 				234405D41EF0E0780001FDC6 /* EditBookRequest.swift in Sources */,
 				23BFA9E21EF21E2200EF2709 /* AccountRequest.swift in Sources */,
