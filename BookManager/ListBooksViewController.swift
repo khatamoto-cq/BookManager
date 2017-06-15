@@ -12,7 +12,9 @@ class ListBooksViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
 
+    override func viewDidAppear(_ animated: Bool) {
         let token = UserDefaults.standard.string(forKey: "request_token")!
         let userId = UserDefaults.standard.integer(forKey: "user_id")
         let listBooksRequest = ListBooksRequest(userId: userId, page: "0-100", token: token)
