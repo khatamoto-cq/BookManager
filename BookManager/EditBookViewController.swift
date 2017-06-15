@@ -81,6 +81,7 @@ class EditBookViewController: BaseBookViewController, FileAttachable {
             switch result {
             case .success(let bookResult):
                 print("[書籍編集完了] 書籍ID: \(bookResult.bookId)")
+                self.navigationController?.popViewController(animated: true)
             case .failure(let error):
                 print("error: \(error)")
                 AlertHelper.showAlert(self, title: R.string.localizable.validateErrorTitle(),
