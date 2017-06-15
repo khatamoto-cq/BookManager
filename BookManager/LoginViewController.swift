@@ -50,6 +50,7 @@ class LoginViewController: BaseAuthViewController {
         Session.send(loginRequest) { result in
             switch result {
             case .success(let auth):
+                print("[ログイン] user_id: \(auth.userId), request_token: \(auth.requestToken)")
                 self.saveAuthInfo(auth)
                 self.moveListViewController()
             case .failure(let error):
