@@ -29,7 +29,7 @@ class BookTableViewCell: UITableViewCell {
         nameLabel.text = book.name
         priceLabel.text = String(book.price) + "円" + " + 税"
         if let date = book.purchaseDate {
-            purchaseDateLabel.text = DateHelper.transform(date: date)
+            purchaseDateLabel.text = DateHelper.transformFromApiDateToClientDate(date: date)
         }
     }
 }

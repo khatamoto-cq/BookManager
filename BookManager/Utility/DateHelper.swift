@@ -1,17 +1,17 @@
 import Foundation
 
 class DateHelper {
-    class func transform(date: String) -> String {
-        let inFmt = DateFormatter()
-        inFmt.dateFormat = "EEE, dd MMM yyyy HH:mm:ss zzz"
-        inFmt.timeZone = TimeZone.current
-        inFmt.locale = Locale(identifier: "en_US_POSIX")
+    class func transformFromApiDateToClientDate(date: String) -> String {
+        let fromFmt = DateFormatter()
+        fromFmt.dateFormat = "EEE, dd MMM yyyy HH:mm:ss zzz"
+        fromFmt.timeZone = TimeZone.current
+        fromFmt.locale = Locale(identifier: "en_US_POSIX")
 
-        let outFmt = DateFormatter()
-        outFmt.dateFormat = "yyyy/MM/dd"
+        let toFmt = DateFormatter()
+        toFmt.dateFormat = "yyyy/MM/dd"
 
-        if  let formatedDate = inFmt.date(from: date) {
-            return outFmt.string(from: formatedDate)
+        if  let formatedDate = fromFmt.date(from: date) {
+            return toFmt.string(from: formatedDate)
         }
 
         print(R.string.localizable.errorDateFormatter())
