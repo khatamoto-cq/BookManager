@@ -35,6 +35,8 @@
 		234405D81EF106D00001FDC6 /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234405D71EF106D00001FDC6 /* ImageHelper.swift */; };
 		234405DA1EF126B90001FDC6 /* BaseBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234405D91EF126B90001FDC6 /* BaseBookViewController.swift */; };
 		235B0DAC1EE673700007BB69 /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235B0DAB1EE673700007BB69 /* BookTableViewCell.swift */; };
+		23BFA9E21EF21E2200EF2709 /* AccountRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BFA9E11EF21E2200EF2709 /* AccountRequest.swift */; };
+		23BFA9E41EF21FE300EF2709 /* BaseAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BFA9E31EF21FE300EF2709 /* BaseAuthViewController.swift */; };
 		23CAD1D11EE9346100C27108 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CAD1D01EE9346100C27108 /* TabViewController.swift */; };
 		23EB3D881EE4FF140038B49C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EB3D871EE4FF140038B49C /* AppDelegate.swift */; };
 		23EB3D8A1EE4FF140038B49C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EB3D891EE4FF140038B49C /* LoginViewController.swift */; };
@@ -78,6 +80,8 @@
 		234405D71EF106D00001FDC6 /* ImageHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageHelper.swift; sourceTree = "<group>"; };
 		234405D91EF126B90001FDC6 /* BaseBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseBookViewController.swift; sourceTree = "<group>"; };
 		235B0DAB1EE673700007BB69 /* BookTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
+		23BFA9E11EF21E2200EF2709 /* AccountRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccountRequest.swift; path = Api/AccountRequest.swift; sourceTree = "<group>"; };
+		23BFA9E31EF21FE300EF2709 /* BaseAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseAuthViewController.swift; sourceTree = "<group>"; };
 		23CAD1D01EE9346100C27108 /* TabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		23EB3D841EE4FF140038B49C /* BookManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23EB3D871EE4FF140038B49C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +143,7 @@
 				233EFCE91EEFE04600EEB8A7 /* Models */,
 				233EFCE41EEFDED900EEB8A7 /* Base.swift */,
 				233EFCEA1EEFE07E00EEB8A7 /* LoginRequest.swift */,
+				23BFA9E11EF21E2200EF2709 /* AccountRequest.swift */,
 				233EFCF01EEFE9FB00EEB8A7 /* ListBooksRequest.swift */,
 				234405D51EF0F7090001FDC6 /* AddBookRequest.swift */,
 				234405D31EF0E0780001FDC6 /* EditBookRequest.swift */,
@@ -181,10 +186,11 @@
 				233EFCE61EEFDEE200EEB8A7 /* Api */,
 				231B69A01EEA8017006F2CBD /* Utility */,
 				23EB3D871EE4FF140038B49C /* AppDelegate.swift */,
+				234405D91EF126B90001FDC6 /* BaseBookViewController.swift */,
+				23BFA9E31EF21FE300EF2709 /* BaseAuthViewController.swift */,
 				23EB3D891EE4FF140038B49C /* LoginViewController.swift */,
 				23CAD1D01EE9346100C27108 /* TabViewController.swift */,
 				231B238F1EE6BEDA004C3221 /* AddBookViewController.swift */,
-				234405D91EF126B90001FDC6 /* BaseBookViewController.swift */,
 				231B23911EE6BF03004C3221 /* EditBookViewController.swift */,
 				23EB3D991EE50C740038B49C /* ListBooksViewController.swift */,
 				23EB3E951EE5562E0038B49C /* SettingViewController.swift */,
@@ -345,10 +351,12 @@
 				233EFCE51EEFDED900EEB8A7 /* Base.swift in Sources */,
 				233EFCCF1EEFC10F00EEB8A7 /* FileAttachable.swift in Sources */,
 				234405D41EF0E0780001FDC6 /* EditBookRequest.swift in Sources */,
+				23BFA9E21EF21E2200EF2709 /* AccountRequest.swift in Sources */,
 				23EB3D8A1EE4FF140038B49C /* LoginViewController.swift in Sources */,
 				23EB3D881EE4FF140038B49C /* AppDelegate.swift in Sources */,
 				234405D61EF0F7090001FDC6 /* AddBookRequest.swift in Sources */,
 				231B23921EE6BF03004C3221 /* EditBookViewController.swift in Sources */,
+				23BFA9E41EF21FE300EF2709 /* BaseAuthViewController.swift in Sources */,
 				231B69A31EEA8017006F2CBD /* DatePickerHelper.swift in Sources */,
 				234405DA1EF126B90001FDC6 /* BaseBookViewController.swift in Sources */,
 				23CAD1D11EE9346100C27108 /* TabViewController.swift in Sources */,

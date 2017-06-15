@@ -1,6 +1,7 @@
 import UIKit
+import APIKit
 
-class AccountViewController: UIViewController {
+class AccountViewController: BaseAuthViewController {
 
     @IBOutlet weak var emailTextField: UITextField! {
         didSet {
@@ -42,16 +43,9 @@ class AccountViewController: UIViewController {
             return AlertHelper.showAlert(self, title: R.string.localizable.validateErrorTitle(),
                                          message: errors.joined(separator: "\n"))
         }
+        saveAccount(email: emailTextField.text!, password: passwordTextField.text!)
 
-        // (todo) 登録、更新処理
-
-        if !UserDefaults.standard.bool(forKey: "logined") {
-            saveLoginState()
-        }
-
-        let controller = R.storyboard.main.tabViewController()
-        controller?.modalTransitionStyle = .crossDissolve
-        present(controller!, animated: true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
 
     override func viewDidLoad() {
@@ -61,6 +55,29 @@ class AccountViewController: UIViewController {
     func saveLoginState() {
         UserDefaults.standard.set(true, forKey: "logined")
         UserDefaults.standard.synchronize()
+    }
+
+    func saveAccount(email: String, password: String) {
+        let accountRequest = AccountRequest(email: email, password: password)
+
+        Session.send(accountRequest) { result in
+            switch result {
+            case .success(let auth):
+                print("[アカウント追加完了] user_id: \(auth.userId), request_token: \(auth.requestToken)")
+                self.saveAuthInfo(auth)
+
+                if !UserDefaults.standard.bool(forKey: "logined") {
+                    self.saveLoginState()
+                    return self.moveListViewController()
+                }
+
+                self.dismiss(animated: true, completion: nil)
+            case .failure(let error):
+                print("error: \(error)")
+                AlertHelper.showAlert(self, title: R.string.localizable.validateErrorTitle(),
+                                      message: R.string.localizable.errorNetworing())
+            }
+        }
     }
 
     func validate() -> [String] {
