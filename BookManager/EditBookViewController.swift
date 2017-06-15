@@ -2,7 +2,7 @@ import UIKit
 import Kingfisher
 import APIKit
 
-class EditBookViewController: BaseBookViewController, FileAttachable {
+class EditBookViewController: UIViewController, FileAttachable, BookValidateable {
 
     var book: Book!
 
@@ -14,7 +14,7 @@ class EditBookViewController: BaseBookViewController, FileAttachable {
         }
     }
 
-    @IBOutlet override weak var nameTextField: UITextField! {
+    @IBOutlet weak var nameTextField: UITextField! {
         didSet {
             nameTextField.apply(borderWidth: Const.TextFieldBorderWidth, borderColor: Const.TextFieldBorderColor,
                               radius: Const.TextFieldCornerRadius, masksToBound: Const.TextFieldMasksToBounds)
@@ -22,7 +22,7 @@ class EditBookViewController: BaseBookViewController, FileAttachable {
         }
     }
 
-    @IBOutlet override weak var priceTextField: UITextField! {
+    @IBOutlet weak var priceTextField: UITextField! {
         didSet {
             priceTextField.apply(borderWidth: Const.TextFieldBorderWidth, borderColor: Const.TextFieldBorderColor,
                                radius: Const.TextFieldCornerRadius, masksToBound: Const.TextFieldMasksToBounds)
@@ -30,7 +30,7 @@ class EditBookViewController: BaseBookViewController, FileAttachable {
         }
     }
 
-    @IBOutlet override weak var purchaseDateTextField: UITextField! {
+    @IBOutlet weak var purchaseDateTextField: UITextField! {
         didSet {
             purchaseDateTextField.apply(borderWidth: Const.TextFieldBorderWidth,
                                         borderColor: Const.TextFieldBorderColor,
@@ -55,7 +55,7 @@ class EditBookViewController: BaseBookViewController, FileAttachable {
     }
 
     @IBAction func didSaveButtonTapped(_ sender: Any) {
-        let errors = validate()
+        let errors = validate(name: nameTextField.text!, price: priceTextField.text!)
         if errors.count > 0 {
             return AlertHelper.showAlert(self, title: R.string.localizable.validateErrorTitle(),
                                          message: errors.joined(separator: "\n"))
@@ -95,6 +95,10 @@ class EditBookViewController: BaseBookViewController, FileAttachable {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+
+    func pickerChanged(sender: UIDatePicker) {
+        DatePickerHelper.setValue(sender, target: purchaseDateTextField)
     }
 }
 
