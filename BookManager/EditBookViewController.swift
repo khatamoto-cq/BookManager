@@ -8,8 +8,9 @@ class EditBookViewController: BaseBookViewController, FileAttachable {
 
     @IBOutlet weak var imageView: UIImageView! {
         didSet {
-            let url = URL(string: book.imageUrl)!
-            imageView.kf.setImage(with: ImageResource.init(downloadURL: url))
+            if !book.imageUrl.isEmpty {
+                imageView.kf.setImage(with: ImageResource.init(downloadURL: URL(string: book.imageUrl)!))
+            }
         }
     }
 
