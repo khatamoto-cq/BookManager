@@ -48,8 +48,7 @@ class AddBookViewController: UIViewController, FileAttachable, BookValidateable 
 
     @IBAction func didSaveButtonTapped(_ sender: Any) {
         let errors = validate(name: nameTextField.text!, price: priceTextField.text!)
-
-        if errors.count > 0 {
+        if !errors.isEmpty {
             return AlertHelper.showAlert(self, title: R.string.localizable.validateErrorTitle(),
                                          message: errors.joined(separator: "\n"))
         }
