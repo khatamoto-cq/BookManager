@@ -61,9 +61,8 @@ class EditBookViewController: BaseBookViewController, FileAttachable {
                                          message: errors.joined(separator: "\n"))
         }
 
-        let token = UserDefaults.standard.string(forKey: "request_token")
-        let userId = UserDefaults.standard.integer(forKey: "user_id")
-        if token == nil || userId == 0 {
+        let auth = AuthManager.shared.getAuth()
+        if auth.requestToken.isEmpty || auth.userId == 0 {
             return AlertHelper.showAlert(self, title: R.string.localizable.errorTitle(),
                                          message: R.string.localizable.errorAuthentication())
         }
@@ -75,7 +74,7 @@ class EditBookViewController: BaseBookViewController, FileAttachable {
         let editBookRequest = EditBookRequest(id: book.id, name: book.name, price: book.price,
                                              purchaseDate: book.purchaseDate!,
                                              image: ImageHelper.encode(image: imageView.image!)!,
-                                             token: token!)
+                                             token: auth.requestToken)
 
         Session.send(editBookRequest) { result in
             switch result {

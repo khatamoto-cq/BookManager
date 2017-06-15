@@ -1,7 +1,7 @@
 import UIKit
 import APIKit
 
-class LoginViewController: BaseAuthViewController {
+class LoginViewController: UIViewController {
 
     @IBOutlet weak var emailTextField: UITextField! {
         didSet {
@@ -51,8 +51,11 @@ class LoginViewController: BaseAuthViewController {
             switch result {
             case .success(let auth):
                 print("[ログイン] user_id: \(auth.userId), request_token: \(auth.requestToken)")
-                self.saveAuthInfo(auth)
-                self.moveListViewController()
+                AuthManager.shared.save(auth)
+
+                let controller = R.storyboard.main.tabViewController()
+                controller?.modalTransitionStyle = .crossDissolve
+                self.present(controller!, animated: true, completion: nil)
             case .failure(let error):
                 print("error: \(error)")
                 AlertHelper.showAlert(self, title: R.string.localizable.errorLoginTitle(),

@@ -15,9 +15,8 @@ class ListBooksViewController: UITableViewController {
     }
 
     override func viewDidAppear(_ animated: Bool) {
-        let token = UserDefaults.standard.string(forKey: "request_token")!
-        let userId = UserDefaults.standard.integer(forKey: "user_id")
-        let listBooksRequest = ListBooksRequest(userId: userId, page: Const.BookLimit, token: token)
+        let auth = AuthManager.shared.getAuth()
+        let listBooksRequest = ListBooksRequest(userId: auth.userId, page: Const.BookLimit, token: auth.requestToken)
 
         Session.send(listBooksRequest) { result in
             switch result {

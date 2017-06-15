@@ -53,9 +53,8 @@ class AddBookViewController: BaseBookViewController, FileAttachable {
                                          message: errors.joined(separator: "\n"))
         }
 
-        let token = UserDefaults.standard.string(forKey: "request_token")
-        let userId = UserDefaults.standard.integer(forKey: "user_id")
-        if token == nil || userId == 0 {
+        let auth = AuthManager.shared.getAuth()
+        if auth.requestToken.isEmpty || auth.userId == 0 {
             return AlertHelper.showAlert(self, title: R.string.localizable.errorTitle(),
                                          message: R.string.localizable.errorAuthentication())
         }
@@ -63,7 +62,7 @@ class AddBookViewController: BaseBookViewController, FileAttachable {
         let addBookRequest = AddBookRequest(name: nameTextField.text!, price: Int(priceTextField.text!)!,
                                             purchaseDate: purchaseDateTextField.text!,
                                             image: ImageHelper.encode(image: imageView.image!)!,
-                                            userId: userId, token: token!)
+                                            userId: auth.userId, token: auth.requestToken)
 
         Session.send(addBookRequest) { result in
             switch result {
