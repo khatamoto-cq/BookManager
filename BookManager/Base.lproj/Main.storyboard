@@ -258,9 +258,9 @@
         <!--書籍一覧-->
         <scene sceneID="dfJ-YH-Brk">
             <objects>
-                <tableViewController storyboardIdentifier="ListBooksViewController" id="Tml-yE-kk8" customClass="ListBooksViewController" customModule="BookManager" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ListBooksViewController" autoresizesArchivedViewToFullSize="NO" id="Tml-yE-kk8" customClass="ListBooksViewController" customModule="BookManager" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" sectionHeaderHeight="28" sectionFooterHeight="28" id="lmZ-bD-nkv">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -326,6 +326,7 @@
                             <outlet property="delegate" destination="Tml-yE-kk8" id="nFV-BY-Wmu"/>
                         </connections>
                     </tableView>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" title="書籍一覧" id="y0b-fa-1XR">
                         <barButtonItem key="rightBarButtonItem" style="done" id="hhT-wH-grN">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="bWu-HG-0jL">
