@@ -15,6 +15,7 @@ class DateHelper {
         }
 
         print(R.string.localizable.errorDateFormatter())
+
         return date
     }
 }

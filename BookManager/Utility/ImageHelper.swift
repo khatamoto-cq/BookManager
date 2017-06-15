@@ -6,6 +6,7 @@ class ImageHelper {
         let data = NSData(data: UIImagePNGRepresentation(image)!)
         let encodeString =
             data.base64EncodedString(options: [])
+
         return encodeString
     }
 }

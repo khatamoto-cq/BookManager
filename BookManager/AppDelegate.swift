@@ -11,11 +11,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UIFont(name: "Avenir-Medium", size: 14)!], for: .normal)
         UITabBarItem.appearance().titlePositionAdjustment = UIOffsetMake(0, -9)
 
-        // 最初のアクセスを判定
-//        let userDefaults = UserDefaults.standard
-//        userDefaults.set(false, forKey: "logined")
-//        userDefaults.synchronize()
+        // <開発用途に使用> アプリ初回起動時に設定したい場合はコメントアウト
+        /*
+        UserDefaults.standard.set(false, forKey: "logined")
+        UserDefaults.standard.synchronize()
+        */
 
+        // 最初のアクセスを判定
         if !UserDefaults.standard.bool(forKey: "logined") {
             self.window?.rootViewController = R.storyboard.main.accountNav()
             self.window?.makeKeyAndVisible()

@@ -6,7 +6,7 @@ struct Auth: Decodable {
     let requestToken: String
 
     static func decode(_ e: Himotoki.Extractor) throws -> Auth {
-        return try Auth(userId: e <| ["user_id"],
-                        requestToken: e <| ["request_token"])
+        return try Auth(userId: e <| "user_id",
+                        requestToken: e <| "request_token")
     }
 }
