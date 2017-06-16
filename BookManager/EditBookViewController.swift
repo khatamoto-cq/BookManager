@@ -78,7 +78,7 @@ class EditBookViewController: UIViewController, FileAttachable, BookValidatable 
 
         let editBookRequest = EditBookRequest(id: book.id, name: book.name, price: book.price,
                                               purchaseDate: book.purchaseDate!,
-                                              imageData:  ImageHelper.encode(image: imageView.image!)!,
+                                              imageData:  ImageHelper.encode(image: imageView.image)!,
                                               token: account.requestToken)
         editBook(editBookRequest)
     }
@@ -98,8 +98,8 @@ class EditBookViewController: UIViewController, FileAttachable, BookValidatable 
     func editBook(_ editBookRequest: EditBookRequest) {
         Session.send(editBookRequest) { result in
             switch result {
-            case .success(let resultBookResponse):
-                print("[書籍編集完了] 書籍ID: \(resultBookResponse.bookId)")
+            case .success(let registerBookResponse):
+                print("[書籍編集完了] 書籍ID: \(registerBookResponse.bookId)")
                 self.navigationController?.popViewController(animated: true)
             case .failure(let error):
                 print("error: \(error)")
