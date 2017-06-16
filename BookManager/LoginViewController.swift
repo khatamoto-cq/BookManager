@@ -25,8 +25,9 @@ class LoginViewController: UIViewController {
 
     @IBAction func didLoginButtonTapped(_ sender: Any) {
         guard validate() else {
-            return AlertHelper.showAlert(self, title: R.string.localizable.errorLoginTitle(),
-                                  message: R.string.localizable.errorLogin())
+            let alertController = UIAlertController.showLeftParagraphAlert(
+                title: R.string.localizable.errorLoginTitle(), message: R.string.localizable.errorLogin())
+            return self.present(alertController, animated: true, completion: nil)
         }
 
         requestLogin()
@@ -58,8 +59,9 @@ class LoginViewController: UIViewController {
                 self.present(controller!, animated: true, completion: nil)
             case .failure(let error):
                 print("error: \(error)")
-                AlertHelper.showAlert(self, title: R.string.localizable.errorLoginTitle(),
-                                      message: R.string.localizable.errorLogin())
+                let alertController = UIAlertController.showLeftParagraphAlert(
+                    title: R.string.localizable.errorLoginTitle(), message: R.string.localizable.errorLogin())
+                return self.present(alertController, animated: true, completion: nil)
             }
         }
     }

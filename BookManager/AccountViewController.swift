@@ -44,9 +44,9 @@ class AccountViewController: UIViewController {
 
         let errors = validate(email: email, password: password, passwordConfirm: passwordConfirm)
         guard errors.isEmpty else {
-            print("aaaa")
-            return AlertHelper.showAlert(self, title: R.string.localizable.validateErrorTitle(),
-                                         message: errors.joined(separator: "\n"))
+            let alertController = UIAlertController.showLeftParagraphAlert(
+                title: R.string.localizable.validateErrorTitle(), message: errors.joined(separator: "\n"))
+            return present(alertController, animated: true, completion: nil)
         }
         saveAccount(email: email, password: password)
     }
@@ -79,8 +79,9 @@ class AccountViewController: UIViewController {
                 self.dismiss(animated: true, completion: nil)
             case .failure(let error):
                 print("error: \(error)")
-                AlertHelper.showAlert(self, title: R.string.localizable.validateErrorTitle(),
-                                      message: R.string.localizable.errorNetworing())
+                let alertController = UIAlertController.showLeftParagraphAlert(
+                    title: R.string.localizable.validateErrorTitle(), message: R.string.localizable.errorNetworing())
+                return self.present(alertController, animated: true, completion: nil)
             }
         }
     }

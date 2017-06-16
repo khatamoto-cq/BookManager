@@ -19,13 +19,13 @@
 		2328F59B1EEE402A00FA0A62 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2328F59A1EEE402A00FA0A62 /* R.generated.swift */; };
 		2328F5AE1EEEA1C300FA0A62 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2328F5AD1EEEA1C300FA0A62 /* Const.swift */; };
 		233B59AD1EF3769700C75D90 /* NumericHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233B59AC1EF3769700C75D90 /* NumericHelper.swift */; };
+		233B59B11EF3844100C75D90 /* UIAlertControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233B59B01EF3844100C75D90 /* UIAlertControllerExtension.swift */; };
 		233EFCC51EEF8B0B00EEB8A7 /* UIControlExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233EFCC41EEF8B0B00EEB8A7 /* UIControlExtention.swift */; };
 		233EFCCF1EEFC10F00EEB8A7 /* FileAttachable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233EFCCE1EEFC10F00EEB8A7 /* FileAttachable.swift */; };
 		233EFCD41EEFC51C00EEB8A7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 233EFCD21EEFC51C00EEB8A7 /* Localizable.strings */; };
 		233EFCE51EEFDED900EEB8A7 /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233EFCE41EEFDED900EEB8A7 /* BaseRequest.swift */; };
 		233EFCE81EEFE04000EEB8A7 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233EFCE71EEFE04000EEB8A7 /* Auth.swift */; };
 		233EFCEB1EEFE07E00EEB8A7 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233EFCEA1EEFE07E00EEB8A7 /* LoginRequest.swift */; };
-		233EFCED1EEFE46D00EEB8A7 /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233EFCEC1EEFE46D00EEB8A7 /* AlertHelper.swift */; };
 		233EFCEF1EEFE6D900EEB8A7 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233EFCEE1EEFE6D900EEB8A7 /* Book.swift */; };
 		233EFCF11EEFE9FB00EEB8A7 /* ListBooksRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233EFCF01EEFE9FB00EEB8A7 /* ListBooksRequest.swift */; };
 		233EFCF31EEFEA4D00EEB8A7 /* BookCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233EFCF21EEFEA4D00EEB8A7 /* BookCollection.swift */; };
@@ -62,6 +62,7 @@
 		2328F59A1EEE402A00FA0A62 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		2328F5AD1EEEA1C300FA0A62 /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		233B59AC1EF3769700C75D90 /* NumericHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumericHelper.swift; sourceTree = "<group>"; };
+		233B59B01EF3844100C75D90 /* UIAlertControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtension.swift; sourceTree = "<group>"; };
 		233EFCC41EEF8B0B00EEB8A7 /* UIControlExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIControlExtention.swift; sourceTree = "<group>"; };
 		233EFCCE1EEFC10F00EEB8A7 /* FileAttachable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileAttachable.swift; sourceTree = "<group>"; };
 		233EFCD01EEFC48200EEB8A7 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
@@ -71,7 +72,6 @@
 		233EFCE41EEFDED900EEB8A7 /* BaseRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseRequest.swift; path = Api/BaseRequest.swift; sourceTree = "<group>"; };
 		233EFCE71EEFE04000EEB8A7 /* Auth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Auth.swift; path = Api/Models/Auth.swift; sourceTree = "<group>"; };
 		233EFCEA1EEFE07E00EEB8A7 /* LoginRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginRequest.swift; path = Api/LoginRequest.swift; sourceTree = "<group>"; };
-		233EFCEC1EEFE46D00EEB8A7 /* AlertHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
 		233EFCEE1EEFE6D900EEB8A7 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Book.swift; path = Api/Models/Book.swift; sourceTree = "<group>"; };
 		233EFCF01EEFE9FB00EEB8A7 /* ListBooksRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListBooksRequest.swift; path = Api/ListBooksRequest.swift; sourceTree = "<group>"; };
 		233EFCF21EEFEA4D00EEB8A7 /* BookCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookCollection.swift; sourceTree = "<group>"; };
@@ -120,7 +120,7 @@
 				231B69A21EEA8017006F2CBD /* FileAttachHelper.swift */,
 				2328F5AD1EEEA1C300FA0A62 /* Const.swift */,
 				233EFCC41EEF8B0B00EEB8A7 /* UIControlExtention.swift */,
-				233EFCEC1EEFE46D00EEB8A7 /* AlertHelper.swift */,
+				233B59B01EF3844100C75D90 /* UIAlertControllerExtension.swift */,
 				233EFCF41EF00F9100EEB8A7 /* DateHelper.swift */,
 				234405D71EF106D00001FDC6 /* ImageHelper.swift */,
 				233B59AC1EF3769700C75D90 /* NumericHelper.swift */,
@@ -341,6 +341,7 @@
 				231B23901EE6BEDA004C3221 /* AddBookViewController.swift in Sources */,
 				234405D81EF106D00001FDC6 /* ImageHelper.swift in Sources */,
 				233EFCEF1EEFE6D900EEB8A7 /* Book.swift in Sources */,
+				233B59B11EF3844100C75D90 /* UIAlertControllerExtension.swift in Sources */,
 				233EFCEB1EEFE07E00EEB8A7 /* LoginRequest.swift in Sources */,
 				233EFCF31EEFEA4D00EEB8A7 /* BookCollection.swift in Sources */,
 				233B59AD1EF3769700C75D90 /* NumericHelper.swift in Sources */,
@@ -352,7 +353,6 @@
 				233EFCF11EEFE9FB00EEB8A7 /* ListBooksRequest.swift in Sources */,
 				23BFA9E61EF29C6400EF2709 /* AuthManager.swift in Sources */,
 				235B0DAC1EE673700007BB69 /* BookTableViewCell.swift in Sources */,
-				233EFCED1EEFE46D00EEB8A7 /* AlertHelper.swift in Sources */,
 				2328F59B1EEE402A00FA0A62 /* R.generated.swift in Sources */,
 				233EFCE51EEFDED900EEB8A7 /* BaseRequest.swift in Sources */,
 				233EFCCF1EEFC10F00EEB8A7 /* FileAttachable.swift in Sources */,

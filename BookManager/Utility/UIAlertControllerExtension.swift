@@ -1,9 +1,8 @@
 import Foundation
 import UIKit
 
-class AlertHelper {
-
-    class func showAlert(_ controller: UIViewController, title: String, message: String) {
+extension UIAlertController {
+    static func showLeftParagraphAlert(title: String, message: String) -> UIAlertController {
         let alertWindow = UIAlertController(title: title,
                                             message: message, preferredStyle: .alert)
 
@@ -19,8 +18,9 @@ class AlertHelper {
                 NSParagraphStyleAttributeName: paragraphStyle
             ]
         )
+
         alertWindow.setValue(messageText, forKey: "attributedMessage")
 
-        controller.present(alertWindow, animated: true, completion: nil)
+        return alertWindow
     }
 }
