@@ -62,9 +62,12 @@ class AddBookViewController: UIViewController, FileAttachable, BookValidatable {
             return present(alertController, animated: true, completion: nil)
         }
 
-        addBook(name: nameTextField.text!, price: NumericHelper.transformStringToInt(priceTextField.text!),
-                purchaseData: purchaseDateTextField.text!,
-                imageData: ImageHelper.encode(image: imageView.image)!, auth: auth)
+        let addBookRequest = AddBookRequest(name: nameTextField.text!,
+                                            price: NumericHelper.transformStringToInt(priceTextField.text!),
+                                            purchaseDate: purchaseDateTextField.text!,
+                                            imageData: ImageHelper.encode(image: imageView.image)!,
+                                            userId: auth.userId, token: auth.requestToken)
+        addBook(addBookRequest)
     }
 
     override func viewDidLoad() {
@@ -79,10 +82,7 @@ class AddBookViewController: UIViewController, FileAttachable, BookValidatable {
         DatePickerHelper.setValue(sender, target: purchaseDateTextField)
     }
 
-    func addBook(name: String, price: Int, purchaseData: String, imageData: String, auth: Auth) {
-        let addBookRequest = AddBookRequest(name: name, price: price, purchaseDate: purchaseData,
-                                            imageData: imageData, userId: auth.userId, token: auth.requestToken)
-
+    func addBook(_ addBookRequest: AddBookRequest) {
         Session.send(addBookRequest) { result in
             switch result {
             case .success(let bookResult):
