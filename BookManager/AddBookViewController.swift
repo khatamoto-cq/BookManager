@@ -47,7 +47,6 @@ class AddBookViewController: UIViewController, FileAttachable, BookValidatable {
     }
 
     @IBAction func didSaveButtonTapped(_ sender: Any) {
-        let auth = AuthManager.shared.getAuth()
         let errors = validate(name: nameTextField.text!, price: priceTextField.text!)
 
         guard errors.isEmpty else {
@@ -62,6 +61,7 @@ class AddBookViewController: UIViewController, FileAttachable, BookValidatable {
             return present(alertController, animated: true, completion: nil)
         }
 
+        let auth = AuthManager.shared.getAuth()
         let addBookRequest = AddBookRequest(name: nameTextField.text!,
                                             price: NumericHelper.transformStringToInt(priceTextField.text!),
                                             purchaseDate: purchaseDateTextField.text!,
