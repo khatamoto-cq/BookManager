@@ -27,7 +27,9 @@ class BookTableViewCell: UITableViewCell {
             bookImageView.kf.setImage(with: url)
         }
         nameLabel.text = book.name
-        priceLabel.text = String(book.price) + "円" + " + 税"
+        priceLabel.text = String(book.price) + R.string.localizable.lavelUnixOfMoney() +
+                            " + " + R.string.localizable.lavelTax()
+
         if let date = book.purchaseDate {
             purchaseDateLabel.text = DateHelper.transformFromApiDateToClientDate(date: date)
         }

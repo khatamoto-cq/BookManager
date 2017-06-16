@@ -14,3 +14,6 @@
 "ErrorAuthentication" = "認証に失敗しました。再度ログインしてください";
 "ErrorNetworing" = "通信中エラーが発生しました。時間をおいてからやり直してみてください";
 "ErrorDateFormatter" = "日付のフォーマット変換に失敗しました";
+
+"LavelTax" = "税";
+"LavelUnixOfMoney" = "円";
