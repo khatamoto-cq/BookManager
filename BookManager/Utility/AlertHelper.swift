@@ -11,7 +11,7 @@ class AlertHelper {
         alertWindow.addAction(canselAction)
 
         let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.alignment = NSTextAlignment.left
+        paragraphStyle.alignment = .left
 
         let messageText = NSMutableAttributedString(
             string: message,
