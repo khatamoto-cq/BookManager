@@ -1,11 +1,13 @@
 import Foundation
 
 class DateHelper {
-    class func transformFromApiDateToClientDate(date: String) -> String {
+    static func transformFromApiDateToClientDate(date: String) -> String {
         let fromFmt = DateFormatter()
         fromFmt.dateFormat = "EEE, dd MMM yyyy HH:mm:ss zzz"
         fromFmt.timeZone = TimeZone.current
-        fromFmt.locale = Locale(identifier: "en_US_POSIX")
+        if let countryCode = (Locale.current as NSLocale).object(forKey: .countryCode) as? String {
+            fromFmt.locale = Locale(identifier: countryCode)
+        }
 
         let toFmt = DateFormatter()
         toFmt.dateFormat = "yyyy/MM/dd"

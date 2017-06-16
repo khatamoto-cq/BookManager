@@ -2,7 +2,7 @@ import Foundation
 import UIKit
 
 class FileAttachHelper {
-    class func load(_ target: UIViewController) {
+    static func load(_ target: UIViewController) {
         let delegate = target as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
 
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
@@ -13,7 +13,7 @@ class FileAttachHelper {
         }
     }
 
-    class func setImage(_ controller: FileAttachable, info: [String : Any]) {
+    static func setImage(_ controller: FileAttachable, info: [String : Any]) {
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             controller.imageView.image = image
         }

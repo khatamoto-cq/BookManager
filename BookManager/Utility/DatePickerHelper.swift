@@ -2,7 +2,7 @@ import Foundation
 import UIKit
 
 class DatePickerHelper {
-    class func load(_ target: Any?, action: Selector, sender: UITextField) {
+    static func load(_ target: Any?, action: Selector, sender: UITextField) {
         let datePicker = UIDatePicker()
         datePicker.datePickerMode = .date
         sender.inputView = datePicker
@@ -10,7 +10,7 @@ class DatePickerHelper {
                              for: UIControlEvents.valueChanged)
     }
 
-    class func setValue(_ sender: UIDatePicker, target: UITextField) {
+    static func setValue(_ sender: UIDatePicker, target: UITextField) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy/MM/dd"
         target.text = dateFormatter.string(from: sender.date)
