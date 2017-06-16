@@ -10,6 +10,12 @@ class TabViewController: UITabBarController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+
+    static func create(_ style: UIModalTransitionStyle) -> TabViewController {
+        let controller = R.storyboard.main.tabViewController()
+        controller?.modalTransitionStyle = style
+        return controller!
+    }
 }
 
 extension TabViewController: UITabBarControllerDelegate {

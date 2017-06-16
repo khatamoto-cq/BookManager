@@ -27,9 +27,8 @@ class AccountViewController: UIViewController {
 
     @IBOutlet weak var closeButton: UIButton! {
         didSet {
-            let logined = UserDefaults.standard.bool(forKey: "logined")
-            closeButton.isEnabled = logined
-            closeButton.isHidden = !logined
+            closeButton.isEnabled = AuthManager.shared.isLogined()
+            closeButton.isHidden = !AuthManager.shared.isLogined()
         }
     }
 
@@ -55,11 +54,6 @@ class AccountViewController: UIViewController {
         super.viewDidLoad()
     }
 
-    func saveLoginState() {
-        UserDefaults.standard.set(true, forKey: "logined")
-        UserDefaults.standard.synchronize()
-    }
-
     func saveAccount(email: String, password: String) {
         let accountRequest = AccountRequest(email: email, password: password)
 
@@ -69,11 +63,9 @@ class AccountViewController: UIViewController {
                 print("[アカウント追加完了] user_id: \(auth.userId), request_token: \(auth.requestToken)")
                 AuthManager.shared.save(auth)
 
-                if !UserDefaults.standard.bool(forKey: "logined") {
-                    self.saveLoginState()
-                    let controller = R.storyboard.main.tabViewController()
-                    controller?.modalTransitionStyle = .crossDissolve
-                    return self.present(controller!, animated: true, completion: nil)
+                if !AuthManager.shared.isLogined() {
+                    AuthManager.shared.saveLoginState()
+                    return self.present(TabViewController.create(.crossDissolve), animated: true, completion: nil)
                 }
 
                 self.dismiss(animated: true, completion: nil)

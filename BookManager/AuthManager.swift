@@ -15,4 +15,13 @@ final class AuthManager {
         return Auth(userId: UserDefaults.standard.integer(forKey: "user_id"),
                     requestToken: UserDefaults.standard.string(forKey: "request_token")!)
     }
+
+    func isLogined() -> Bool {
+        return UserDefaults.standard.bool(forKey: "logined")
+    }
+
+    func saveLoginState() {
+        UserDefaults.standard.set(true, forKey: "logined")
+        UserDefaults.standard.synchronize()
+    }
 }
