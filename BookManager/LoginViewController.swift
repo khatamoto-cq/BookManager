@@ -24,7 +24,7 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func didLoginButtonTapped(_ sender: Any) {
-        guard validate() else {
+        guard validate(email: emailTextField.text!, password: passwordTextField.text!) else {
             let alertController = UIAlertController.showLeftParagraphAlert(
                 title: R.string.localizable.errorLoginTitle(), message: R.string.localizable.errorLogin())
             return self.present(alertController, animated: true, completion: nil)
@@ -37,12 +37,8 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
     }
 
-    func validate() -> Bool {
-        if (emailTextField.text?.isEmpty)! || (passwordTextField.text?.isEmpty)! {
-            return false
-        }
-
-        return true
+    func validate(email: String, password: String) -> Bool {
+        return !email.isEmpty && !password.isEmpty
     }
 
     func requestLogin() {
