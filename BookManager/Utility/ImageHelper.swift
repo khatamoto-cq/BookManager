@@ -2,8 +2,12 @@ import Foundation
 import UIKit
 
 class ImageHelper {
-    class func encode(image: UIImage) -> String? {
-        let data = NSData(data: UIImagePNGRepresentation(image)!)
+    static func encode(image: UIImage?) -> String? {
+        if image == nil {
+            return ""
+        }
+
+        let data = NSData(data: UIImagePNGRepresentation(image!)!)
         let encodeString =
             data.base64EncodedString(options: [])
 

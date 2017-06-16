@@ -18,6 +18,7 @@
 		2328F5981EEE3F5000FA0A62 /* Rswift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2328F5971EEE3F5000FA0A62 /* Rswift.framework */; };
 		2328F59B1EEE402A00FA0A62 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2328F59A1EEE402A00FA0A62 /* R.generated.swift */; };
 		2328F5AE1EEEA1C300FA0A62 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2328F5AD1EEEA1C300FA0A62 /* Const.swift */; };
+		233B59AD1EF3769700C75D90 /* NumericHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233B59AC1EF3769700C75D90 /* NumericHelper.swift */; };
 		233EFCC51EEF8B0B00EEB8A7 /* UIControlExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233EFCC41EEF8B0B00EEB8A7 /* UIControlExtention.swift */; };
 		233EFCCF1EEFC10F00EEB8A7 /* FileAttachable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233EFCCE1EEFC10F00EEB8A7 /* FileAttachable.swift */; };
 		233EFCD41EEFC51C00EEB8A7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 233EFCD21EEFC51C00EEB8A7 /* Localizable.strings */; };
@@ -60,6 +61,7 @@
 		2328F5971EEE3F5000FA0A62 /* Rswift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Rswift.framework; path = Carthage/Build/iOS/Rswift.framework; sourceTree = "<group>"; };
 		2328F59A1EEE402A00FA0A62 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		2328F5AD1EEEA1C300FA0A62 /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		233B59AC1EF3769700C75D90 /* NumericHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumericHelper.swift; sourceTree = "<group>"; };
 		233EFCC41EEF8B0B00EEB8A7 /* UIControlExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIControlExtention.swift; sourceTree = "<group>"; };
 		233EFCCE1EEFC10F00EEB8A7 /* FileAttachable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileAttachable.swift; sourceTree = "<group>"; };
 		233EFCD01EEFC48200EEB8A7 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				233EFCEC1EEFE46D00EEB8A7 /* AlertHelper.swift */,
 				233EFCF41EF00F9100EEB8A7 /* DateHelper.swift */,
 				234405D71EF106D00001FDC6 /* ImageHelper.swift */,
+				233B59AC1EF3769700C75D90 /* NumericHelper.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 				233EFCEF1EEFE6D900EEB8A7 /* Book.swift in Sources */,
 				233EFCEB1EEFE07E00EEB8A7 /* LoginRequest.swift in Sources */,
 				233EFCF31EEFEA4D00EEB8A7 /* BookCollection.swift in Sources */,
+				233B59AD1EF3769700C75D90 /* NumericHelper.swift in Sources */,
 				234405D21EF0DF940001FDC6 /* BookResult.swift in Sources */,
 				233EFCC51EEF8B0B00EEB8A7 /* UIControlExtention.swift in Sources */,
 				23BFA9E81EF2A64700EF2709 /* BookValidateable.swift in Sources */,

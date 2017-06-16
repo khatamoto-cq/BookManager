@@ -48,7 +48,8 @@ class AddBookViewController: UIViewController, FileAttachable, BookValidateable 
 
     @IBAction func didSaveButtonTapped(_ sender: Any) {
         let errors = validate(name: nameTextField.text!, price: priceTextField.text!)
-        if !errors.isEmpty {
+
+        guard !errors.isEmpty else {
             return AlertHelper.showAlert(self, title: R.string.localizable.validateErrorTitle(),
                                          message: errors.joined(separator: "\n"))
         }
@@ -59,9 +60,10 @@ class AddBookViewController: UIViewController, FileAttachable, BookValidateable 
                                          message: R.string.localizable.errorAuthentication())
         }
 
-        let addBookRequest = AddBookRequest(name: nameTextField.text!, price: Int(priceTextField.text!)!,
+        let addBookRequest = AddBookRequest(name: nameTextField.text!,
+                                            price: NumericHelper.transformStringToInt(priceTextField.text!),
                                             purchaseDate: purchaseDateTextField.text!,
-                                            image: ImageHelper.encode(image: imageView.image!)!,
+                                            image: ImageHelper.encode(image: imageView.image)!,
                                             userId: auth.userId, token: auth.requestToken)
 
         Session.send(addBookRequest) { result in
