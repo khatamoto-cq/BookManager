@@ -27,7 +27,6 @@ class AccountViewController: UIViewController {
 
     @IBOutlet weak var closeButton: UIButton! {
         didSet {
-            closeButton.isEnabled = AuthManager.shared.isEntry()
             closeButton.isHidden = !AuthManager.shared.isEntry()
         }
     }
@@ -47,16 +46,15 @@ class AccountViewController: UIViewController {
                 title: R.string.localizable.validateErrorTitle(), message: errors.joined(separator: "\n"))
             return present(alertController, animated: true, completion: nil)
         }
-        saveAccount(email: email, password: password)
+
+        saveAccount(AccountRequest(email: email, password: password))
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
-    func saveAccount(email: String, password: String) {
-        let accountRequest = AccountRequest(email: email, password: password)
-
+    func saveAccount(_ accountRequest: AccountRequest) {
         Session.send(accountRequest) { result in
             switch result {
             case .success(let auth):
