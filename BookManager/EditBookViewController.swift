@@ -74,10 +74,26 @@ class EditBookViewController: UIViewController, FileAttachable, BookValidateable
         book.price = Int(priceTextField.text!)!
         book.purchaseDate = purchaseDateTextField.text!
 
+        editBook(book: book, imageData: ImageHelper.encode(image: imageView.image!)!, auth: auth)
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+
+    func pickerChanged(sender: UIDatePicker) {
+        DatePickerHelper.setValue(sender, target: purchaseDateTextField)
+    }
+
+    func editBook(book: Book, imageData: String, auth: Auth) {
         let editBookRequest = EditBookRequest(id: book.id, name: book.name, price: book.price,
-                                             purchaseDate: book.purchaseDate!,
-                                             image: ImageHelper.encode(image: imageView.image!)!,
-                                             token: auth.requestToken)
+                                              purchaseDate: book.purchaseDate!,
+                                              imageData: imageData,
+                                              token: auth.requestToken)
 
         Session.send(editBookRequest) { result in
             switch result {
@@ -91,18 +107,6 @@ class EditBookViewController: UIViewController, FileAttachable, BookValidateable
                 return self.present(alertController, animated: true, completion: nil)
             }
         }
-    }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-
-    func pickerChanged(sender: UIDatePicker) {
-        DatePickerHelper.setValue(sender, target: purchaseDateTextField)
     }
 }
 
