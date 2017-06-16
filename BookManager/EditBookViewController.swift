@@ -66,7 +66,7 @@ class EditBookViewController: UIViewController, FileAttachable, BookValidatable 
         }
 
         let account = AuthManager.shared.getAuth()
-        if account.requestToken.isEmpty || account.userId == 0 {
+        if !AuthManager.shared.isLogin() {
             let alertController = UIAlertController.createLeftParagraphAlert(
                 title: R.string.localizable.errorTitle(), message: R.string.localizable.errorAuthentication())
             return self.present(alertController, animated: true, completion: nil)
@@ -76,7 +76,11 @@ class EditBookViewController: UIViewController, FileAttachable, BookValidatable 
         book.price = Int(priceTextField.text!)!
         book.purchaseDate = purchaseDateTextField.text!
 
-        editBook(book: book, imageData: ImageHelper.encode(image: imageView.image!)!, account: account)
+        let editBookRequest = EditBookRequest(id: book.id, name: book.name, price: book.price,
+                                              purchaseDate: book.purchaseDate!,
+                                              imageData:  ImageHelper.encode(image: imageView.image!)!,
+                                              token: account.requestToken)
+        editBook(editBookRequest)
     }
 
     override func viewDidLoad() {
@@ -91,12 +95,7 @@ class EditBookViewController: UIViewController, FileAttachable, BookValidatable 
         DatePickerHelper.setValue(sender, target: purchaseDateTextField)
     }
 
-    func editBook(book: BookResponse, imageData: String, account: AccountResponse) {
-        let editBookRequest = EditBookRequest(id: book.id, name: book.name, price: book.price,
-                                              purchaseDate: book.purchaseDate!,
-                                              imageData: imageData,
-                                              token: account.requestToken)
-
+    func editBook(_ editBookRequest: EditBookRequest) {
         Session.send(editBookRequest) { result in
             switch result {
             case .success(let resultBookResponse):
