@@ -1,6 +1,6 @@
 import Foundation
 
-class DateHelper {
+extension Date {
     static func transformFromApiDateToClientDate(date: String) -> String {
         let fromFmt = DateFormatter()
         fromFmt.dateFormat = "EEE, dd MMM yyyy HH:mm:ss zzz"

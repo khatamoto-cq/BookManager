@@ -20,6 +20,7 @@
 		2328F5AE1EEEA1C300FA0A62 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2328F5AD1EEEA1C300FA0A62 /* Const.swift */; };
 		233B59AD1EF3769700C75D90 /* NumericHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233B59AC1EF3769700C75D90 /* NumericHelper.swift */; };
 		233B59B11EF3844100C75D90 /* UIAlertControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233B59B01EF3844100C75D90 /* UIAlertControllerExtension.swift */; };
+		233B59B31EF3BFB300C75D90 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233B59B21EF3BFB300C75D90 /* DateExtension.swift */; };
 		233EFCC51EEF8B0B00EEB8A7 /* UIControlExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233EFCC41EEF8B0B00EEB8A7 /* UIControlExtention.swift */; };
 		233EFCCF1EEFC10F00EEB8A7 /* FileAttachable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233EFCCE1EEFC10F00EEB8A7 /* FileAttachable.swift */; };
 		233EFCD41EEFC51C00EEB8A7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 233EFCD21EEFC51C00EEB8A7 /* Localizable.strings */; };
@@ -29,7 +30,6 @@
 		233EFCEF1EEFE6D900EEB8A7 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233EFCEE1EEFE6D900EEB8A7 /* Book.swift */; };
 		233EFCF11EEFE9FB00EEB8A7 /* ListBooksRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233EFCF01EEFE9FB00EEB8A7 /* ListBooksRequest.swift */; };
 		233EFCF31EEFEA4D00EEB8A7 /* BookCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233EFCF21EEFEA4D00EEB8A7 /* BookCollection.swift */; };
-		233EFCF51EF00F9100EEB8A7 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233EFCF41EF00F9100EEB8A7 /* DateHelper.swift */; };
 		234405D21EF0DF940001FDC6 /* BookResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234405D11EF0DF940001FDC6 /* BookResult.swift */; };
 		234405D41EF0E0780001FDC6 /* EditBookRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234405D31EF0E0780001FDC6 /* EditBookRequest.swift */; };
 		234405D61EF0F7090001FDC6 /* AddBookRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234405D51EF0F7090001FDC6 /* AddBookRequest.swift */; };
@@ -63,6 +63,7 @@
 		2328F5AD1EEEA1C300FA0A62 /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		233B59AC1EF3769700C75D90 /* NumericHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumericHelper.swift; sourceTree = "<group>"; };
 		233B59B01EF3844100C75D90 /* UIAlertControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtension.swift; sourceTree = "<group>"; };
+		233B59B21EF3BFB300C75D90 /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		233EFCC41EEF8B0B00EEB8A7 /* UIControlExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIControlExtention.swift; sourceTree = "<group>"; };
 		233EFCCE1EEFC10F00EEB8A7 /* FileAttachable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileAttachable.swift; sourceTree = "<group>"; };
 		233EFCD01EEFC48200EEB8A7 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
@@ -75,7 +76,6 @@
 		233EFCEE1EEFE6D900EEB8A7 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Book.swift; path = Api/Models/Book.swift; sourceTree = "<group>"; };
 		233EFCF01EEFE9FB00EEB8A7 /* ListBooksRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListBooksRequest.swift; path = Api/ListBooksRequest.swift; sourceTree = "<group>"; };
 		233EFCF21EEFEA4D00EEB8A7 /* BookCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookCollection.swift; sourceTree = "<group>"; };
-		233EFCF41EF00F9100EEB8A7 /* DateHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		234405D11EF0DF940001FDC6 /* BookResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BookResult.swift; path = Api/Models/BookResult.swift; sourceTree = "<group>"; };
 		234405D31EF0E0780001FDC6 /* EditBookRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EditBookRequest.swift; path = Api/EditBookRequest.swift; sourceTree = "<group>"; };
 		234405D51EF0F7090001FDC6 /* AddBookRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddBookRequest.swift; path = Api/AddBookRequest.swift; sourceTree = "<group>"; };
@@ -119,7 +119,7 @@
 				2328F5AD1EEEA1C300FA0A62 /* Const.swift */,
 				231B69A11EEA8017006F2CBD /* DatePickerHelper.swift */,
 				231B69A21EEA8017006F2CBD /* FileAttachHelper.swift */,
-				233EFCF41EF00F9100EEB8A7 /* DateHelper.swift */,
+				233B59B21EF3BFB300C75D90 /* DateExtension.swift */,
 				234405D71EF106D00001FDC6 /* ImageHelper.swift */,
 				233B59AC1EF3769700C75D90 /* NumericHelper.swift */,
 				233EFCC41EEF8B0B00EEB8A7 /* UIControlExtention.swift */,
@@ -346,6 +346,7 @@
 				233EFCF31EEFEA4D00EEB8A7 /* BookCollection.swift in Sources */,
 				233B59AD1EF3769700C75D90 /* NumericHelper.swift in Sources */,
 				234405D21EF0DF940001FDC6 /* BookResult.swift in Sources */,
+				233B59B31EF3BFB300C75D90 /* DateExtension.swift in Sources */,
 				233EFCC51EEF8B0B00EEB8A7 /* UIControlExtention.swift in Sources */,
 				23BFA9E81EF2A64700EF2709 /* BookValidatable.swift in Sources */,
 				231B69A41EEA8017006F2CBD /* FileAttachHelper.swift in Sources */,
@@ -364,7 +365,6 @@
 				231B23921EE6BF03004C3221 /* EditBookViewController.swift in Sources */,
 				231B69A31EEA8017006F2CBD /* DatePickerHelper.swift in Sources */,
 				23CAD1D11EE9346100C27108 /* TabViewController.swift in Sources */,
-				233EFCF51EF00F9100EEB8A7 /* DateHelper.swift in Sources */,
 				23EB3E961EE5562E0038B49C /* SettingViewController.swift in Sources */,
 				2328F5AE1EEEA1C300FA0A62 /* Const.swift in Sources */,
 				233EFCE81EEFE04000EEB8A7 /* Auth.swift in Sources */,

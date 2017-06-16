@@ -30,7 +30,7 @@ class BookTableViewCell: UITableViewCell {
         priceLabel.text = R.string.localizable.labelPrice(book.price)
 
         if let date = book.purchaseDate {
-            purchaseDateLabel.text = DateHelper.transformFromApiDateToClientDate(date: date)
+            purchaseDateLabel.text = Date.transformFromApiDateToClientDate(date: date)
         }
     }
 }

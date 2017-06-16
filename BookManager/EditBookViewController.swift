@@ -37,7 +37,7 @@ class EditBookViewController: UIViewController, FileAttachable, BookValidatable 
                                         radius: Const.TextFieldCornerRadius,
                                         masksToBound: Const.TextFieldMasksToBounds)
             if book.purchaseDate != nil {
-                purchaseDateTextField.text = DateHelper.transformFromApiDateToClientDate(date: book.purchaseDate!)
+                purchaseDateTextField.text = Date.transformFromApiDateToClientDate(date: book.purchaseDate!)
             }
         }
     }
