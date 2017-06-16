@@ -16,12 +16,17 @@ final class AuthManager {
                     requestToken: UserDefaults.standard.string(forKey: "request_token")!)
     }
 
-    func isLogined() -> Bool {
-        return UserDefaults.standard.bool(forKey: "logined")
+    func isEntry() -> Bool {
+        return UserDefaults.standard.bool(forKey: "entried")
     }
 
-    func saveLoginState() {
-        UserDefaults.standard.set(true, forKey: "logined")
+    func saveEntry() {
+        UserDefaults.standard.set(true, forKey: "entried")
         UserDefaults.standard.synchronize()
+    }
+
+    func isLogin() -> Bool {
+        let auth = getAuth()
+        return !auth.requestToken.isEmpty && auth.userId > 0
     }
 }

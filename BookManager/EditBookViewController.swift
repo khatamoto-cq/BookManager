@@ -2,7 +2,7 @@ import UIKit
 import Kingfisher
 import APIKit
 
-class EditBookViewController: UIViewController, FileAttachable, BookValidateable {
+class EditBookViewController: UIViewController, FileAttachable, BookValidatable {
 
     var book: Book!
 

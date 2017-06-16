@@ -1,7 +1,7 @@
 import UIKit
 import APIKit
 
-class AddBookViewController: UIViewController, FileAttachable, BookValidateable {
+class AddBookViewController: UIViewController, FileAttachable, BookValidatable {
 
     @IBOutlet weak var imageView: UIImageView!
 
@@ -47,6 +47,7 @@ class AddBookViewController: UIViewController, FileAttachable, BookValidateable 
     }
 
     @IBAction func didSaveButtonTapped(_ sender: Any) {
+        let auth = AuthManager.shared.getAuth()
         let errors = validate(name: nameTextField.text!, price: priceTextField.text!)
 
         guard errors.isEmpty else {
@@ -55,8 +56,7 @@ class AddBookViewController: UIViewController, FileAttachable, BookValidateable 
             return present(alertController, animated: true, completion: nil)
         }
 
-        let auth = AuthManager.shared.getAuth()
-        if auth.requestToken.isEmpty || auth.userId == 0 {
+        if !AuthManager.shared.isLogin() {
             let alertController = UIAlertController.createLeftParagraphAlert(
                 title: R.string.localizable.errorTitle(), message: R.string.localizable.errorAuthentication())
             return present(alertController, animated: true, completion: nil)

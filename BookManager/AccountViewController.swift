@@ -27,8 +27,8 @@ class AccountViewController: UIViewController {
 
     @IBOutlet weak var closeButton: UIButton! {
         didSet {
-            closeButton.isEnabled = AuthManager.shared.isLogined()
-            closeButton.isHidden = !AuthManager.shared.isLogined()
+            closeButton.isEnabled = AuthManager.shared.isEntry()
+            closeButton.isHidden = !AuthManager.shared.isEntry()
         }
     }
 
@@ -63,8 +63,8 @@ class AccountViewController: UIViewController {
                 print("[アカウント追加完了] user_id: \(auth.userId), request_token: \(auth.requestToken)")
                 AuthManager.shared.save(auth)
 
-                if !AuthManager.shared.isLogined() {
-                    AuthManager.shared.saveLoginState()
+                if !AuthManager.shared.isEntry() {
+                    AuthManager.shared.saveEntry()
                     return self.present(TabViewController.create(.crossDissolve), animated: true, completion: nil)
                 }
 

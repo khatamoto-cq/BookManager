@@ -1,10 +1,10 @@
 import UIKit
 
-protocol BookValidateable {
+protocol BookValidatable {
     func validate(name: String, price: String) -> [String]
 }
 
-extension BookValidateable {
+extension BookValidatable {
     func validate(name: String, price: String) -> [String] {
         var errors: [String] = []
         let predicate = NSPredicate(format: "SELF MATCHES '\\\\d+'")

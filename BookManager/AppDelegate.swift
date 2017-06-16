@@ -13,12 +13,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         // <開発用途に使用> アプリ初回起動時に設定したい場合はコメントアウト
         /*
-        UserDefaults.standard.set(false, forKey: "logined")
+        UserDefaults.standard.set(false, forKey: "entried")
         UserDefaults.standard.synchronize()
         */
 
         // 最初のアクセスを判定
-        if !UserDefaults.standard.bool(forKey: "logined") {
+        if !UserDefaults.standard.bool(forKey: "entried") {
             self.window?.rootViewController = R.storyboard.main.accountNav()
             self.window?.makeKeyAndVisible()
         }
