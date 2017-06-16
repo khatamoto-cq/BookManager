@@ -36,7 +36,9 @@ class EditBookViewController: UIViewController, FileAttachable, BookValidateable
                                         borderColor: Const.TextFieldBorderColor,
                                         radius: Const.TextFieldCornerRadius,
                                         masksToBound: Const.TextFieldMasksToBounds)
-            purchaseDateTextField.text = DateHelper.transformFromApiDateToClientDate(date: book.purchaseDate!)
+            if book.purchaseDate != nil {
+                purchaseDateTextField.text = DateHelper.transformFromApiDateToClientDate(date: book.purchaseDate!)
+            }
         }
     }
 
