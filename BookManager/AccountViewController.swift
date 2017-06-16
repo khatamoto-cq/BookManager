@@ -38,12 +38,16 @@ class AccountViewController: UIViewController {
     }
 
     @IBAction func didSaveButtonTapped(_ sender: Any) {
-        let errors = validate()
+        let email = emailTextField.text!
+        let password = passwordTextField.text!
+        let passwordConfirm = passwordConfirmTextField.text!
+
+        let errors = validate(email: email, password: password, passwordConfirm: passwordConfirm)
         if !errors.isEmpty {
             return AlertHelper.showAlert(self, title: R.string.localizable.validateErrorTitle(),
                                          message: errors.joined(separator: "\n"))
         }
-        saveAccount(email: emailTextField.text!, password: passwordTextField.text!)
+        saveAccount(email: email, password: password)
     }
 
     override func viewDidLoad() {
@@ -80,28 +84,28 @@ class AccountViewController: UIViewController {
         }
     }
 
-    func validate() -> [String] {
+    func validate(email: String, password: String, passwordConfirm: String) -> [String] {
         var errors: [String] = []
 
-        if (emailTextField.text?.isEmpty)! {
+        if email.isEmpty {
             errors.append(R.string.localizable.validateErrorRequireAccountEmail())
         } else {
             let regEx = NSPredicate(format:"SELF MATCHES %@", "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}")
-            if !regEx.evaluate(with: emailTextField.text) {
+            if !regEx.evaluate(with: email) {
                 errors.append(R.string.localizable.validateErrorInvalidEmail())
             }
         }
 
-        if (passwordTextField.text?.isEmpty)! {
+        if password.isEmpty {
             errors.append(R.string.localizable.validateErrorRequireAccountPassword())
         }
 
-        if (passwordConfirmTextField.text?.isEmpty)! {
+        if passwordConfirm.isEmpty {
             errors.append(R.string.localizable.validateErrorRequireAccountPasswordConfirm())
         }
 
-        if !(passwordTextField.text?.isEmpty)! && !(passwordConfirmTextField.text?.isEmpty)! {
-            if passwordTextField.text != passwordConfirmTextField.text {
+        if !password.isEmpty && !passwordConfirm.isEmpty {
+            if password != passwordConfirm {
                 errors.append(R.string.localizable.validateErrorCompareAccountPassword())
             }
         }
