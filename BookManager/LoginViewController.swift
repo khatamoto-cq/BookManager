@@ -1,4 +1,5 @@
 import UIKit
+import APIKit
 
 class LoginViewController: UIViewController {
 
@@ -23,29 +24,41 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func didLoginButtonTapped(_ sender: Any) {
-        guard validate() else {
-            let alertWindow = UIAlertController(title: R.string.localizable.loginErrorTitle(),
-                    message: R.string.localizable.loginErrorMessage(), preferredStyle: .alert)
-            let canselAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-            alertWindow.addAction(canselAction)
-            return present(alertWindow, animated: true, completion: nil)
+        guard validate(email: emailTextField.text!, password: passwordTextField.text!) else {
+            let alertController = UIAlertController.createLeftParagraphAlert(
+                title: R.string.localizable.errorLoginTitle(), message: R.string.localizable.errorLogin())
+            return self.present(alertController, animated: true, completion: nil)
         }
 
-        let controller = R.storyboard.main.tabViewController()
-        controller?.modalTransitionStyle = .crossDissolve
-        return present(controller!, animated: true, completion: nil)
+        requestLogin()
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
-    func validate() -> Bool {
-        if (emailTextField.text?.isEmpty)! || (passwordTextField.text?.isEmpty)! {
-            return false
-        }
+    func validate(email: String, password: String) -> Bool {
+        return !email.isEmpty && !password.isEmpty
+    }
 
-        // (todo) APIと連携時にID/PWチェック
-        return true
+    func requestLogin() {
+        let loginRequest = LoginRequest(email: emailTextField.text!, password: passwordTextField.text!)
+
+        Session.send(loginRequest) { result in
+            switch result {
+            case .success(let accountResponse):
+                print("[ログイン] user_id: \(accountResponse.userId), request_token: \(accountResponse.requestToken)")
+                AuthManager.shared.save(accountResponse)
+
+                let controller = R.storyboard.main.tabViewController()
+                controller?.modalTransitionStyle = .crossDissolve
+                self.present(controller!, animated: true, completion: nil)
+            case .failure(let error):
+                print("error: \(error)")
+                let alertController = UIAlertController.createLeftParagraphAlert(
+                    title: R.string.localizable.errorLoginTitle(), message: R.string.localizable.errorLogin())
+                return self.present(alertController, animated: true, completion: nil)
+            }
+        }
     }
 }

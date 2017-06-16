@@ -7,4 +7,7 @@ struct Const {
     static let TextFieldBorderColor = UIColor.lightGray.cgColor
     static let TextFieldMasksToBounds = true
     static let ButtonCornerRadius = CGFloat(5)
+
+    static let BaseURL = "http://54.238.252.116"
+    static let BookLimit = "0-200"
 }

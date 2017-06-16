@@ -1,10 +1,18 @@
 import UIKit
+import Kingfisher
+import APIKit
 
-class EditBookViewController: UIViewController, FileAttachable {
+class EditBookViewController: UIViewController, FileAttachable, BookValidatable {
 
-    var book: Book!
+    var book: BookResponse!
 
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var imageView: UIImageView! {
+        didSet {
+            if !book.imageUrl.isEmpty {
+                imageView.kf.setImage(with: ImageResource.init(downloadURL: URL(string: book.imageUrl)!))
+            }
+        }
+    }
 
     @IBOutlet weak var nameTextField: UITextField! {
         didSet {
@@ -18,7 +26,7 @@ class EditBookViewController: UIViewController, FileAttachable {
         didSet {
             priceTextField.apply(borderWidth: Const.TextFieldBorderWidth, borderColor: Const.TextFieldBorderColor,
                                radius: Const.TextFieldCornerRadius, masksToBound: Const.TextFieldMasksToBounds)
-            priceTextField.text = book.price
+            priceTextField.text = String(book.price)
         }
     }
 
@@ -28,7 +36,9 @@ class EditBookViewController: UIViewController, FileAttachable {
                                         borderColor: Const.TextFieldBorderColor,
                                         radius: Const.TextFieldCornerRadius,
                                         masksToBound: Const.TextFieldMasksToBounds)
-            purchaseDateTextField.text = book.purchaseDate
+            if book.purchaseDate != nil {
+                purchaseDateTextField.text = Date.transformFromApiDateToClientDate(date: book.purchaseDate!)
+            }
         }
     }
 
@@ -47,7 +57,30 @@ class EditBookViewController: UIViewController, FileAttachable {
     }
 
     @IBAction func didSaveButtonTapped(_ sender: Any) {
-        print(R.string.localizable.logRegistBook)
+        let errors = validate(name: nameTextField.text!, price: priceTextField.text!)
+
+        guard errors.isEmpty else {
+            let alertController = UIAlertController.createLeftParagraphAlert(
+                title: R.string.localizable.validateErrorTitle(), message: errors.joined(separator: "\n"))
+            return self.present(alertController, animated: true, completion: nil)
+        }
+
+        let account = AuthManager.shared.getAuth()
+        if !AuthManager.shared.isLogin() {
+            let alertController = UIAlertController.createLeftParagraphAlert(
+                title: R.string.localizable.errorTitle(), message: R.string.localizable.errorAuthentication())
+            return self.present(alertController, animated: true, completion: nil)
+        }
+
+        book.name = nameTextField.text!
+        book.price = Int(priceTextField.text!)!
+        book.purchaseDate = purchaseDateTextField.text!
+
+        let editBookRequest = EditBookRequest(id: book.id, name: book.name, price: book.price,
+                                              purchaseDate: book.purchaseDate!,
+                                              imageData:  ImageHelper.encode(image: imageView.image)!,
+                                              token: account.requestToken)
+        editBook(editBookRequest)
     }
 
     override func viewDidLoad() {
@@ -59,7 +92,22 @@ class EditBookViewController: UIViewController, FileAttachable {
     }
 
     func pickerChanged(sender: UIDatePicker) {
-        DatePickerHelper.setValue(sender, target: self.purchaseDateTextField)
+        DatePickerHelper.setValue(sender, target: purchaseDateTextField)
+    }
+
+    func editBook(_ editBookRequest: EditBookRequest) {
+        Session.send(editBookRequest) { result in
+            switch result {
+            case .success(let registerBookResponse):
+                print("[書籍編集完了] 書籍ID: \(registerBookResponse.bookId)")
+                self.navigationController?.popViewController(animated: true)
+            case .failure(let error):
+                print("error: \(error)")
+                let alertController = UIAlertController.createLeftParagraphAlert(
+                    title: R.string.localizable.validateErrorTitle(), message: R.string.localizable.errorNetworing())
+                return self.present(alertController, animated: true, completion: nil)
+            }
+        }
     }
 }
 

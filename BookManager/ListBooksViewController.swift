@@ -1,8 +1,10 @@
 import UIKit
+import APIKit
+import Himotoki
 
 class ListBooksViewController: UITableViewController {
 
-    var books = Book.allBooks
+    var books: [BookResponse] = []
 
     @IBAction func tapAddAction(_ sender: Any) {
         present(R.storyboard.main.addBook()!, animated: true, completion: nil)
@@ -10,6 +12,21 @@ class ListBooksViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        let auth = AuthManager.shared.getAuth()
+        let listBooksRequest = ListBooksRequest(userId: auth.userId, page: Const.BookLimit, token: auth.requestToken)
+
+        Session.send(listBooksRequest) { result in
+            switch result {
+            case .success(let listBookResponse):
+                self.books = listBookResponse.books
+                self.loadView()
+            case .failure(let error):
+                print("error: \(error)")
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {

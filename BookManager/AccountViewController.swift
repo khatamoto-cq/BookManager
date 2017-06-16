@@ -1,4 +1,5 @@
 import UIKit
+import APIKit
 
 class AccountViewController: UIViewController {
 
@@ -26,9 +27,7 @@ class AccountViewController: UIViewController {
 
     @IBOutlet weak var closeButton: UIButton! {
         didSet {
-            let logined = UserDefaults.standard.bool(forKey: "logined")
-            closeButton.isEnabled = logined
-            closeButton.isHidden = !logined
+            closeButton.isHidden = !AuthManager.shared.isEntry()
         }
     }
 
@@ -37,22 +36,72 @@ class AccountViewController: UIViewController {
     }
 
     @IBAction func didSaveButtonTapped(_ sender: Any) {
-        print(R.string.localizable.logRegistAccount())
+        let email = emailTextField.text!
+        let password = passwordTextField.text!
+        let passwordConfirm = passwordConfirmTextField.text!
 
-        if !UserDefaults.standard.bool(forKey: "logined") {
-            saveLoginState()
-            let controller = R.storyboard.main.tabViewController()
-            controller?.modalTransitionStyle = .crossDissolve
-            present(controller!, animated: true, completion: nil)
+        let errors = validate(email: email, password: password, passwordConfirm: passwordConfirm)
+        guard errors.isEmpty else {
+            let alertController = UIAlertController.createLeftParagraphAlert(
+                title: R.string.localizable.validateErrorTitle(), message: errors.joined(separator: "\n"))
+            return present(alertController, animated: true, completion: nil)
         }
+
+        saveAccount(AccountRequest(email: email, password: password))
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
-    func saveLoginState() {
-        UserDefaults.standard.set(true, forKey: "logined")
-        UserDefaults.standard.synchronize()
+    func saveAccount(_ accountRequest: AccountRequest) {
+        Session.send(accountRequest) { result in
+            switch result {
+            case .success(let accountResponse):
+                print("[アカウント追加完了] user_id: \(accountResponse.userId), request_token: \(accountResponse.requestToken)")
+                AuthManager.shared.save(accountResponse)
+
+                if !AuthManager.shared.isEntry() {
+                    AuthManager.shared.saveEntry()
+                    return self.present(TabViewController.create(.crossDissolve), animated: true, completion: nil)
+                }
+
+                self.dismiss(animated: true, completion: nil)
+            case .failure(let error):
+                print("error: \(error)")
+                let alertController = UIAlertController.createLeftParagraphAlert(
+                    title: R.string.localizable.validateErrorTitle(), message: R.string.localizable.errorNetworing())
+                return self.present(alertController, animated: true, completion: nil)
+            }
+        }
+    }
+
+    func validate(email: String, password: String, passwordConfirm: String) -> [String] {
+        var errors: [String] = []
+
+        if email.isEmpty {
+            errors.append(R.string.localizable.validateErrorRequireAccountEmail())
+        } else {
+            let regEx = NSPredicate(format:"SELF MATCHES %@", "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}")
+            if !regEx.evaluate(with: email) {
+                errors.append(R.string.localizable.validateErrorInvalidEmail())
+            }
+        }
+
+        if password.isEmpty {
+            errors.append(R.string.localizable.validateErrorRequireAccountPassword())
+        }
+
+        if passwordConfirm.isEmpty {
+            errors.append(R.string.localizable.validateErrorRequireAccountPasswordConfirm())
+        }
+
+        if !password.isEmpty && !passwordConfirm.isEmpty {
+            if password != passwordConfirm {
+                errors.append(R.string.localizable.validateErrorCompareAccountPassword())
+            }
+        }
+
+        return errors
     }
 }
