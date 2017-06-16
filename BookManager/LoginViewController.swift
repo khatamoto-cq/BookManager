@@ -46,9 +46,9 @@ class LoginViewController: UIViewController {
 
         Session.send(loginRequest) { result in
             switch result {
-            case .success(let auth):
-                print("[ログイン] user_id: \(auth.userId), request_token: \(auth.requestToken)")
-                AuthManager.shared.save(auth)
+            case .success(let accountResponse):
+                print("[ログイン] user_id: \(accountResponse.userId), request_token: \(accountResponse.requestToken)")
+                AuthManager.shared.save(accountResponse)
 
                 let controller = R.storyboard.main.tabViewController()
                 controller?.modalTransitionStyle = .crossDissolve

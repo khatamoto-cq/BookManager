@@ -3,7 +3,7 @@ import APIKit
 import Himotoki
 
 struct LoginRequest: BaseRequest {
-    typealias Response = Auth
+    typealias Response = AccountResponse
 
     let email: String
     let password: String

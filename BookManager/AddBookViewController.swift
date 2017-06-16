@@ -85,8 +85,8 @@ class AddBookViewController: UIViewController, FileAttachable, BookValidatable {
     func addBook(_ addBookRequest: AddBookRequest) {
         Session.send(addBookRequest) { result in
             switch result {
-            case .success(let bookResult):
-                print("[書籍追加完了] 書籍ID: \(bookResult.bookId)")
+            case .success(let resultBookResponse):
+                print("[書籍追加完了] 書籍ID: \(resultBookResponse.bookId)")
                 self.dismiss(animated: true, completion: nil)
             case .failure(let error):
                 print("error: \(error)")

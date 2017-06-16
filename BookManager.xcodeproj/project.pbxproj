@@ -25,12 +25,12 @@
 		233EFCCF1EEFC10F00EEB8A7 /* FileAttachable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233EFCCE1EEFC10F00EEB8A7 /* FileAttachable.swift */; };
 		233EFCD41EEFC51C00EEB8A7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 233EFCD21EEFC51C00EEB8A7 /* Localizable.strings */; };
 		233EFCE51EEFDED900EEB8A7 /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233EFCE41EEFDED900EEB8A7 /* BaseRequest.swift */; };
-		233EFCE81EEFE04000EEB8A7 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233EFCE71EEFE04000EEB8A7 /* Auth.swift */; };
+		233EFCE81EEFE04000EEB8A7 /* AccountResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233EFCE71EEFE04000EEB8A7 /* AccountResponse.swift */; };
 		233EFCEB1EEFE07E00EEB8A7 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233EFCEA1EEFE07E00EEB8A7 /* LoginRequest.swift */; };
-		233EFCEF1EEFE6D900EEB8A7 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233EFCEE1EEFE6D900EEB8A7 /* Book.swift */; };
+		233EFCEF1EEFE6D900EEB8A7 /* BookIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233EFCEE1EEFE6D900EEB8A7 /* BookIResponse.swift */; };
 		233EFCF11EEFE9FB00EEB8A7 /* ListBooksRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233EFCF01EEFE9FB00EEB8A7 /* ListBooksRequest.swift */; };
-		233EFCF31EEFEA4D00EEB8A7 /* BookCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233EFCF21EEFEA4D00EEB8A7 /* BookCollection.swift */; };
-		234405D21EF0DF940001FDC6 /* BookResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234405D11EF0DF940001FDC6 /* BookResult.swift */; };
+		233EFCF31EEFEA4D00EEB8A7 /* ListBooksResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233EFCF21EEFEA4D00EEB8A7 /* ListBooksResponse.swift */; };
+		234405D21EF0DF940001FDC6 /* ResultBookResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234405D11EF0DF940001FDC6 /* ResultBookResponse.swift */; };
 		234405D41EF0E0780001FDC6 /* EditBookRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234405D31EF0E0780001FDC6 /* EditBookRequest.swift */; };
 		234405D61EF0F7090001FDC6 /* AddBookRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234405D51EF0F7090001FDC6 /* AddBookRequest.swift */; };
 		234405D81EF106D00001FDC6 /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234405D71EF106D00001FDC6 /* ImageHelper.swift */; };
@@ -71,12 +71,12 @@
 		233EFCD31EEFC51C00EEB8A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = BookManager/Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		233EFCD51EEFC85500EEB8A7 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = BookManager/ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		233EFCE41EEFDED900EEB8A7 /* BaseRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseRequest.swift; path = Api/BaseRequest.swift; sourceTree = "<group>"; };
-		233EFCE71EEFE04000EEB8A7 /* Auth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Auth.swift; path = Api/Models/Auth.swift; sourceTree = "<group>"; };
+		233EFCE71EEFE04000EEB8A7 /* AccountResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccountResponse.swift; path = Api/Models/AccountResponse.swift; sourceTree = "<group>"; };
 		233EFCEA1EEFE07E00EEB8A7 /* LoginRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginRequest.swift; path = Api/LoginRequest.swift; sourceTree = "<group>"; };
-		233EFCEE1EEFE6D900EEB8A7 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Book.swift; path = Api/Models/Book.swift; sourceTree = "<group>"; };
+		233EFCEE1EEFE6D900EEB8A7 /* BookIResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BookIResponse.swift; path = Api/Models/BookIResponse.swift; sourceTree = "<group>"; };
 		233EFCF01EEFE9FB00EEB8A7 /* ListBooksRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListBooksRequest.swift; path = Api/ListBooksRequest.swift; sourceTree = "<group>"; };
-		233EFCF21EEFEA4D00EEB8A7 /* BookCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookCollection.swift; sourceTree = "<group>"; };
-		234405D11EF0DF940001FDC6 /* BookResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BookResult.swift; path = Api/Models/BookResult.swift; sourceTree = "<group>"; };
+		233EFCF21EEFEA4D00EEB8A7 /* ListBooksResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListBooksResponse.swift; sourceTree = "<group>"; };
+		234405D11EF0DF940001FDC6 /* ResultBookResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResultBookResponse.swift; path = Api/Models/ResultBookResponse.swift; sourceTree = "<group>"; };
 		234405D31EF0E0780001FDC6 /* EditBookRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EditBookRequest.swift; path = Api/EditBookRequest.swift; sourceTree = "<group>"; };
 		234405D51EF0F7090001FDC6 /* AddBookRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddBookRequest.swift; path = Api/AddBookRequest.swift; sourceTree = "<group>"; };
 		234405D71EF106D00001FDC6 /* ImageHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageHelper.swift; sourceTree = "<group>"; };
@@ -157,10 +157,10 @@
 		233EFCE91EEFE04600EEB8A7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				233EFCE71EEFE04000EEB8A7 /* Auth.swift */,
-				234405D11EF0DF940001FDC6 /* BookResult.swift */,
-				233EFCEE1EEFE6D900EEB8A7 /* Book.swift */,
-				233EFCF21EEFEA4D00EEB8A7 /* BookCollection.swift */,
+				233EFCE71EEFE04000EEB8A7 /* AccountResponse.swift */,
+				234405D11EF0DF940001FDC6 /* ResultBookResponse.swift */,
+				233EFCEE1EEFE6D900EEB8A7 /* BookIResponse.swift */,
+				233EFCF21EEFEA4D00EEB8A7 /* ListBooksResponse.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -340,12 +340,12 @@
 				23EB3D9A1EE50C740038B49C /* ListBooksViewController.swift in Sources */,
 				231B23901EE6BEDA004C3221 /* AddBookViewController.swift in Sources */,
 				234405D81EF106D00001FDC6 /* ImageHelper.swift in Sources */,
-				233EFCEF1EEFE6D900EEB8A7 /* Book.swift in Sources */,
+				233EFCEF1EEFE6D900EEB8A7 /* BookIResponse.swift in Sources */,
 				233B59B11EF3844100C75D90 /* UIAlertControllerExtension.swift in Sources */,
 				233EFCEB1EEFE07E00EEB8A7 /* LoginRequest.swift in Sources */,
-				233EFCF31EEFEA4D00EEB8A7 /* BookCollection.swift in Sources */,
+				233EFCF31EEFEA4D00EEB8A7 /* ListBooksResponse.swift in Sources */,
 				233B59AD1EF3769700C75D90 /* NumericHelper.swift in Sources */,
-				234405D21EF0DF940001FDC6 /* BookResult.swift in Sources */,
+				234405D21EF0DF940001FDC6 /* ResultBookResponse.swift in Sources */,
 				233B59B31EF3BFB300C75D90 /* DateExtension.swift in Sources */,
 				233EFCC51EEF8B0B00EEB8A7 /* UIControlExtention.swift in Sources */,
 				23BFA9E81EF2A64700EF2709 /* BookValidatable.swift in Sources */,
@@ -367,7 +367,7 @@
 				23CAD1D11EE9346100C27108 /* TabViewController.swift in Sources */,
 				23EB3E961EE5562E0038B49C /* SettingViewController.swift in Sources */,
 				2328F5AE1EEEA1C300FA0A62 /* Const.swift in Sources */,
-				233EFCE81EEFE04000EEB8A7 /* Auth.swift in Sources */,
+				233EFCE81EEFE04000EEB8A7 /* AccountResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -21,7 +21,7 @@ class BookTableViewCell: UITableViewCell {
         bookImageView.image = nil
     }
 
-    func set(_ book: Book) {
+    func set(_ book: BookResponse) {
         if !book.imageUrl.isEmpty {
             let url = URL(string: book.imageUrl)
             bookImageView.kf.setImage(with: url)

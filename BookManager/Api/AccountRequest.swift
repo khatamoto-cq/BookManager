@@ -4,7 +4,7 @@ import Himotoki
 
 struct AccountRequest: BaseRequest {
 
-    typealias Response = Auth
+    typealias Response = AccountResponse
 
     let email: String
     let password: String

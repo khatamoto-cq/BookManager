@@ -4,7 +4,7 @@ import Himotoki
 
 struct ListBooksRequest: BaseRequest {
 
-    typealias Response = BookCollection
+    typealias Response = ListBooksResponse
 
     let userId: Int
     let page: String

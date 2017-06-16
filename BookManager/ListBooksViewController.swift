@@ -4,7 +4,7 @@ import Himotoki
 
 class ListBooksViewController: UITableViewController {
 
-    var books: [Book] = []
+    var books: [BookResponse] = []
 
     @IBAction func tapAddAction(_ sender: Any) {
         present(R.storyboard.main.addBook()!, animated: true, completion: nil)
@@ -20,8 +20,8 @@ class ListBooksViewController: UITableViewController {
 
         Session.send(listBooksRequest) { result in
             switch result {
-            case .success(let bookCollection):
-                self.books = bookCollection.books
+            case .success(let listBookResponse):
+                self.books = listBookResponse.books
                 self.loadView()
             case .failure(let error):
                 print("error: \(error)")

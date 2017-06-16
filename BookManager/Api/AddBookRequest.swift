@@ -3,7 +3,7 @@ import APIKit
 import Himotoki
 
 struct AddBookRequest: BaseRequest {
-    typealias Response = BookResult
+    typealias Response = ResultBookResponse
 
     let name: String
     let price: Int

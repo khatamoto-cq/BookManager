@@ -57,9 +57,9 @@ class AccountViewController: UIViewController {
     func saveAccount(_ accountRequest: AccountRequest) {
         Session.send(accountRequest) { result in
             switch result {
-            case .success(let auth):
-                print("[アカウント追加完了] user_id: \(auth.userId), request_token: \(auth.requestToken)")
-                AuthManager.shared.save(auth)
+            case .success(let accountResponse):
+                print("[アカウント追加完了] user_id: \(accountResponse.userId), request_token: \(accountResponse.requestToken)")
+                AuthManager.shared.save(accountResponse)
 
                 if !AuthManager.shared.isEntry() {
                     AuthManager.shared.saveEntry()

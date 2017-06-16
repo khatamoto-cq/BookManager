@@ -4,7 +4,7 @@ import APIKit
 
 class EditBookViewController: UIViewController, FileAttachable, BookValidatable {
 
-    var book: Book!
+    var book: BookResponse!
 
     @IBOutlet weak var imageView: UIImageView! {
         didSet {
@@ -65,8 +65,8 @@ class EditBookViewController: UIViewController, FileAttachable, BookValidatable 
             return self.present(alertController, animated: true, completion: nil)
         }
 
-        let auth = AuthManager.shared.getAuth()
-        if auth.requestToken.isEmpty || auth.userId == 0 {
+        let account = AuthManager.shared.getAuth()
+        if account.requestToken.isEmpty || account.userId == 0 {
             let alertController = UIAlertController.createLeftParagraphAlert(
                 title: R.string.localizable.errorTitle(), message: R.string.localizable.errorAuthentication())
             return self.present(alertController, animated: true, completion: nil)
@@ -76,7 +76,7 @@ class EditBookViewController: UIViewController, FileAttachable, BookValidatable 
         book.price = Int(priceTextField.text!)!
         book.purchaseDate = purchaseDateTextField.text!
 
-        editBook(book: book, imageData: ImageHelper.encode(image: imageView.image!)!, auth: auth)
+        editBook(book: book, imageData: ImageHelper.encode(image: imageView.image!)!, account: account)
     }
 
     override func viewDidLoad() {
@@ -91,16 +91,16 @@ class EditBookViewController: UIViewController, FileAttachable, BookValidatable 
         DatePickerHelper.setValue(sender, target: purchaseDateTextField)
     }
 
-    func editBook(book: Book, imageData: String, auth: Auth) {
+    func editBook(book: BookResponse, imageData: String, account: AccountResponse) {
         let editBookRequest = EditBookRequest(id: book.id, name: book.name, price: book.price,
                                               purchaseDate: book.purchaseDate!,
                                               imageData: imageData,
-                                              token: auth.requestToken)
+                                              token: account.requestToken)
 
         Session.send(editBookRequest) { result in
             switch result {
-            case .success(let bookResult):
-                print("[書籍編集完了] 書籍ID: \(bookResult.bookId)")
+            case .success(let resultBookResponse):
+                print("[書籍編集完了] 書籍ID: \(resultBookResponse.bookId)")
                 self.navigationController?.popViewController(animated: true)
             case .failure(let error):
                 print("error: \(error)")
