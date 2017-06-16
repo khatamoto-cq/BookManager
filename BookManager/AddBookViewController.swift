@@ -62,11 +62,26 @@ class AddBookViewController: UIViewController, FileAttachable, BookValidateable 
             return present(alertController, animated: true, completion: nil)
         }
 
-        let addBookRequest = AddBookRequest(name: nameTextField.text!,
-                                            price: NumericHelper.transformStringToInt(priceTextField.text!),
-                                            purchaseDate: purchaseDateTextField.text!,
-                                            imageData: ImageHelper.encode(image: imageView.image)!,
-                                            userId: auth.userId, token: auth.requestToken)
+        addBook(name: nameTextField.text!, price: NumericHelper.transformStringToInt(priceTextField.text!),
+                purchaseData: purchaseDateTextField.text!,
+                imageData: ImageHelper.encode(image: imageView.image)!, auth: auth)
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+
+    func pickerChanged(sender: UIDatePicker) {
+        DatePickerHelper.setValue(sender, target: purchaseDateTextField)
+    }
+
+    func addBook(name: String, price: Int, purchaseData: String, imageData: String, auth: Auth) {
+        let addBookRequest = AddBookRequest(name: name, price: price, purchaseDate: purchaseData,
+                                            imageData: imageData, userId: auth.userId, token: auth.requestToken)
 
         Session.send(addBookRequest) { result in
             switch result {
@@ -80,18 +95,6 @@ class AddBookViewController: UIViewController, FileAttachable, BookValidateable 
                 return self.present(alertController, animated: true, completion: nil)
             }
         }
-    }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-
-    func pickerChanged(sender: UIDatePicker) {
-        DatePickerHelper.setValue(sender, target: purchaseDateTextField)
     }
 }
 
