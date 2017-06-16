@@ -8,7 +8,7 @@ struct Book: Decodable {
     var price: Int
     var purchaseDate: String?
 
-    static func decode(_ e: Himotoki.Extractor) throws -> Book {
+    static func decode(_ e: Extractor) throws -> Book {
         return try Book(id: e <| "id", imageUrl: e <| "image_url",
                         name: e <| "name", price: e <| "price",
                         purchaseDate: e <|? "purchase_date")
