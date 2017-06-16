@@ -9,7 +9,7 @@ struct EditBookRequest: BaseRequest {
     let name: String
     let price: Int
     let purchaseDate: String
-    let image: String
+    let imageData: String
     let token: String
 
     var method: HTTPMethod {
@@ -29,7 +29,7 @@ struct EditBookRequest: BaseRequest {
             "name": name,
             "price": price,
             "purchase_date": purchaseDate,
-            "image_data": image
+            "image_data": imageData
         ])
     }
 }
