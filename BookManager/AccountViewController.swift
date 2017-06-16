@@ -43,7 +43,7 @@ class AccountViewController: UIViewController {
         let passwordConfirm = passwordConfirmTextField.text!
 
         let errors = validate(email: email, password: password, passwordConfirm: passwordConfirm)
-        if !errors.isEmpty {
+        guard !errors.isEmpty else {
             return AlertHelper.showAlert(self, title: R.string.localizable.validateErrorTitle(),
                                          message: errors.joined(separator: "\n"))
         }
