@@ -8,7 +8,7 @@ struct AddBookRequest: BaseRequest {
     let name: String
     let price: Int
     let purchaseDate: String
-    let image: String
+    let imageData: String
     let userId: Int
     let token: String
 
@@ -29,7 +29,7 @@ struct AddBookRequest: BaseRequest {
             "name": name,
             "price": price,
             "purchase_date": purchaseDate,
-            "image_data": image,
+            "image_data": imageData,
             "user_id": userId
         ])
     }

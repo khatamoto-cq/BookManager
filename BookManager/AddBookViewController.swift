@@ -63,7 +63,7 @@ class AddBookViewController: UIViewController, FileAttachable, BookValidateable 
         let addBookRequest = AddBookRequest(name: nameTextField.text!,
                                             price: NumericHelper.transformStringToInt(priceTextField.text!),
                                             purchaseDate: purchaseDateTextField.text!,
-                                            image: ImageHelper.encode(image: imageView.image)!,
+                                            imageData: ImageHelper.encode(image: imageView.image)!,
                                             userId: auth.userId, token: auth.requestToken)
 
         Session.send(addBookRequest) { result in
