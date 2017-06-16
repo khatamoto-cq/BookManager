@@ -50,14 +50,14 @@ class AddBookViewController: UIViewController, FileAttachable, BookValidateable 
         let errors = validate(name: nameTextField.text!, price: priceTextField.text!)
 
         guard errors.isEmpty else {
-            let alertController = UIAlertController.showLeftParagraphAlert(
+            let alertController = UIAlertController.createLeftParagraphAlert(
                 title: R.string.localizable.validateErrorTitle(), message: errors.joined(separator: "\n"))
             return present(alertController, animated: true, completion: nil)
         }
 
         let auth = AuthManager.shared.getAuth()
         if auth.requestToken.isEmpty || auth.userId == 0 {
-            let alertController = UIAlertController.showLeftParagraphAlert(
+            let alertController = UIAlertController.createLeftParagraphAlert(
                 title: R.string.localizable.errorTitle(), message: R.string.localizable.errorAuthentication())
             return present(alertController, animated: true, completion: nil)
         }
@@ -90,7 +90,7 @@ class AddBookViewController: UIViewController, FileAttachable, BookValidateable 
                 self.dismiss(animated: true, completion: nil)
             case .failure(let error):
                 print("error: \(error)")
-                let alertController = UIAlertController.showLeftParagraphAlert(
+                let alertController = UIAlertController.createLeftParagraphAlert(
                     title: R.string.localizable.validateErrorTitle(), message: R.string.localizable.errorNetworing())
                 return self.present(alertController, animated: true, completion: nil)
             }

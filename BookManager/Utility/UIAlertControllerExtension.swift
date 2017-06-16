@@ -2,7 +2,7 @@ import Foundation
 import UIKit
 
 extension UIAlertController {
-    static func showLeftParagraphAlert(title: String, message: String) -> UIAlertController {
+    static func createLeftParagraphAlert(title: String, message: String) -> UIAlertController {
         let alertWindow = UIAlertController(title: title,
                                             message: message, preferredStyle: .alert)
 
