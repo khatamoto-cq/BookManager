@@ -15,5 +15,4 @@
 "ErrorNetworing" = "通信中エラーが発生しました。時間をおいてからやり直してみてください";
 "ErrorDateFormatter" = "日付のフォーマット変換に失敗しました";
 
-"LavelTax" = "税";
-"LavelUnixOfMoney" = "円";
+"LabelPrice" = "%d円 + 税";
